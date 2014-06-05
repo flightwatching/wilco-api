@@ -1,4 +1,4 @@
-wilco-parser-boilerplate
+wilco-api
 ========================
 
-a boilerplate JAVA project to push messages to WILCO in its JSON format
+a boilerplate JAVA project to use WILCO APIV3 interface
