@@ -19,6 +19,9 @@ public class ApiBridge {
 	private static String cookies;
 
 	public static void connect(String rootApiUrl, String user, String password) throws IOException, ApiException {
+		if (!rootApiUrl.endsWith("/")) {
+			rootApiUrl+="/";
+		}
 		ApiBridge.rootApiUrl = rootApiUrl;
 		String response = call("login?username="+user+"&tnc=true&password="+password, "GET", null);
 		Logger.info("connected as %s",user);
@@ -75,14 +78,21 @@ public class ApiBridge {
 		} else {
 		    is = conn.getInputStream();
 		}
-		return new InputStreamReader(is);
+		if (is==null) {
+			return null;
+		} else {
+			return new InputStreamReader(is);
+		}	
 	}
 
 	private static String readResponseAsString(HttpURLConnection conn)
 			throws IOException {
 		
-		BufferedReader br = new BufferedReader(readResponseAsReader(conn));
-		
+		Reader reader = readResponseAsReader(conn);
+		if (reader==null) {
+			return "";
+		}
+		BufferedReader br = new BufferedReader(reader);
 		StringBuilder builder = new StringBuilder();
 		String aux = "";
 

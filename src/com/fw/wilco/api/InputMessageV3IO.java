@@ -75,6 +75,22 @@ public class InputMessageV3IO {
 	 * the application provider key
 	 */
 	public String provider;
+	
+	/**
+	 * the name of the layout that matches the message. The name is the name as it appears on the server.
+	 * if it is not provided, no rule or dashboard can be attached, but the message is still inserted
+	 */
+	public String namedLayout;
+	
+	
+	public InputSampleV3IO insertSample(String name, String value) {
+		if (samples==null) {
+			samples = new HashSet<InputSampleV3IO>();
+		}
+		InputSampleV3IO ret = new InputSampleV3IO(name, value, this.computedDate);
+		this.samples.add(ret);
+		return ret;
+	}
 
 
 }

@@ -13,6 +13,14 @@ public class Logger {
 		java.util.logging.Logger.getLogger("API").log(Level.WARNING, String.format(msg, args));
 	}
 	
+
+	public static void fatal(String msg, Object... args) {
+		java.util.logging.Logger.getLogger("API").log(Level.WARNING, String.format(msg, args));
+	}
+	
+	public static void debug(String msg, Object... args) {
+		java.util.logging.Logger.getLogger("API").log(Level.WARNING, String.format(msg, args));
+	}
 	
 
 }
