@@ -8,6 +8,7 @@ public class UserV3IO {
 	public String login;
 	public String airline;
 	public String profile;
+	public String trigram;
 
 
 }
