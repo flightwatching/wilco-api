@@ -79,8 +79,15 @@ public class InputMessageV3IO {
 	/**
 	 * the name of the layout that matches the message. The name is the name as it appears on the server.
 	 * if it is not provided, no rule or dashboard can be attached, but the message is still inserted
+	 * if the layoutId is provided, this is ignored
 	 */
 	public String namedLayout;
+	
+	/**
+	 * the id of the layout that matches the message. 
+	 * if it is not provided, namedLayout is tried
+	 */
+	public Long layoutId;
 	
 	
 	public InputSampleV3IO insertSample(String name, String value) {

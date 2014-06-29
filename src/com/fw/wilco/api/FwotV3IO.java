@@ -15,7 +15,7 @@ public class FwotV3IO {
 	public String eta;
 	public String etd; //TODO
 	public EventV3IO alert; //TODO
-	public Boolean hasPhoto=false;
+	public String photoUrl;
 	
 	public Map<String, String> properties;
 	

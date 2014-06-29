@@ -1,17 +1,24 @@
 package com.fw.wilco.api;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+
 
 public class InputSampleV3IO {
 
-	public InputSampleV3IO(String name, String value, String computedDate) {
+	public InputSampleV3IO(String name, JsonElement value, String computedDate) {
 		this.name = name;
 		this.value = value;
 		timestamp = computedDate;
 		
 	}
 	
+	public InputSampleV3IO(String name, String value, String computedDate) {
+		this(name, new Gson().toJsonTree(value), computedDate);
+	}
+	
 	public String name;
-	public String value;
+	public JsonElement value;
 	public String timestamp;
 	public String timelabel;
 	@Override

@@ -17,7 +17,7 @@ public class EncodeDecodeFwotV3IO {
 		
 		
 		//decode
-		String raw = "{\"reg\":\"TOTO\",\"hasPhoto\":false,\"properties\":{p2:\"val2\",p1:\"val1\"}}";
+		String raw = "{\"reg\":\"TOTO\",\"properties\":{p2:\"val2\",p1:\"val1\"}}";
 		FwotV3IO decode = new Gson().fromJson(raw, FwotV3IO.class);
 		System.out.println(decode.properties);
 	}

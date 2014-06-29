@@ -31,6 +31,7 @@ public class EventV3IO{
 
 	public String reg;
 	
+	public Long layoutId;
 	public Long lastUpdate;
 	public String flightId;
 	
