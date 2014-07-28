@@ -39,6 +39,10 @@ public class InputMessageV3IO {
 	 */
 	public String sumup;
 	/**
+	 * a short title (40 char max) 
+	 */
+	public String title;
+	/**
 	 * an external url to the resource
 	 */
 	public String extUrl;

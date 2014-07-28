@@ -26,6 +26,7 @@ public class EventV3IO{
 	public String phase;
 	public String status;
 
+	public String title;
 	public String sumUp;
 	public String data;
 
