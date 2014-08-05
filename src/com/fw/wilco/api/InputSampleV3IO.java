@@ -52,5 +52,11 @@ public class InputSampleV3IO {
 		return true;
 	}
 	
+	@Override
+	public String toString() {
+		String ret =  String.format("%s=%s", this.name, this.value);
+		return ret;
+	}
+	
 	
 }

@@ -7,13 +7,14 @@ import java.util.HashSet;
 import com.fw.wilco.api.constants.FlightStatus;
 import com.fw.wilco.api.constants.SMI;
 import com.fw.wilco.api.constants.Severity;
+import com.google.gson.JsonElement;
 
 public class InputMessageV3IO {
 	
 	/**
 	 * date formatter and parser from and to pattern "yyyy-MM-dd'T'HH:mm:ss"
 	 */
-	public final static SimpleDateFormat ISO8601DF = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+	public final static SimpleDateFormat ISO8601DF = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
 
 	
 	/**
@@ -102,6 +103,25 @@ public class InputMessageV3IO {
 		this.samples.add(ret);
 		return ret;
 	}
+	
+	public InputSampleV3IO insertSample(String name, JsonElement value) {
+		if (samples==null) {
+			samples = new HashSet<InputSampleV3IO>();
+		}
+		InputSampleV3IO ret = new InputSampleV3IO(name, value, this.computedDate);
+		this.samples.add(ret);
+		return ret;
+	}
 
+	@Override
+	public String toString() {
+		String ret =  String.format("%s (%s) @ %s", this.namedLayout, this.sumup, this.computedDate);
+		for (InputSampleV3IO s : this.samples) {
+			ret+="\n  "+s.toString();
+		}
+		return ret;
+	}
+
+	
 
 }
