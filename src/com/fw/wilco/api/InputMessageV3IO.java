@@ -2,6 +2,8 @@ package com.fw.wilco.api;
 
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashSet;
 
 import com.fw.wilco.api.constants.FlightStatus;
@@ -95,22 +97,37 @@ public class InputMessageV3IO {
 	public Long layoutId;
 	
 	
-	public InputSampleV3IO insertSample(String name, String value) {
+	
+	public InputSampleV3IO insertSample(String name, String value, String d) {
 		if (samples==null) {
 			samples = new HashSet<InputSampleV3IO>();
 		}
-		InputSampleV3IO ret = new InputSampleV3IO(name, value, this.computedDate);
-		this.samples.add(ret);
+		InputSampleV3IO ret = new InputSampleV3IO(name, value, d);
+		if (!this.samples.add(ret)) {
+			System.err.println(String.format("samples for %s overlaps at %s", name, d));
+		}
 		return ret;
 	}
 	
-	public InputSampleV3IO insertSample(String name, JsonElement value) {
+	public InputSampleV3IO insertSample(String name, String value) {
+		return insertSample(name, value, this.computedDate);
+	}
+	
+	
+	
+	public InputSampleV3IO insertSample(String name, JsonElement value, String d) {
 		if (samples==null) {
 			samples = new HashSet<InputSampleV3IO>();
 		}
-		InputSampleV3IO ret = new InputSampleV3IO(name, value, this.computedDate);
-		this.samples.add(ret);
+		InputSampleV3IO ret = new InputSampleV3IO(name, value, d);
+		if (!this.samples.add(ret)) {
+			System.err.println(String.format("samples for %s overlaps at %s", name, d));
+		}
 		return ret;
+	}
+
+	public InputSampleV3IO insertSample(String name, JsonElement value) {
+		return insertSample(name, value, this.computedDate);
 	}
 
 	@Override
