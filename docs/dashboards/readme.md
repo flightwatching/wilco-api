@@ -17,11 +17,17 @@ When your page is loaded, activate the inspector, ctrl+p (or cmd+p on mac). Type
 ##use no-cache
 WILCO creates a cache with your dashboards, symbols and rules to accelerate the loading process. When designing rules, this is not very efficient as computing the cache is slow. add a no-cache url parameter to directly use your ongoing version of the dashboard/IFTs.
 
-e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?no-cache=true`
-
+e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?no-cache`
 
 ##use the debug option
+debug option logs more things in the console (chrome inspector tab) about the context and rules.
+e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?debug`
 
+you can use both options with 
+e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?no-cache&debug`
+
+##console.log
+In your IFT, add some `console.log(anything)` and it will appear in your inspector (console tab)
 
 #Variables accessible in the dashboard
 
