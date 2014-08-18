@@ -10,7 +10,7 @@ WILCO provides context related variables to the designer so that the dashboard i
 ##Dashboards for an event
 Here is the exhaustive list of the variables you can access in yout IFT
 ###EVT
-`EVT` is an object that represents the [EventV3IO API object](/java/fw/wilco/api/EventV3IO.java).
+`EVT` is an object that represents the [EventV3IO API object](/java/com/fw/wilco/api/EventV3IO.java).
 
 
 #Symbols
