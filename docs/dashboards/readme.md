@@ -87,9 +87,67 @@ symbol name minus `_anim`. The example above will lead to `theFunction(ALT)`
 
 ##symbol functions
 
-Each symbol has a function to ease access to sub components and to manage its behavior.
+Each symbol becomes a javascript object which name is the ID of the symbol. I has a function to ease access to sub components and to manage its behavior. For example, you can have a `ALT_anim` variable created for you.
+
 ###clickForTrend(sample)
 This function binds the click event on the symbol. When clicked, the parameter of the sample is used to display the Trend modal box.
+
+```javascript
+ALT_anim.clickForTrend(ALT);
+```
+
+###clickForDashboard(db_id)
+TODO
+
+###clickForMessage()
+TODO
+
+###inlineDashboard(db_id)
+TODO
+
+====
+
+# Managing objects, using D3
+
+In the Symbols chapter, we described how to animate static elements of your dashboard. But in many cases, you cannot know in advance the elements that will appear in your dashboard.
+
+* Some planes, GSE in a airbase. The count of elements depends with the time
+* the configuration of a FWOT: is it equipped or not?
+* Depending on the type of aircraft, there is 2 or 4 engines
+* ...
+
+In those cases, WILCO allows you to dynamically create associated symbols. It also enables the user to translate or rotate them manually directly within the dashboard with smart tools.
+
+##cloning a template
+To achieve that, the user can create some template symbols, and WILCO will map the template to the data. Here is the code snippet for that
+
+
+```javascript
+
+var type2symbol = {
+"A330": "a330_template",
+"A340": "a340_template"
+}
+
+//clone (template, samples, uniqueId, targetGroupLayer)
+
+var instances = clone(
+    function(d) {return '#'+nature2symbol[d.value.type]},
+    usefulSamples, 
+    function(d) {return d.name}, 
+    '#acs');
+```
+
+In this example, we will clone a template a330_template or a340_template according the the value.type of the sample see [samples description](#samples).
+The list of samples is [SAMPLES](#samples) but it could be any custom array. The identification of the clone is the sample name and the clone will be appended in the layer which id is `acs` (the dashes are the standard id reference in javascript)
+
+
+
+
+
+
+
+
 
 
 
