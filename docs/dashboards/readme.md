@@ -3,6 +3,26 @@ With WILCO, you can draw your dashboard in any tool like Adobe Illustrator and g
 With IFTs you can access all the elements of the dashboard, but the standard way of working is to animate the symbols of your dashboard.
 IFT is a javascript piece of code 
 
+#Debugging your IFTs
+OK, you wrote an ITF and nothing happends? here are some tips to figure out what did not happend
+
+##use the chrome inspector
+Your friend is the chrome inspector. The Dashboard and Symbol IFTs are executed by you browser, not by the server. That's why it is necessary to debug it from the client browser.
+To access the chrome inspector, go to the page that represents your dashboard in conditions, for example an event page with the dashboard activated. Right-click on any element and choose `inspect element`
+
+WILCO names each one of your IFT so that it is accessible within the inspector (see [this thread](https://developer.chrome.com/devtools/docs/javascript-debugging#breakpoints-dynamic-javascript)
+
+When your page is loaded, activate the inspector, ctrl+p (or cmd+p on mac). Type IFT and a combo list will display all the loaded IFTs. choose your IFT, it will be fetched in the inspector. On the left, click on the line numbers to add/remove breakpoints. refresh your page, change event or move around with the samples timeline, the ITFs will be called and breakpoints activated. Hover with your mouse or right-click and watch to monitor your variables.
+
+##use no-cache
+WILCO creates a cache with your dashboards, symbols and rules to accelerate the loading process. When designing rules, this is not very efficient as computing the cache is slow. add a no-cache url parameter to directly use your ongoing version of the dashboard/IFTs.
+
+e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?no-cache=true`
+
+
+##use the debug option
+
+
 #Variables accessible in the dashboard
 
 ##libraries
@@ -142,12 +162,6 @@ In this example, we will clone a template a330_template or a340_template accordi
 The list of samples is [SAMPLES](#samples) but it could be any custom array. The identification of the clone is the sample name and the clone will be appended in the layer which id is `acs` (the dashes are the standard id reference in javascript)
 
 the `d` parameter used in the 2nd argument is each element of the passed array. You are not compelled to deal with samples. Could be FWOTS or any array you have
-
-
-
-
-
-
 
 
 
