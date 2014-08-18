@@ -72,14 +72,14 @@ TAT; //will return the value of the sample TAT. May be a string or an Object if 
 
 ```
 
-
+====
 
 #Symbols
 
 ##refering to a symbol
-A symbol is described [here](../symbols.readme.md)
+A symbol is described [here](../symbols/readme.md)
 
-The symbols are automatically mapped on an IFT as soon as its id (the name of the object in illustrator) ends with `\_anim`. For example, `ALT_anim` will be mapped to the IFT named `ALT`.
+The symbols are automatically mapped on an IFT as soon as its id (the name of the object in illustrator) ends with `_anim`. For example, `ALT_anim` will be mapped to the IFT named `ALT`.
 The symbol ALT must exist in the symbol list, and its type has to match (a svg symbol or a svg standard tag)
 
 If the symbol has a default function, you can simply tick the auto checkbox, and the default function will be called with a sample in parameter. The sample is chosen like this:
@@ -89,4 +89,7 @@ symbol name minus `_anim`. The example above will lead to `theFunction(ALT)`
 
 Each symbol has a function to ease access to sub components and to manage its behavior.
 ###clickForTrend(sample)
-This function binds the click event on the symbol. When clicked, the parameter of the sample is 
+This function binds the click event on the symbol. When clicked, the parameter of the sample is used to display the Trend modal box.
+
+
+
