@@ -145,7 +145,11 @@ ALT_anim.inlineDashboard(12445);
 ```
 
 ###d3(the_sym)
-TODO
+This function give you access to child elements of the symbol. The child elements are the elements which suffix is \_sym. Do not specify this suffix.
+If your sub element is named `needle_sym` you will get access to it with the following. You can now use the [d3](http://d3js.org/) functions
+
+```javascript
+ALT_anim.d3("needle").attr("opacity", )
 
 ====
 
