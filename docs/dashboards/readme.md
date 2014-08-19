@@ -123,13 +123,26 @@ ALT_anim.clickForTrend(ALT);
 ```
 
 ###clickForDashboard(db_id)
-TODO
+*Still not supported*
 
-###clickForMessage()
-TODO
+###clickForMessage(samples)
+When the symbol is clicked, a new message is created with the given samples associated. The message is the same as the current one (fwot, layout...) but the computedDate is the current date (now). 
+
+Samples is an array of objects with at least 2 fields: name and value. To ensure the sample continuity, we recommand modifying [SAMPLES](#samples) and passing it as parameter (or filtering it before passing)
+
+```javascript
+ALT_anim.clickForMessage(SAMPLES);
+```
+
 
 ###inlineDashboard(db_id)
-TODO
+This function will take the bounding box of the element and display the given dashbaord (db_id) within it. We recommend that the element is a rect. The rect can be rotated or scaled, the dashboard will try to fit it the best
+
+The db_id is the unique ID of the dashboard as it appears in the dashboard list
+
+```javascript
+ALT_anim.inlineDashboard(12445);
+```
 
 ###d3(the_sym)
 TODO
