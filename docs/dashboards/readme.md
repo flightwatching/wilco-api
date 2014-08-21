@@ -150,6 +150,7 @@ If your sub element is named `needle_sym` you will get access to it with the fol
 
 ```javascript
 ALT_anim.d3("needle").attr("opacity", )
+```
 
 ====
 
