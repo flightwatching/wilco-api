@@ -93,7 +93,9 @@ TAT.maxOK //contains the maxOK as defined in the parameter definition (float)
 TAT.minScale //contains the minOK as defined in the parameter definition (float)
 TAT.maxScale //contains the maxOK as defined in the parameter definition (float)
 
-TAT; //will return the value of the sample TAT. May be a string or an Object if the TAT value was a JSON serialized string
+TAT.value //the value of the parameter.  May be a string or an Object if the TAT value was a JSON serialized string
+
+TAT; //will return the value of the sample TAT. it is the exact copy of TAT.value
 +TAT; //will return the value of the sample TAT as a float or NaN (Not a Number) if it cannot be cast
 
 ```
