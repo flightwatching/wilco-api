@@ -93,7 +93,9 @@ TAT.maxOK //contains the maxOK as defined in the parameter definition (float)
 TAT.minScale //contains the minOK as defined in the parameter definition (float)
 TAT.maxScale //contains the maxOK as defined in the parameter definition (float)
 
-TAT; //will return the value of the sample TAT. May be a string or an Object if the TAT value was a JSON serialized string
+TAT.value //the value of the parameter.  May be a string or an Object if the TAT value was a JSON serialized string
+
+TAT; //will return the value of the sample TAT. it is the exact copy of TAT.value
 +TAT; //will return the value of the sample TAT as a float or NaN (Not a Number) if it cannot be cast
 
 ```
@@ -150,6 +152,7 @@ If your sub element is named `needle_sym` you will get access to it with the fol
 
 ```javascript
 ALT_anim.d3("needle").attr("opacity", )
+```
 
 ====
 
@@ -178,13 +181,13 @@ var type2symbol = {
 //clone (template, samples, uniqueId, targetGroupLayer)
 
 var instances = clone(
-    function(d) {return '#'+nature2symbol[d.value.type]},
+    function(d) {return '#'+type2symbol[d.value.type]},
     usefulSamples, 
     function(d) {return d.name}, 
     '#acs');
 ```
 
-In this example, we will clone a template a330_template or a340_template according the the value.type of the sample see [samples description](#your-samples-by-parameter-name).
+In this example, we will clone a template `a330_template` or `a340_template` according the the value.type of the sample see [samples description](#your-samples-by-parameter-name).
 The list of samples is [SAMPLES](#samples) but it could be any custom array. The identification of the clone is the sample name and the clone will be appended in the layer which id is `acs` (the dashes are the standard id reference in javascript)
 
 the `d` parameter used in the 2nd argument is each element of the passed array. You are not compelled to deal with samples. Could be FWOTS or any array you have
