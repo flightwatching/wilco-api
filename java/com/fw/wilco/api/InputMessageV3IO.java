@@ -82,6 +82,11 @@ public class InputMessageV3IO {
 	 * the application provider key
 	 */
 	public String provider;
+	/**
+	 * if set and false, the message will not be viewable by the user. The message is only here for IFT purposes
+	 * In that case, WILCO will not ensure the persistency forever
+	 */
+	public Boolean visible;
 	
 	/**
 	 * the name of the layout that matches the message. The name is the name as it appears on the server.
