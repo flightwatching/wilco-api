@@ -125,7 +125,7 @@ ALT_anim.clickForTrend(ALT);
 ```
 
 ###clickForDashboard(db_id)
-*Still not supported*
+scrolls to the passed dashboard Id. If the target dashboard is not in the page, there is no scroll
 
 ###clickForMessage(samples)
 When the symbol is clicked, a new message is created with the given samples associated. The message is the same as the current one (fwot, layout...) but the computedDate is the current date (now). 
@@ -136,6 +136,8 @@ Samples is an array of objects with at least 2 fields: name and value. To ensure
 ALT_anim.clickForMessage(SAMPLES);
 ```
 
+###createMessage(samples)
+Same as above, but does not map the action to a click. The post is performed immediately
 
 ###inlineDashboard(db_id)
 This function will take the bounding box of the element and display the given dashbaord (db_id) within it. We recommend that the element is a rect. The rect can be rotated or scaled, the dashboard will try to fit it the best
