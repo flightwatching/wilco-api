@@ -17,6 +17,7 @@ public class FwotV3IO {
 	public EventV3IO alert; //TODO
 	public String photoUrl;
 	public String extUrl;
+	public Long statusDashboard;
 	
 	public Map<String, String> properties;
 	
