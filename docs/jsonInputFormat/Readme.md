@@ -6,9 +6,9 @@ This document describes the format for this kind of use
 
 # Description
 ## JAVA object
-We provide the [JAVA object](https://github.com/flightwatching/wilco-api/blob/master/src/com/fw/wilco/api/InputMessageV3IO.java) if you develop with JAVA and use the GSON object to string parsers (`new GSon().toJSON(MyInstance)`).
+We provide the [JAVA object](https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/InputMessageV3IO.java) if you develop with JAVA and use the GSON object to string parsers (`new GSon().toJSON(MyInstance)`).
 
-Check [this simple program](https://github.com/flightwatching/wilco-api/blob/master/src/com/fw/wilco/api/examples/InsertMessage.java) for an example
+Check [this simple program](https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/examples/InsertMessage.java) for an example
 
 ## straight JSON
 
