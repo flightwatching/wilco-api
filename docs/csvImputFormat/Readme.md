@@ -12,9 +12,15 @@ first of all, a simple example:
 |  REP04 | FW-DAO | 23/09/2014 | 12:55:46 | 10      | MATT    | ... |
 |  REP04 | FW-DAO | 23/09/2014 | 12:58:46 | 12      | RATUCH  | ... |
 | MANUAL | FW-LUC | 23/09/2014 | 12:54:46 | 0.45    | 0.48    | ... |
-| MANUAL | FW-LUC | 23/09/2014 | 13:54:46 | 0.45    | 1.25    | ... |
+| MANUAL | FW-LUC | 23/09/2014 | 13:53:46 | 0.45    | 1.25    | ... |
+|        |        |            |          |         |         | ... |
 | MANUAL | FW-LUC | 23/09/2014 | 14:54:46 | 0.47    | 4.456   | ... |
-| MANUAL | FW-LUC | 23/09/2014 | 15:54:46 | 0.422   | 1       | ... |
+| MANUAL | FW-LUC | 23/09/2014 | 15:54:46 |         | 1       | ... |
+
+This CSV table will create 3 messages:
+* a REP04 message for the FWOT named FW-DAO. It will contain 6 samples with 3 different timestamps
+* a MANUAL message for the FWOT named FW-LUC. It will contain 4 samples with 2 different timestamps
+* a MANUAL message for the FWOT named FW-LUC. It will contain 3 samples with 2 different timestamps
 
 ## Format
 ** THE FIELD DELIMITER IS THE `;` **
