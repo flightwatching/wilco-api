@@ -53,6 +53,7 @@ public class CSVParser implements IParser {
 				} else {
 					m.reg = fwot;
 					m.namedLayout = layout;
+					m.sumup = layout;
 				}
 				try {
 					if (csvRecord.size()<PARAMS_OFFSET) {
