@@ -23,9 +23,9 @@ This CSV table will create 3 messages:
 * a MANUAL message for the FWOT named FW-LUC. It will contain 3 samples with 2 different timestamps
 
 ## Format
-** THE FIELD DELIMITER IS THE `;` **
-**THE RECORD DELIMITER IS THE `new line` **
-**THE DECIMAL DELIMITER IS THE `.` **
+> THE FIELD DELIMITER IS THE `;`
+> THE RECORD DELIMITER IS THE `new line`
+> THE DECIMAL DELIMITER IS THE `.`
 
 The CSV file has at least the 4 first columns in this order. It also have the header line (mandatory)
 
