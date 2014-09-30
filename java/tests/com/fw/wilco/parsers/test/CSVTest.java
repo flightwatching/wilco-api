@@ -33,7 +33,7 @@ public class CSVTest {
 		Assert.assertEquals(3, msgs.size());
 		Assert.assertEquals(6, msgs.get(0).samples.size());
 		Assert.assertEquals(4, msgs.get(1).samples.size());
-		Assert.assertEquals(4, msgs.get(2).samples.size());
+		Assert.assertEquals(3, msgs.get(2).samples.size());
 		System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(msgs.get(0)));
 		System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(msgs.get(1)));
 		System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(msgs.get(2)));
