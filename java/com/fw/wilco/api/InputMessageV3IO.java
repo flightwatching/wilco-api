@@ -11,6 +11,12 @@ import com.fw.wilco.api.constants.SMI;
 import com.fw.wilco.api.constants.Severity;
 import com.google.gson.JsonElement;
 
+@Deprecated 
+/**
+ * we will have to merge it with the EventV3IO
+ * @author dao
+ *
+ */
 public class InputMessageV3IO {
 	
 	/**
@@ -25,6 +31,12 @@ public class InputMessageV3IO {
 	 * MANDATORY
 	 */
 	public String reg;
+	
+	/**
+	 * the ID of the message. If you want to update a message, use the field, else 
+	 * leave it null or missing
+	 */
+	public Long id;
 	
 	/**
 	 * the computed date of the message, in ISO8601 format, eg. 2014-05-23T13:45:23

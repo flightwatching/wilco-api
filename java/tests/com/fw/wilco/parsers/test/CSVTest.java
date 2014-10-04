@@ -13,6 +13,14 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class CSVTest {
+	
+	@Test
+	public void ontonome() throws ParseException {
+		CSVParser p = new CSVParser();
+		List<InputMessageV3IO> msgs = p.parse(new File("java/tests/resources/otono-me.csv"));
+		Assert.assertEquals(1, msgs.size());
+		Assert.assertEquals("2014-10-02T16:25:00", msgs.get(0).computedDate);
+	}
 
 	@Test
 	public void simple() throws ParseException {

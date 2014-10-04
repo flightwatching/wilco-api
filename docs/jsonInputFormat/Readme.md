@@ -32,6 +32,9 @@ First an example to figure out what it is
 }
 ```
 ## Message description
+
+**id** `Long` the ID of the message. If you want to update a message, use the field, else leave it null or missing
+
 **reg** `String, Mandatory` is the identifier (registration) of the FWOT the message is dealing with. A message is necessarily a by fwot message. If you want to send messages for a whole fleet, you will have to push as many message as fwots
 
 
