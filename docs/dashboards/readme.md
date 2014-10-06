@@ -125,11 +125,11 @@ ALT_anim.clickForTrend(ALT);
 ```
 
 
-###clickForFwot(reg)
+###gotoFwot(reg)
 Opens the last message of the fwot which registration is `reg`. It will enable the live mode.
 
 ```javascript
-ALT_anim.clickForFwot("FW-FAN");
+ALT_anim.gotoFwot("FW-FAN");
 ```
 
 ###clickForDashboard(db_id)
