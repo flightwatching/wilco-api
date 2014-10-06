@@ -124,6 +124,14 @@ This function binds the click event on the symbol. When clicked, the parameter o
 ALT_anim.clickForTrend(ALT);
 ```
 
+
+###clickForFwot(reg)
+Opens the last message of the fwot which registration is `reg`. It will enable the live mode.
+
+```javascript
+ALT_anim.clickForFwot("FW-FAN");
+```
+
 ###clickForDashboard(db_id)
 scrolls to the passed dashboard Id. If the target dashboard is not in the page, there is no scroll
 
@@ -155,6 +163,12 @@ If your sub element is named `needle_sym` you will get access to it with the fol
 ```javascript
 ALT_anim.d3("needle").attr("opacity", )
 ```
+
+###updateOnFwots()
+
+This function forces the page to render each time a FWOT changes in the server. This way, it is possible to use the properties or attributes of other fwots (using the FWOTS array) and get some live data in a dashboard.
+
+It is your responsability to make the dashboard readable: your dashboard will mix realtime data and event sample data
 
 ====
 
