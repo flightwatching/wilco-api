@@ -38,7 +38,7 @@ First an example to figure out what it is
 **reg** `String, Mandatory` is the identifier (registration) of the FWOT the message is dealing with. A message is necessarily a by fwot message. If you want to send messages for a whole fleet, you will have to push as many message as fwots
 
 
-**computedDate** `String, Mandatory` the computed date of the message, in ISO8601 format, eg. 2014-05-23T13:45:2 and it is UTC time
+**computedDate** `String` the computed date of the message, in ISO8601 format, eg. 2014-05-23T13:45:2 and it is UTC time. If not provided, the message is stamped with the current date.
 
 **title** : `String` The title of the message. Short text (<40 characters)
 
@@ -83,7 +83,8 @@ First an example to figure out what it is
 
 **value** `String or JSON, Mandatory` the value of the sample. it can be a string or a complex JSON object that will be usable in the dashboard, but not for trend purpose. If the string contains a number (can be a decimal) it will be cast as such, enabling chart trends
 
-**timestamp**  `String` the date of the sample, in ISO8601 format, eg. 2014-05-23T13:45:2 and it is UTC time 
+**timestamp**  `String` the date of the sample, in ISO8601 format, eg. 2014-05-23T13:45:2 and it is UTC time.
+ If not provided, the sample is stamped with the message computedDate.
 
 **timelabel** `String` a label if you want to tag the timestamp
 
