@@ -59,7 +59,7 @@ public class CSVParser implements IParser {
 					if (csvRecord.size()<PARAMS_OFFSET) {
 						logException(csvRecord, "line "+csvRecord.getRecordNumber(), "the line must at least have COL1->FWOT, COL2->DATE. it is currently \""+csvRecord+"\" (see WILCO CSV format)");					
 					}
-					Date d = DateUtils.parseDate(csvRecord.get(MANDATORY_FIELDS.DATE.ordinal())+"T"+csvRecord.get(MANDATORY_FIELDS.TIME.ordinal()), 
+					Date d = DateUtils.parseDateStrictly(csvRecord.get(MANDATORY_FIELDS.DATE.ordinal())+"T"+csvRecord.get(MANDATORY_FIELDS.TIME.ordinal()), 
 							"yyyy/MM/dd'T'HH:mm",
 							"yyyy/MM/dd'T'HH:mm:ss",
 							"dd/MM/yyyy'T'HH:mm:ss",
