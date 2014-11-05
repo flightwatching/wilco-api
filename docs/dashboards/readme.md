@@ -118,10 +118,11 @@ symbol name minus `_anim`. The example above will lead to `theFunction(ALT)`
 Each symbol becomes a javascript object which name is the ID of the symbol. I has a function to ease access to sub components and to manage its behavior. For example, you can have a `ALT_anim` variable created for you.
 
 ###clickForTrend(sample)
-This function binds the click event on the symbol. When clicked, the parameter of the sample is used to display the Trend modal box.
+This function binds the click event on the symbol. When clicked, the parameter of the sample is used to display the Trend modal box. You can also pass an array to see several trends at a time
 
 ```javascript
 ALT_anim.clickForTrend(ALT);
+ALT_anim.clickForTrend([ALT, MACH]);
 ```
 
 
