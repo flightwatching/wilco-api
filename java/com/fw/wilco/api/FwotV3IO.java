@@ -8,6 +8,7 @@ public class FwotV3IO {
 	
 	public String reg;
 	public String coolName;
+	public String category;
 	public String type;
 	public String from;
 	public String to;
