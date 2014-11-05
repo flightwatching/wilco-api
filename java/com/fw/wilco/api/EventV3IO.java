@@ -50,8 +50,6 @@ public class EventV3IO{
 	@Deprecated
 	public Integer flightCount;
 	
-
-
-	
+	public String sharingId;
 	
 }
