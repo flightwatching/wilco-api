@@ -117,6 +117,14 @@ symbol name minus `_anim`. The example above will lead to `theFunction(ALT)`
 
 Each symbol becomes a javascript object which name is the ID of the symbol. I has a function to ease access to sub components and to manage its behavior. For example, you can have a `ALT_anim` variable created for you.
 
+###tag(tags)
+This function takes a string with whitespace separated tags (or comma). each tag is then searchable using the search box and the symbol is framed when found. If you pass a sample, its name is used as single tag.
+
+```javascript
+ALT_anim.tag(ALT); // will make the string "ALT" searchable
+ALT_anim.tag("foo bar"); // will make the string "foo" and "bar" searchable
+```
+
 ###clickForTrend(sample)
 This function binds the click event on the symbol. When clicked, the parameter of the sample is used to display the Trend modal box. You can also pass an array to see several trends at a time
 
