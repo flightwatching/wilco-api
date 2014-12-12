@@ -78,6 +78,13 @@ even if the samples are accessible one by one, you may want to have an array wit
 
 Each sample is described below
 
+###DATE
+contains the current date in unix timestamp e.g 1381295944000.
+This is useful to display the current date in the SVG and to compare the current date with the sample date and check if the sample is right on the current date or is from a near timestamp.
+
+you can compare it with DATE == TAT.date or using momentjs.
+
+
 ###Your samples by parameter name
 Each of your samples is accessible by its parameter name. WILCO creates variables which name is the name of the parameter the sample refers. A sample is still not exactly the same as [SampleV3IO API object](/java/com/fw/wilco/api/SampleV3IO.java) but we are working on it.
 
@@ -92,6 +99,7 @@ TAT.minOK //contains the minOK as defined in the parameter definition (float)
 TAT.maxOK //contains the maxOK as defined in the parameter definition (float)
 TAT.minScale //contains the minOK as defined in the parameter definition (float)
 TAT.maxScale //contains the maxOK as defined in the parameter definition (float)
+TAT.date //contains the date of the TAT sample. in unix timestamp: e.g 1381295944000
 
 TAT.value //the value of the parameter.  May be a string or an Object if the TAT value was a JSON serialized string
 
