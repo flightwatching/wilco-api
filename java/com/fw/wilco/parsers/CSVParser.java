@@ -41,14 +41,18 @@ public class CSVParser implements IParser {
 			while (it.hasNext()) {
 				CSVRecord csvRecord = (CSVRecord) it.next();
 				
-				String fwot = csvRecord.get(MANDATORY_FIELDS.FWOT.ordinal()).trim();
-				String layout = csvRecord.get(MANDATORY_FIELDS.LAYOUT.ordinal()).trim();
+				String fwot = null;
+				String layout = null;									
+				if (csvRecord.size()>2) {
+					fwot = csvRecord.get(MANDATORY_FIELDS.FWOT.ordinal()).trim();
+					layout = csvRecord.get(MANDATORY_FIELDS.LAYOUT.ordinal()).trim();					
+				}
 				if (!matchesMessage(m, fwot, layout)) {
 					//the fwot changed. push the message and create a new one
 					ret.add(m);
 					m = new InputMessageV3IO();
 				}
-				if (fwot.length()==0) {
+				if (fwot==null || fwot.length()==0) {
 					continue;
 				} else {
 					m.reg = fwot;
@@ -83,9 +87,7 @@ public class CSVParser implements IParser {
 				ret.add(m);
 			}
 
-		} catch (FileNotFoundException e) {
-			throw new ParseException("file", file.getName(), e);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			throw new ParseException("file", file.getName(), e);
 		}
 		return ret;
