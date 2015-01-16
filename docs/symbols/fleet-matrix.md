@@ -115,7 +115,7 @@ Example:  `matrix_anim.updateMatrix(30, 'days', '2014-05-01T00:00:00')` will que
 When WILCO gathers all the data from the server, it builds a big table from all the samples. All the formula functions are then called and all the text functions too.
 
 ##How to write the formulas
-the formula is a function like this: `function(data) {//your code}
+the formula is a function like this: `function(data) {//your code}`
 The data is a 2-dimension table with the samples of 1 fwot only.
 
 |Date|APUN1|APUN2|
