@@ -1,5 +1,12 @@
 # The fleet-matrix symbol
 
+> console.log is a good way of debugging with a browser.
+> you can open the console in [chrome](https://developer.chrome.com/devtools/docs/console)
+> or in [firefox](https://developer.mozilla.org/en/docs/Tools/Web_Console)
+> 
+> you can log any variable in the console in the symbol functions or dashboard rules very easily 
+> calling in your code console.log(myVariable)
+
 The fleet-matrix symbol is dedicated to display a matrix of colored boxes.
 
 As rows we use some FWOTS (aircrafts)
@@ -115,23 +122,25 @@ Example:  `matrix_anim.updateMatrix(30, 'days', '2014-05-01T00:00:00')` will que
 When WILCO gathers all the data from the server, it builds a big table from all the samples. All the formula functions are then called and all the text functions too.
 
 ##How to write the formulas
-the formula is a function like this: `function(data) {//your code}`
-The data is a 2-dimension table with the samples of 1 fwot only.
+the formula is a function like this: `function(data) {return //your code;}`
+The data is a 2-dimension table with the samples of 1 fwot only. The function returns a value
 
-|Date|APUN1|APUN2|
-|-|-|-|
-|2012/08/13 07:24:51|100 |91.9|
-|2012/08/13 07:24:58|100 |91.9|
-|2012/08/13 07:24:59|100 |92|
-|2012/08/13 07:25:00|100 |92|
-|2012/08/13 07:25:01|68.3|66.8|
-|2012/08/13 07:25:03|40  |42|
-|2012/08/13 07:25:05|28.8|31.1|
-|2012/08/13 07:25:07|22.7|24.5|
-|2012/08/13 07:25:09|18.4|20.1|
-|2012/08/13 07:25:11|15.4|17|
-|2013/01/04 13:34:41|0   |5.7|
-|2013/01/04 13:34:42|0   |7.3|
+
+| Date | APUN1 | APUN2 |
+|---|---|---|
+| 2012/08/13 07:24:51 | 100  | 91.9 |
+| 2012/08/13 07:24:58 | 100  | 91.9 |
+| 2012/08/13 07:24:59 | 100  | 92   |
+| 2012/08/13 07:25:00 | 100  | 92   |
+| 2012/08/13 07:25:01 | 68.3 | 66.8 |
+| 2012/08/13 07:25:03 | 40   | 42   |
+| 2012/08/13 07:25:05 | 28.8 | 31.1 |
+| 2012/08/13 07:25:07 | 22.7 | 24.5 |
+| 2012/08/13 07:25:09 | 18.4 | 20.1 |
+| 2012/08/13 07:25:11 | 15.4 | 17   |
+| 2013/01/04 13:34:41 | 0    | 5.7  |
+| 2013/01/04 13:34:42 | 0    | 7.3  |
+
 
 You often do not need the first column. You can use the good old for loop to loop on the matrix:
 
