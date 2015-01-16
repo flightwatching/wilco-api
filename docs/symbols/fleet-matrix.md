@@ -1,11 +1,14 @@
-# The fleet-matrix symbol
-
 > console.log is a good way of debugging with a browser.
 > you can open the console in [chrome](https://developer.chrome.com/devtools/docs/console)
 > or in [firefox](https://developer.mozilla.org/en/docs/Tools/Web_Console)
 > 
 > you can log any variable in the console in the symbol functions or dashboard rules very easily 
 > calling in your code console.log(myVariable)
+
+
+# The fleet-matrix symbol
+***a running example is provided [here](https://gist.github.com/daohodac/2509fc371e756bac19f4)***
+
 
 The fleet-matrix symbol is dedicated to display a matrix of colored boxes.
 
