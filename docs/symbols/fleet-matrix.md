@@ -117,7 +117,7 @@ The matrix can be filled using `matrix_anim.updateMatrix(count, unit, refDate)`.
 
 * `count`: the mount of units before the refDate or before now
 * `unit`: the unit (seconds, minutes, hours, days, weeks, months, years)
-* `refDate`: the date of the newest sample.
+* `refDate`: the date of the newest sample. refDate is optional. If not set, then the current date is used.
 
 Example:  `matrix_anim.updateMatrix(30, 'days', '2014-05-01T00:00:00')` will query all the data between `2014-04-01T00:00:00` and `2014-05-01T00:00:00`. `matrix_anim.updateMatrix(1, 'months', '2014-05-01T00:00:00')` will query the same timespan
 
