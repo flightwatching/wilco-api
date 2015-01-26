@@ -42,6 +42,17 @@ WILCO provides context related variables to the designer so that the dashboard i
 
 ##Dashboards for an event
 Here is the exhaustive list of the variables you can access in yout IFT
+
+###URL_PARAMS
+an object containing all the url parameters. for example 
+`http://localhost:9000/#/APUs/events/807885?timeUnits=weeks&reg=FW-RVL`
+will provide the object
+```json
+{
+	timeUnits:weeks,
+	reg:FW-RVL
+}
+```
 ###EVT
 `EVT` is an object that represents the [EventV3IO API object](/java/com/fw/wilco/api/EventV3IO.java).
 you can access the fields like this:
