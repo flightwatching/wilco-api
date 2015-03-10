@@ -32,6 +32,8 @@ public class InputMessageV3IO {
 	 */
 	public String reg;
 	
+	public String sharingId;
+	
 	/**
 	 * the ID of the message. If you want to update a message, use the field, else 
 	 * leave it null or missing
