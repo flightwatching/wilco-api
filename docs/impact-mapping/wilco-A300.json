@@ -7,25 +7,20 @@
 			  	{
 			   		"name": "less NFF",
 			   		"children": [
-			   			{"name": "in-flight remote analysis",
-			   	 			"children": [
-				    			{"name": "Bleed monitoring"},
-				    			{"name": "PMC wiring check"}
-			   	 			]
-			   			}
+		    			{"name": "Bleed monitoring"},
+		    			{"name": "PMC wiring check"}
 			   		]
 			  	},
 			  	{
 			   		"name": "Fuel consumption",
 			   		"children": [
-			    		{"name": "WILCO Engine dashbords"},
-			    		{"name": "PMC wiring check"}
+			    		{"name": "WILCO Engine dashbords"}
 			   		]
 			  	}
 			]
 	 	},
 	 	{
-	 		"name": "time savings",
+	 		"name": "prepare ramp up",
 	 		"children":[
 				{"name":"reduce T/S time",
 					"children": [
@@ -33,7 +28,8 @@
 				    	{"name": "OFV monitoring"},
 				    	{"name": "Abnormal report alerts"},
 				    	{"name": "PMC wiring check"},
-						{"name": "ARINC LABEL reader"}
+						{"name": "ARINC LABEL reader"},
+		    			{"name": "PMC wiring check"}
 					]
 				}, 
 				{"name": "anticipate spare parts",
