@@ -10,6 +10,7 @@ public class ParameterIOV3 {
 	public  Double minOK;
 	public  Double maxOK;
 	public  String name;
+    public  String description;
 	public  String actypeName;
 
 }
