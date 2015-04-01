@@ -9,6 +9,8 @@ public class RuleV3IO {
 	public String code;
 	public Boolean skip;
 	public Long id;
-
+	public String name;
+	public String srcId;
+	public String srcKind;
 
 }
