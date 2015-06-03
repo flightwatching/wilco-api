@@ -20,19 +20,19 @@ Mid 2015 release notes
 
 Landing page bookmarks
 -----
-The landing page can be configured by using the bookmarks. There is a new field in the bookmark administration page. If landing page is set, then the bookmark is a landing page one.
+The landing page can be configured by using the bookmarks. There is a new field in the  general administration page under `edit bookmarks`. If landing page is ticked, then the bookmark is a landing page one.
 
 * if there is no landing page bookmark, the landing page is the fleet view
-* if there is one landing page bookmark only, the landing page is this one
+* if there is one landing page bookmark only, the landing page is the one selected
 * if there is more than one landing page, a new selection page is the landing page
 
 <img src="images/bookmarks.png" width="80%">
 
 Fleet dashboards
 ------
-You can override the default fleet FWOT thumbnail by any dashboard. In that case, remember you are not in an event scope, that means that some parameters like EVT, SAMPLES... are not available. in the other hand, you have al FWOT variable set up (see https://github.com/flightwatching/wilco-api/tree/master/docs/dashboards#FWOT)
+You can override the default fleet FWOT thumbnail by any dashboard. In this case, remember you are not in an `event scope, that means that some parameters like EVT, SAMPLES... are not available. On the other hand, you have a FWOT variable set up (see https://github.com/flightwatching/wilco-api/tree/master/docs/dashboards#FWOT)
 
-Now that you have a dashboard set, just append to the fleet view 
+Now that you have a dashboard set up, just append to the fleet view 
 `http://localhost:9000/#/fleet` -> `http://localhost:9000/#/fleet?db=53425`
 
 <img src="images/fleet-db.png" width="50%">
