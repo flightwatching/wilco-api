@@ -1,18 +1,39 @@
 Mid 2015 release notes
 ==========
 
-Manual add comments in the timeline
------------
+- [Mid 2015 release notes](#)
+	- [Landing page bookmarks](#)
+	- [Fleet dashboards](#)
+	- [Multiple columns fleet view](#)
+	- [Add an alert zone in Fleet view](#)
+	- [OSM World map](#)
+	- [show passed events in the timeline](#)
+	- [Alerts only](#)
+	- [Manual add comments in the timeline](#)
+	- [Fixed timeline](#)
+	- [IFT visualization](#)
+	- [Constants](#)
+	- [New trend pages](#)
+		- [on the fly computation.](#)
+		- [2 axis graphs](#)
+		- [You can choose the colors manually](#)
+		- [You can specify rolling average on the data to scrub high freq variations](#)
+		- [you can stack several graphs that are synchronized in time and stretch](#)
+		- [you can save the configurations (even timewize)](#)
+		- [rif new points arrive they are added in real time](#)
+	- [CSV import - multi date format](#)
 
-You can insert some comments in the timeline for a FWOT. Simply click the blue or grey vertical timeline. Where the color dims, you can click to add a comment
 
-<img src="images/comment-trig.png" width="50%">
 
-Then you get a form with a title and some details. It is prefilled with a comment to the clicked place, your signature and the exact same date as the clicked element.
+Landing page bookmarks
+-----
+The landing page can be configured by using the bookmarks. There is a new field in the bookmark administration page. If landing page is set, then the bookmark is a landing page one.
 
-You can override all the fields and set a severity (which corresponds to a color)
+* if there is no landing page bookmark, the landing page is the fleet view
+* if there is one landing page bookmark only, the landing page is this one
+* if there is more than one landing page, a new selection page is the landing page
 
-<img src="images/comment-form.png" width="50%">
+<img src="images/bookmarks.png" width="80%">
 
 Fleet dashboards
 ------
@@ -23,18 +44,25 @@ Now that you have a dashboard set, just append to the fleet view
 
 <img src="images/fleet-db.png" width="50%">
 
-Fixed timeline
--------
-On events where there are multiple time offsets, the horizontal local timeline is fixed: when you scroll down, it is still visible with some transparency
-
-<img src="images/fixed-timeline.png" width="50%">
-
 
 Multiple columns fleet view
 ------
 the number of columns of the fleet view can be set in the URL to see more FWOT in the same screen. authorized values are 2, 3, 4 6 and 12 columns
 
 <img src="images/cols-fleet.png" width="50%">
+
+
+Add an alert zone in Fleet view
+-----
+An alert zone has been added to the fleet view where only the alert FWOT appear
+
+<img src="images/alert-zone.png" width="50%">
+
+OSM World map
+-----
+The world map for locating objects is now a real OSM map to have details as gates and airport maps
+
+<img src="images/OSM.png" width="50%">
 
 
 show passed events in the timeline
@@ -59,36 +87,27 @@ The selection can be provided in the URL by adding the important parameter (help
 
 <img src="images/alerts-only.png" width="50%">
 
-Landing page bookmarks
------
-The landing page can be configured by using the bookmarks. There is a new field in the bookmark administration page. If landing page is set, then the bookmark is a landing page one.
 
-* if there is no landing page bookmark, the landing page is the fleet view
-* if there is one landing page bookmark only, the landing page is this one
-* if there is more than one landing page, a new selection page is the landing page
+Manual add comments in the timeline
+-----------
 
-<img src="images/bookmarks.png" width="80%">
+You can insert some comments in the timeline for a FWOT. Simply click the blue or grey vertical timeline. Where the color dims, you can click to add a comment
+
+<img src="images/comment-trig.png" width="50%">
+
+Then you get a form with a title and some details. It is prefilled with a comment to the clicked place, your signature and the exact same date as the clicked element.
+
+You can override all the fields and set a severity (which corresponds to a color)
+
+<img src="images/comment-form.png" width="50%">
 
 
-CSV import - multi date format
-------
-when importing a CSV, the date+time columns can have several formats. 
 
-The date formats can be:
+Fixed timeline
+-------
+On events where there are multiple time offsets, the horizontal local timeline is fixed: when you scroll down, it is still visible with some transparency
 
-* yyyy/MM/dd
-* yyyy/MM/dd
-* dd/MM/yyyy
-* yyyy-MM-dd
-* yyyy-MM-dd
-
-and the time formats can be:
-
-* HH:mm
-* HH:mm:ss
-* HH:mm:ss
-* HH:mm:ss.SSS
-* HH:mm:ss
+<img src="images/fixed-timeline.png" width="50%">
 
 
 IFT visualization
@@ -110,12 +129,6 @@ will display
 <img src="images/comment-IFT.png" width="50%">
 
 
-Add an alert zone in Fleet view
------
-An alert zone has been added to the fleet view where only the alert FWOT appear
-
-<img src="images/alert-zone.png" width="50%">
-
 
 Constants
 -----
@@ -124,12 +137,6 @@ Instead of putting thresholds or constants as figures in the IFTs, we have creat
 <img src="images/constants.png" width="50%">
 
 how to set: actions -> general admin -> constants
-
-OSM World map
------
-The world map for locating objects is now a real OSM map to have details as gates and airport maps
-
-<img src="images/OSM.png" width="50%">
 
 
 New trend pages
@@ -160,6 +167,27 @@ On the bottom left part of the graphs, change the value to make rolling average 
 ### you can save the configurations (even timewize)
 `https://demo.flightwatching.com/wilco/#/designer/trends/1911865/FW-AAA?edit=false&from=2015-05-13T03:17:20&to=2015-06-10T03:17:20`
 
-### rif new points arrive they are added in real time
+### new samples are added in real-time
 
+
+
+CSV import - multi date format
+------
+when importing a CSV, the date+time columns can have several formats. 
+
+The date formats can be:
+
+* yyyy/MM/dd
+* yyyy/MM/dd
+* dd/MM/yyyy
+* yyyy-MM-dd
+* yyyy-MM-dd
+
+and the time formats can be:
+
+* HH:mm
+* HH:mm:ss
+* HH:mm:ss
+* HH:mm:ss.SSS
+* HH:mm:ss
 
