@@ -52,4 +52,9 @@ public class EventV3IO{
 	
 	public String sharingId;
 	
+	public Boolean visible;
+	
+	public List<SampleV3IO> samples;
+	public FwotV3IO fwot;
+	
 }

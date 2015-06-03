@@ -37,6 +37,7 @@ function fr24Airports(callback) {
 		  	body+=d;
 		  });
 		  res.on('end', function(d) {
+		    console.log(body);
 		    callback(JSON.parse(body));
 		  });
 		});

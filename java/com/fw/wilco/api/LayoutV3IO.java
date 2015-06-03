@@ -10,5 +10,7 @@ public class LayoutV3IO {
 	public ArrayList<String> dashboardIds;
 	public String name;
 	public List dashboards;
+	public String reportId;
+	public Boolean canUseAlphaCallUps;
 
 }

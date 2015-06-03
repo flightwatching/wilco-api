@@ -80,6 +80,13 @@ for (var i = 0; i < FWOTS.length; i++) {
 };
 ```
 
+###FWOT
+`FWOT` exists only when the dashboard is used in the FLEET mode. it contains the current FWOT that is represented in the thumbnail (see [FwotV3IO API object](/java/com/fw/wilco/api/FwotV3IO.java))
+
+```javascript
+MY_anim.go().text(FWOT.reg);
+```
+
 if you want to select an aircraft (for example the current event one) you can use underscore to avoid the loop
 ```javascript
 	var acEvts=_.where(evts, {reg: EVT.reg});

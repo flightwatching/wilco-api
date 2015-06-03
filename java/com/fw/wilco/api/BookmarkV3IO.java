@@ -15,6 +15,8 @@ public class BookmarkV3IO {
 	
 	public boolean disabled;
 
+	public boolean landingPage;
+
 	public String who;
 
 }
