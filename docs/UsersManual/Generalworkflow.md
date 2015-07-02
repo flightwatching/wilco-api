@@ -30,7 +30,8 @@ A few notes to assist interpretation:
 * Messages marked in orange, like the one below, are alerts, and clicking on them will bring up the particulars of the alert, or a dashboard with the alert made visible.
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Timeline_02.PNG)
 
-How to navigate the timeline:<p>
+How to navigate the timeline:
+
 The search bar in the top left can be used to identify particular reports; for example, typing in "doors" will remove all reports without the word "doors" in their title.  
 Next to the search bar are several words, highlighted in blue; clicking on any one of them will remove all results that fit the category in blue from the timeline.  In other words, it filters out unwanted results.  Clicking "acms" will remove all the reports, for example.  Similarly, clicking on "Alerts only" will remove all messages except alerts, or messages in orange.  
 Clicking a point along the vertical timeline will open a box that will allow you to make a comment at that time.  
