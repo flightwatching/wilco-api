@@ -49,6 +49,8 @@ For example, this is the default curve for two data points:
 And this is a user customizable chart containing the data point (Transfered Pressure) as well as some context (Engine Number 1):
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/NewTrend.PNG)
 
+In either chart, you can click and drag across an area to zoom the chart in, and double click to zoom out.  
 
+Clicking on a data point brings you to the dashboard at the time the data point was taken.
 
 
