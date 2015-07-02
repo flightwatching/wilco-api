@@ -4,8 +4,10 @@ The first thing you see when you open wilco is a page that looks like this:
 
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Homepage.PNG)
 
-##Timelines
+#Timelines
 Timelines describe the activities of each plane over time, and allow you to access the reports with data from each plane.  There are several methods of selecting which plane's timeline you wish to see.  
+
+##How to access timelines
 
 * One way is to go to ops, which will look like this: 
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/ops.PNG)
@@ -18,3 +20,13 @@ Timelines describe the activities of each plane over time, and allow you to acce
 * Alternatively, you can go to ENG:
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/ENG.PNG)
    The planes will all be listed there, planes with alerts in a section above those without.  Once again, click on a any plane to bring up its timeline.
+
+##Using Timelines
+When you open a plane's timeline, you will see something like this:
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Timeline_01.PNG)
+The yellow-green horizontal dotted line running through the timeline represents the present; everything below it is the past, and above it is the future.  
+Areas marked in blue on the timeline represent time the plane is in flight; the other areas are when the plane is at rest.  
+The search bar in the top left can be used to identify particular reports; for example, typing in "doors" will remove all reports without the word "doors" in their title.  
+Next to the search bar are several words, highlighted in blue; clicking on any one of them will remove all results that fit the category in blue from the timeline.  In other words, it filters out unwanted results.  Clicking "acms" will remove all the reports, for example.  
+
+
