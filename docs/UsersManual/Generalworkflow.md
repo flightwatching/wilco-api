@@ -1,5 +1,4 @@
-#Navigating From the Homepage
-
+#General workflow
 The first thing you see when you open wilco is a page that looks like this:
 
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Homepage.PNG)
@@ -24,9 +23,15 @@ Timelines describe the activities of each plane over time, and allow you to acce
 ##Using Timelines
 When you open a plane's timeline, you will see something like this:
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Timeline_01.PNG)
-The yellow-green horizontal dotted line running through the timeline represents the present; everything below it is the past, and above it is the future.  
-Areas marked in blue on the timeline represent time the plane is in flight; the other areas are when the plane is at rest.  
-The search bar in the top left can be used to identify particular reports; for example, typing in "doors" will remove all reports without the word "doors" in their title.  
-Next to the search bar are several words, highlighted in blue; clicking on any one of them will remove all results that fit the category in blue from the timeline.  In other words, it filters out unwanted results.  Clicking "acms" will remove all the reports, for example.  
+A few notes to assist interpretation:
+* The yellow-green horizontal dotted line running through the timeline represents the present; everything below it is the past, and above it is the future.  
+* Areas marked in blue on the timeline represent time the plane is in flight; the other areas are when the plane is at rest.  
+* The messages marked in green are reports, and clicking them will take you to a dashboard with all the detailed information concerning the plane.
+* Messages marked in orange, like the one below, are alerts, and clicking on them will bring up the particulars of the alert, or a dashboard with the alert made visible.
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Timeline_02.PNG)
 
+How to navigate the timeline:
+The search bar in the top left can be used to identify particular reports; for example, typing in "doors" will remove all reports without the word "doors" in their title.  
+Next to the search bar are several words, highlighted in blue; clicking on any one of them will remove all results that fit the category in blue from the timeline.  In other words, it filters out unwanted results.  Clicking "acms" will remove all the reports, for example.  Similarly, clicking on "Alerts only" will remove all messages except alerts, or messages in orange.  
+Clicking a point along the vertical timeline will open a box that will allow you to make a comment at that time.  
 
