@@ -47,6 +47,9 @@ While an ECS report will look like this:
 
 If you look at the second one, you'll notice a timeline across the top of the picture that does not appear in the take off report.  This timeline signifies that there are several samples of data coming in for this one ECS report, and its absence in the first report means that that one was a snapshot, one instant in time.  You can navigate this timeline by clicking points along it or using the arrow keys, or simply clicking "play." 
 
+In both of them there is a bar across the top with a forward skip, a backwards skip, and a play button, as on a DVD player; the backwards skip arrow will take you to the previous report of the same type (on a take off report it will take you to the previous take off, on an ECS report the the previous ECS, etc.), and the forward skip to the next one of the same type.  The "play" arrow will put the system into live; as soon as another report of the same type is received, it will automatically refresh to that page.  In other words, having the "play" arrow activated will keep the screen always on the most up to date report of the same type available.  
+
+
 There are several kinds of data points, represented by colors:
 * Lime green points are normal data points collected; nothing unusual about them.
 * Orange data points represent an alert; something is unusual or wrong with the data point, or it is outside acceptable parameters.
@@ -55,7 +58,7 @@ There are several kinds of data points, represented by colors:
 An example of the colors in use:
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/ECS_02.PNG)
 
-Clicking on any of the various gauges or labels will bring up a chart with the history of that data point; other inputs can be plotted against each other in the chart by clicking off of the chart back onto the main page, then clicking on the second data point.  A curve can be removed by clicking on the name of the unwanted curve in the bottom left of the chart window (below the actual chart).  
+Clicking on any of the various gauges, labels, or dials will bring up a chart with the history of that data point; other inputs can be plotted against each other in the chart by clicking off of the chart back onto the main page, then clicking on the second data point.  A curve can be removed by clicking on the name of the unwanted curve in the bottom left of the chart window (below the actual chart).  
 
 There are two types of trend charts: there is the default chart, which is simpler, and more automatic, and then there user customizable chart, which is more dynamic and is customizable, allowing the user to define which curves he or she wishes to include, as well as letting the user display several plots near each other; because of this, it is useful for plotting a data point in a general context.  
 
