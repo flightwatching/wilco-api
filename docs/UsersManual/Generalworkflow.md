@@ -52,6 +52,9 @@ There are several kinds of data points, represented by colors:
 * Orange data points represent an alert; something is unusual or wrong with the data point, or it is outside acceptable parameters.
 * Cyan points in general are points that were manually entered, as opposed to automatically collected.  
 
+An example of the colors in use:
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/ECS_02.PNG)
+
 Clicking on any of the various gauges or labels will bring up a chart with the history of that data point; other inputs can be plotted against each other in the chart by clicking off of the chart back onto the main page, then clicking on the second data point.  A curve can be removed by clicking on the name of the unwanted curve in the bottom left of the chart window (below the actual chart).  
 
 There are two types of trend charts: there is the default chart, which is simpler, and more automatic, and then there user customizable chart, which is more dynamic and is customizable, allowing the user to define which curves he or she wishes to include, as well as letting the user display several plots near each other; because of this, it is useful for plotting a data point in a general context.  
@@ -65,3 +68,7 @@ And this is a user customizable chart containing the data point (Transfered Pres
 * In either chart, you can click and drag across an area to zoom the chart in, and double click to zoom out.  
 * This action can be repeated multiple times for greater zoom.  
 * Clicking on a data point brings you to the dashboard at the time the data point was taken, allowing you to see all the information available at that time.
+
+
+
+
