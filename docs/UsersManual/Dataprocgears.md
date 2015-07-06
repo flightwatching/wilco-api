@@ -11,6 +11,7 @@ In other words, right now, the landing gear is down and locked in place.
 * Next is the lever, represented by the two green cylinders.  There are three positions available to this lever: Up, Down, and Neutral (some only have up and down).  Up means the landing gear has been fully retracted; Down means the landing gear has been fully deployed; and Neutral means retracted, but a step down from up, ready to be redeployed.  
 * After that are the two Data points on the right: GSEL_ND stands for Ground Support Equipment List_NotDown.  In other words, if it is marked as "1," or true, the landing gear is not down.  Similarly, GSEL_NU stands for Ground Support Equipment List_NotUp, meaning the landing gear is not up.  Therefore, when in the neutral position, the landing gear is neither up nor down, so both GSEL_ND and GSEL_NU will be marked as 1, and the lever position will be in the middle.
 
+
 #Data input
 
 Now onto something a little more complicated: how wilco receives data, and what it does to process it.  Originally, when data, like the GSEL_ND for example, is collected by the plane, before it is sent down to the ground, it is in a binary format.  Each true/false data point is recorded as one number in a 32 bit binary chain (each number in the chain is a bit, labeled in this program from bit1 to bit32, with bit1 on the far right, although in other contexts the first bit might be labeled bit0), so that a 1 in the fifteenth bit (for example) will always mean that the same condition is being marked "true."  In this way, by looking at the proper bit in the chain, we can decipher all of the information in the report.  
@@ -23,6 +24,7 @@ There are many things one can do with the AND function; one of them is to test t
 
 Inside the plane itself, from system to system, data is exchanged in binary, in this general format (may vary a little):
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/BCDformat.PNG)
+
 From right to left: 
 * The Label tells in what order information was recorded, and what kind of information it is.  
 * The SDI, simply put, tells the program which side of the plane the information is coming from.  It is not always used.
