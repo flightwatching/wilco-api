@@ -62,11 +62,15 @@ And this is a user customizable chart containing the data point (Transfered Pres
 
 The recommended alert mechanism is as follows:
 When an alert comes up, a message is automatically sent to you notifying you of the problem.  At the same time, the plane for which the alert appeared is moved up to the alert section of the fleet, as in the example at the top of the page, and an orange alert report appears on the timeline.  Clicking on the report will bring up a dashboard displaying the system that sent an alert.  On this dashboard, the part that gave rise to the alert will appear marked orange, like this:
-![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Dashboard_01.PNG)
+
+\\![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Dashboard_01.PNG)\\
+<img style="float:right" src="Dashboard_01.PNG">
 
 Since this particular error was in the Bleed system, clicking on the Bleed button in the top right corner will bring up a matrix for the various Bleed systems in all the planes over the past week:
 
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/BleedMatrix_01.PNG)
+
+
 
 This matrix shows the alerts received by the program for each of the bleed systems for each of the planes over the past week.  Looking at the middle row, you can see that there has been one alert on the HPV this week for the F-GSTB, which matches the alert seen on the dashboard earlier.  These matrices help you keep track of the alerts, and check for recurring alerts and problems on a plane.  
 
