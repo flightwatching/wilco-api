@@ -28,9 +28,8 @@ Inside the plane itself, from system to system, data is exchanged in binary, in 
 From right to left: 
 * The Label tells in what order information was recorded, and what kind of information it is.  
 * The SDI, simply put, tells the program which side of the plane the information is coming from.  It is not always used.
-* Discretes refers to the kind of data where each boolean (1 or 0) represents its own data point with its own meaning, as opposed to a long word composed of several bits, which mean something when strung together.
-* Pad is the bits left over after everything else has been entered; the extra.
-* Data in this case is the long words; they start on the left and move to the right, and Discretes start on the right and move to the left.  Which bits are parts of long words and which are discretes depends on the kind of report and is specified in the label.
+* The useful part of the report is bits 11-29, which contains either Discretes (individual bits each with a meaning), Data (strings of bits that collectively have one meaning), or some hybrid of both, as in the example.  Pad is whatever bits are left over after everything has been entered; extra bits that don't mean anything.  
+* Note that bits in the Data section are ordered from left to right as "Most Significant Bits" (MSB) to "Least Significant Bits" (LSB), as shown.  
 * The SSM, or Sign/Status Matrix, tells the program whether the system is malfunctioning, or if there are errors in data collection.  
 * The Parity bit is used to make the sum of all the bits odd.  By doing this, if there was an error in the transmission of one of the bits, the total with the parity bit will be even, the program can detect the error, and ask for the data to be retransmitted.  
 
