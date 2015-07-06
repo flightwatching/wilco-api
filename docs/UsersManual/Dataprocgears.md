@@ -17,18 +17,22 @@ Now onto something a little more complicated: how wilco receives data, and what 
 
 ##A Little "Bit" of Binary
 
-In order to understand exactly what is happening, it is necessary to have a some knowledge of the ins and outs (or ons and offs) of binary.  Binary is a base 2 number system, which is to say that it has two numbers: 0 and 1.  So 0 is 0, 1 is 1, but 2 in decimal is 10 in binary.  3 is 11, 4 is 100, and so on and so forth.  Since binary only has two possible states for a number, we can perform certain operations on binary numbers that would be meaningless, or at least not very useful, in decimal.  One of these is the "And" function.  This function compares the states of each bit of one binary number to its corresponding bit in another number.  If the bits match, the end value will return the value of the bit in question (two 0s will return 0, two 1s will return 1).  If they do not match, the function will return 0.  In other words, it is a function to see if both number A *and* number B are 1 in that bit.  So, for example, testing 1010 And 1100 will return the number 1000, because bit1 in both of them is a 0, so the function returns 0, they don't match in bits 2 or 3, and in the end, only bit4 in each of them is equal to 1.  The And function returns a 1 for a bit only if both of the corresponding bits in the factors are also 1.  Any other combination returns a 0 for that bit.  
+In order to understand exactly what is happening, it is necessary to have a some knowledge of the ins and outs (or ons and offs) of binary.  Binary is a base 2 number system, which is to say that it has two numbers: 0 and 1.  So 0 is 0, 1 is 1, but 2 in decimal is 10 in binary.  3 is 11, 4 is 100, and so on and so forth.  Since binary only has two possible states for a number, we can perform certain operations on binary numbers that would be meaningless, or at least not very useful, in decimal.  One of these is the "AND" function.  This function compares the states of each bit of one binary number to its corresponding bit in another number.  If the bits match, the end value will return the value of the bit in question (two 0s will return 0, two 1s will return 1).  If they do not match, the function will return 0.  In other words, it is a function to see if both number A **and** number B are 1 in that bit.  So, for example, testing 1010 AND 1100 will return the number 1000, because bit1 in both of them is a 0, so the function returns 0, they don't match in bits 2 or 3, and in the end, only bit4 in each of them is equal to 1.  The AND function returns a 1 for a bit only if both of the corresponding bits in the factors are also 1.  Any other combination returns a 0 for that bit.  
 
-There are many things one can do with the And function; one of them is to test the state of each bit individually; in other words, to extract a wanted bit from the whole chain.  This is done by running an And function with a 1 in one bit and 0s in all the rest.  For example, 1001100 AND 1000 returns 1000; the program can then check whether this value equals 1000; if it does, the value of the original bit is 1, and the program can display the corresponding information accordingly.  
+There are many things one can do with the AND function; one of them is to test the state of each bit individually; in other words, to extract a wanted bit from the whole chain.  This is done by running an AND function with a 1 in one bit and 0s in all the rest.  For example, 1001100 AND 1000 returns 1000; the program can then check whether this value equals 1000; if it does, the value of the original bit is 1, and the program can display the corresponding information accordingly.  
 
-Inside the plane itself, from system to system, data is exchanged in binary, generally in BCD format, which looks like this:
+Inside the plane itself, from system to system, data is exchanged in binary, in this general format (may vary a little):
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/BCDformat.PNG)
 From right to left: 
 * The Label tells in what order information was recorded, and what kind of information it is.  
 * The SDI
-* 
+* Discretes
+* Pad is whatever is left over after everything else has been entered.
+* Then comes Data; each bit represents a data point, which varies depending on the type of report (specified in the Label) 
+* The SSM, or Sign/Status Matrix, tells the program whether the system is malfunctioning, or if there are errors in data collection.  
+* The Parity bit is used to make the sum of all the bits odd.  By doing this, if there was an error in the transmission of one of the bits, the total with the parity bit will be even, the program can detect the error, and ask for the data to be retransmitted.  
 
-into a hexadecimal, or base 16 format (0-9 and A-F; F is 15, 10 is 16, 11 is 17, 1F is 31, etc.).  
+However, the aircraft does not send us (the program) data in binary; it converts it into a hexadecimal, or base 16 format (0-9 and A-F; F is 15, 10 is 16, 11 is 17, 1F is 31, etc.).  
 
 
 
