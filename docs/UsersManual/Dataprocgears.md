@@ -19,9 +19,16 @@ Now onto something a little more complicated: how wilco receives data, and what 
 
 In order to understand exactly what is happening, it is necessary to have a some knowledge of the ins and outs (or ons and offs) of binary.  Binary is a base 2 number system, which is to say that it has two numbers: 0 and 1.  So 0 is 0, 1 is 1, but 2 in decimal is 10 in binary.  3 is 11, 4 is 100, and so on and so forth.  Since binary only has two possible states for a number, we can perform certain operations on binary numbers that would be meaningless, or at least not very useful, in decimal.  One of these is the "And" function.  This function compares the states of each bit of one binary number to its corresponding bit in another number.  If the bits match, the end value will return the value of the bit in question (two 0s will return 0, two 1s will return 1).  If they do not match, the function will return 0.  In other words, it is a function to see if both number A *and* number B are 1 in that bit.  So, for example, testing 1010 And 1100 will return the number 1000, because bit1 in both of them is a 0, so the function returns 0, they don't match in bits 2 or 3, and in the end, only bit4 in each of them is equal to 1.  The And function returns a 1 for a bit only if both of the corresponding bits in the factors are also 1.  Any other combination returns a 0 for that bit.  
 
-The "Or" function, on the other hand, is the opposite; it only returns a 0 if both the corresponding bits in the factors are 0.  If the bit1 in the first factor or the bit1 in the second factor is 1, performing an Or function on those two numbers will return a 1 in bit1 of the product.  So, for example, 1010 Or 1100 would return 1110, because only bit1 was 1 in neither factor.
+There are many things one can do with the And function; one of them is to test the state of each bit individually; in other words, to extract a wanted bit from the whole chain.  This is done by running an And function with a 1 in one bit and 0s in all the rest.  For example, 1001100 AND 1000 returns 1000; the program can then check whether this value equals 1000; if it does, the value of the original bit is 1, and the program can display the corresponding information accordingly.  
 
-However, the information is not sent down in its binary format; it is compressed, to take up less space and fewer characters, making it easier to send, into a hexadecimal, or base 16 format (0-9 and A-F; F is 15, 10 is 16, 11 is 17, 1F is 31, etc.).  
+Inside the plane itself, from system to system, data is exchanged in binary, generally in BCD format, which looks like this:
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/BCDformat.PNG)
+From right to left: 
+* The Label tells in what order information was recorded, and what kind of information it is.  
+* The SDI
+* 
+
+into a hexadecimal, or base 16 format (0-9 and A-F; F is 15, 10 is 16, 11 is 17, 1F is 31, etc.).  
 
 
 
