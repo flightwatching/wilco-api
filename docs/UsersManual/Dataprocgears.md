@@ -25,14 +25,14 @@ Inside the plane itself, from system to system, data is exchanged in binary, in 
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/BCDformat.PNG)
 From right to left: 
 * The Label tells in what order information was recorded, and what kind of information it is.  
-* The SDI
-* Discretes
-* Pad is whatever is left over after everything else has been entered.
-* Then comes Data; each bit represents a data point, which varies depending on the type of report (specified in the Label) 
+* The SDI, simply put, tells the program which side of the plane the information is coming from.  It is not always used.
+* Discretes refers to the kind of data where each boolean (1 or 0) represents its own data point with its own meaning, as opposed to a long word composed of several bits, which mean something when strung together.
+* Pad is the bits left over after everything else has been entered; the extra.
+* Data in this case is the long words; they start on the left and move to the right, and Discretes start on the right and move to the left.  Which bits are parts of long words and which are discretes depends on the kind of report and is specified in the label.
 * The SSM, or Sign/Status Matrix, tells the program whether the system is malfunctioning, or if there are errors in data collection.  
 * The Parity bit is used to make the sum of all the bits odd.  By doing this, if there was an error in the transmission of one of the bits, the total with the parity bit will be even, the program can detect the error, and ask for the data to be retransmitted.  
 
-However, the aircraft does not send us (the program) data in binary; it converts it into a hexadecimal, or base 16 format (0-9 and A-F; F is 15, 10 is 16, 11 is 17, 1F is 31, etc.).  
+However, the aircraft does not send us (the program) data in binary; it converts it into a hexadecimal, or base 16 format (0-9 and A-F; F is 15, 10 is 16, 11 is 17, 1F is 31, etc.).  However, the process for determining the identity of each of the bits in binary remains the same; we still do an AND function with a 1 in the appropriate bit and 0s in the rest, only instead of doing it in binary, we do it in hexadecimal.  So, for example, if we wanted to test the identity of the fourth bit in binary, we'd use 1000; but since we're not in binary, we would use the hexa equivalent, 8.  So our function would look like ________ AND 8.  We would then check the return for 0 or 1, and use the data accordingly.   
 
 
 
