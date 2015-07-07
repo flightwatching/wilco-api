@@ -29,6 +29,11 @@ All of the other errors look similar to these three; either the blip happens rig
 
 To see the full scope of the error, for how long it has been occurring, and how often, in this case you can click on LDG in the top right corner.  This will bring up the matrix with all the landing gear errors for all the planes, and you can change the timeframe to find the first error.  
 
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Matrix_01.PNG) --> ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Date_01.PNG)
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Matrix_02.PNG) --> ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Gearerrorplot.PNG)
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Gearerrorplot_02.PNG)
+
+
 #Data input
 
 Now onto something a little more complicated: how wilco receives data, and what it does to process it.  Originally, when data, like the GSEL_ND for example, is collected by the plane, before it is sent down to the ground, it is in a binary format.  Each true/false data point is recorded as one number in a 32 bit binary chain (each number in the chain is a bit, labeled in this program from bit1 to bit32, with bit1 on the far right, although in other contexts the first bit might be labeled bit0), so that a 1 in the fifteenth bit (for example) will always mean that the same condition is being marked "true."  In this way, by looking at the proper bits in the chain, we can decipher all of the information in the report.  
