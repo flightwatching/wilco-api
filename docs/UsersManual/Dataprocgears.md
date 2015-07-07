@@ -8,8 +8,24 @@ There are several key elements to the reading of this diagram:
  - The grayed out letters spelling "UNLK," or unlock, signify that the landing gear is currently locked in place.  This does not mean it cannot be rectracted, simply that it will not move on its own.  When the letters light up, it means that the landing gear is no longer locked in place; in other words, it is in a transition phase from up to down, or vice versa
  - The green arrows facing down signify that the landing gear is currently down.  
 In other words, right now, the landing gear is down and locked in place.
-* Next is the lever, represented by the two green cylinders.  There are three positions available to this lever: Up, Down, and Neutral (some only have up and down).  Up means the landing gear has been fully retracted; Down means the landing gear has been fully deployed; and Neutral means retracted, but a step down from up, ready to be redeployed.  
+* Next is the lever, represented by the two green cylinders.  There are three positions available to this lever: Up, Down, and Neutral (some only have up and down).  Up means the landing gear has been fully retracted; Down means the landing gear has been fully deployed; and Neutral means ready to change states; it doesn't imply a physical movement of the landing gear.  
 * After that are the two Data points on the right: GSEL_ND stands for Ground Support Equipment List_NotDown.  In other words, if it is marked as "1," or true, the landing gear is not down.  Similarly, GSEL_NU stands for Ground Support Equipment List_NotUp, meaning the landing gear is not up.  Therefore, when in the neutral position, the landing gear is neither up nor down, so both GSEL_ND and GSEL_NU will be marked as 1, and the lever position will be in the middle.
+
+Next, we will look at an error: 
+
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Gearlever_02.PNG)
+
+In the image above, something is clearly wrong.  Although the lever is marked as being in the neutral position, and GSEL_ND and GSEL_NU are both 1, the green arrows are lit up; in other words, the landing gear is down, but the lever is in the neutral position.  This alone doesn't seem all that terrible; but, when keeping in mind the purpose and usage of the neutral position, an error becomes apparent.  When the plane takes off, the pilot puts the gear from Down to Up.  When it reaches a certain altitude, at cruise, the pilot will move the lever down to Neutral.  As the pilot makes his final approach, right before landing, he or she will move the lever from Neutral to Down, lowering the landing gear.  Never does the pilot move the lever from Down to Neutral, which is what this reading is suggesting.  There are several possible explanations for this error; it could be a reading error, a transmission error (a boolean in the wrong state), or even a pilot error.  The first place to look to identify the definitive cause of the error is the timeline.  Clicking on "Alerts Only" at the top of the page will let you see all the alerts for the plane, and in this case, it looks like this: 
+
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Error_04.PNG)
+
+There are even more below; so clearly this is a recurring error, that has happened many times.  That rules out pilot error; one pilot might make that error once, but various pilots, over the course of that many days?  The odds are rather slim.  This discovery also pretty much rules out transmission errors; due to the parity bit, explained later, for an error in a boolean to go unnoticed, there would have to be two errors, to keep the parity odd; once again, this might happen once or even twice, but not that many times, and not that often.  That leaves us with a reading error; to verify our theory, once again we can refer to the timeline, this time with all messages.  
+
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Error_02.PNG)
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Error_01.PNG)
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Error_05.PNG)
+
+All of the other errors look similar to these two; either the blip happens right before takeoff, right before landing, or right after landing.  Once again, there is no reason for the pilot to put the landing gear in Neutral; the error is probably a consistent error in reading or in the filing of the report.  
 
 
 #Data input
@@ -34,12 +50,6 @@ From right to left:
 * The Parity bit is used to make the sum of all the bits odd.  By doing this, if there was an error in the transmission of one of the bits, the total with the parity bit will be even, the program can detect the error, and ask for the data to be retransmitted.  
 
 However, the aircraft does not send us (the program) data in binary; it converts it into a hexadecimal, or base 16 format (0-9 and A-F; F is 15, 10 is 16, 11 is 17, 1F is 31, etc.).  However, the process for determining the identity of each of the bits in binary remains the same; we still do an AND function with a 1 in the appropriate bit and 0s in the rest, only instead of doing it in binary, we do it in hexadecimal.  So, for example, if we wanted to test the identity of the fourth bit in binary, we'd use 1000; but since we're not in binary, we would use the hexa equivalent, 8.  So our function would look like ________ AND 8.  We would then check the return for 0 or 1, and use the data accordingly.   
-
-
-
-
-
-
 
 
 
