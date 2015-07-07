@@ -25,8 +25,9 @@ There are even more below; so clearly this is a recurring error, that has happen
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Error_01.PNG)
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Error_05.PNG)
 
-All of the other errors look similar to these two; either the blip happens right before takeoff, right before landing, or right after landing.  Once again, there is no reason for the pilot to put the landing gear in Neutral; the error is probably a consistent error in reading or in the filing of the report.  
+All of the other errors look similar to these three; either the blip happens right before takeoff, right before landing, or right after landing.  Once again, there is no reason for the pilot to put the landing gear in Neutral; the error is probably in reading or in the filing of the report.  
 
+To see the full scope of the error, for how long it has been occurring, and how often, in this case you can click on LDG in the top right corner.  This will bring up the matrix with all the landing gear errors for all the planes, and you can change the timeframe to find the first error.  
 
 #Data input
 

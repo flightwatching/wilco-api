@@ -57,6 +57,7 @@ And this is a user customizable chart containing the data point (Transfered Pres
 * In either chart, you can click and drag across an area to zoom the chart in, and double click to zoom out.  
 * This action can be repeated multiple times for greater zoom.  
 * Clicking on a data point brings you to the dashboard at the time the data point was taken, allowing you to see all the information available at that time.
+* Shift click-and-drag will move you along the chart.  
 
 ##Alert Workflow
 
@@ -69,9 +70,7 @@ Since this particular error was in the Bleed system, clicking on the Bleed butto
 
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/BleedMatrix_01.PNG)
 
-
-
-This matrix shows the alerts received by the program for each of the bleed systems for each of the planes over the past week.  Looking at the middle row, you can see that there has been one alert on the HPV this week for the F-GSTB, which matches the alert seen on the dashboard earlier.  These matrices help you keep track of the alerts, and check for recurring alerts and problems on a plane.  
+This matrix shows the alerts received by the program for each of the bleed systems for each of the planes over the past week.  Looking at the middle row, you can see that there has been one alert on the HPV this week for the F-GSTB, which matches the alert seen on the dashboard earlier.  These matrices help you keep track of the alerts, and check for recurring alerts and problems on a plane.  You can adjust the time-frame by switching the number and the count; the default is 7 day count, or a week, but you can switch it to up to 30 days, weeks, months, or years.  
 
 
 
