@@ -29,10 +29,15 @@ All of the other errors look similar to these three; either the blip happens rig
 
 To see the full scope of the error, for how long it has been occurring, and how often, in this case you can click on LDG in the top right corner.  This will bring up the matrix with all the landing gear errors for all the planes, and you can change the timeframe to find the first error.  
 
-![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Matrix_01.PNG) --> ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Date_01.PNG)
-![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Matrix_02.PNG) --> ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Gearerrorplot.PNG)
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Matrix_01.PNG) 
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Date_01.PNG)
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Matrix_02.PNG) 
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Gearerrorplot.PNG)
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Gearerrorplot_02.PNG)
 
+From there, clicking on any point will bring you to the dashboard for that point, and from the dashboard, clicking the name of the plane at the top of the page will bring you back to the timeline, at the time of the dashboard.  
+
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Gearlever_03.PNG)
 
 #Data input
 

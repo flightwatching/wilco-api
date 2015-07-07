@@ -35,6 +35,7 @@ If you look at the second one, you'll notice a timeline across the top of the pi
 
 In both of them there is a bar across the top with a forward skip, a backwards skip, and a play button, as on a DVD player; the backwards skip arrow will take you to the previous report of the same type (on a take off report it will take you to the previous take off, on an ECS report the the previous ECS, etc.), and the forward skip to the next one of the same type.  The "play" arrow will put the system into live; as soon as another report of the same type is received, it will automatically refresh to that page.  In other words, having the "play" arrow activated will keep the screen always on the most up to date report of the same type available.  
 
+Next to those buttons is the name of the plane; clicking on that name will bring you back to the timeline, at the time the dashboard you came from was reported.  
 
 There are several kinds of data points, represented by colors:
 * Lime green points are normal data points collected; nothing unusual about them.
