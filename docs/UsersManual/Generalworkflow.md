@@ -1,7 +1,24 @@
 #General workflow
 The first thing you see when you open wilco is a page that looks like this:
 
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/login.PNG)
+
+If you have an account, enter your email and password in the appropriate fields.  If you do not have an account, click the register button, fill out the required fields, and click register.  A confirmation email will be sent to the email adress you provided.  Open it, click the specified link, and wait for a FlightWatching admin to confirm your request; you can send one an email at the specified adress.  
+
+Once you have logged in, the default homescreen is this: 
+
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Homepage.PNG)
+
+This can be customized, to any of the following pages:
+* Eng (or FSE), for looking at the current activities and state of the fleet (which planes are in flight, which are on the ground, which have alerts, etc.):
+
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/ENG.PNG)
+
+* MCC, or Maintenance control center, to see all of the planes in a more zoomed-out view, with all the alerts and flights:
+
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/MCC.PNG)
+
+* Ops, a map of the earth with all of the planes displayed on it; pan by clicking and dragging, zoom by scrolling (very detailed, down to the house)
 
 #Timelines
 Timelines describe the activities of each plane over time, and allow you to access the reports with data from each plane.  Simply click on the plane whose timeline you wish to see to bring it up.
