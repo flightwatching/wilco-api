@@ -44,13 +44,17 @@ A few notes to assist interpretation:
 **How to navigate the timeline:**
 
 The search bar in the top left can be used to identify particular reports; for example, typing in "doors" will remove all reports without the word "doors" in their title.  
-Next to the search bar are several words, highlighted in blue; clicking on any one of them will remove all results that fit the category in blue from the timeline.  In other words, it filters out unwanted results.  Clicking "acms" will remove all the reports, for example.  Similarly, clicking on "Alerts only" will remove all messages except alerts, or messages in orange.  
+Next to the search bar are several words, highlighted in blue: 
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/takeoff_01.PNG)
+
+Clicking on any one of them will remove all results that fit the category in blue from the timeline.  In other words, it filters out unwanted results.  Clicking "acms" will remove all the reports, for example.  Similarly, clicking on "Alerts only" will remove all messages except alerts, or messages in orange.  
 Clicking a point along the vertical timeline will open a box that will allow you to make a comment at that time.  
+Also, scrolling down will automatically load past information.  
 
 #Dashboards
 At the timeline, you can click on a report (acms) to make a dashboard come up.  The dashboard contains a multitude of information about the plane's systems.  
 
-There are different kinds of reports that will bring up different kinds of dashboards; for example, a take off report will look like this:
+There are different kinds of reports that will bring up different kinds of dashboards; for example, a Take Off Report will look like this:
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/takeoff_01.PNG)
 
 While an ECS report will look like this:
@@ -67,7 +71,7 @@ Next to those buttons is the name of the plane; clicking on that name will bring
 There are several kinds of data points, represented by colors:
 * Lime green points are normal data points collected; nothing unusual about them.
 * Orange data points represent an alert; something is unusual or wrong with the data point, or it is outside acceptable parameters.
-* Cyan points in general are points that were manually entered, as opposed to automatically collected.  
+* Cyan points in general are points that were manually entered (by the crew for example), as opposed to automatically computed by avionic equipment.  
 
 An example of the colors in use:
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/ECS_02.PNG)
@@ -76,16 +80,18 @@ Clicking on any of the various gauges, labels, or dials will bring up a chart wi
 
 There are two types of trend charts: there is the default chart, which is simpler, and more automatic, and then there user customizable chart, which is more dynamic and is customizable, allowing the user to define which curves he or she wishes to include, as well as letting the user display several plots near each other; because of this, it is useful for plotting a data point in a general context.  
 
-For example, this is the default curve for two data points:
+For example, this is the default curve for two parameters, FCV_1 and FCV_2:
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/DefaultTrend.PNG)
 
 And this is a user customizable chart containing the data point (Transfered Pressure) as well as some context (Engine Number 1):
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/NewTrend.PNG)
 
-* In either chart, you can click and drag across an area to zoom the chart in, and double click to zoom out.  
+* In either chart, you can click and drag horizontally or vertically across an area to zoom the chart in, and double click to zoom out.  
 * This action can be repeated multiple times for greater zoom.  
 * Clicking on a data point brings you to the dashboard at the time the data point was taken, allowing you to see all the information available at that time.
 * Shift click-and-drag will move you along the chart.  
+
+To note: 1 and 2 when referring to avionic parameters refer to the side of the plane from which the data was taken.  Looking at the plane from above with the nose facing forward, side 1 is always the left side of the plane, and side 2 the right side; so FCV_1 and FCV_2 are the left and right side Flow Control Valves, respectively.  
 
 ##Alert Workflow
 
