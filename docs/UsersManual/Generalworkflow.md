@@ -10,15 +10,22 @@ Once you have logged in, the default homescreen is this:
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Homepage.PNG)
 
 This can be customized, to any of the following pages:
+
 * Eng (or FSE), for looking at the current activities and state of the fleet (which planes are in flight, which are on the ground, which have alerts, etc.):
 
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/ENG.PNG)
+
+Planes with alerts appear at the top of the page; planes in flight have a blue "flying" indicator next to the destination and departure points (the airport abbreviations).  If it is not in flight, the plane's current stage of preparation will appear in grey instead (gatein, pwrup, engon, etc).  The plane's most recent alert is indicated in the top right, along with how long ago it occurred; when a new message or report comes up for a plane, a blinking green dot lights up in the top right corner of the box.  
 
 * MCC, or Maintenance control center, to see all of the planes in a more zoomed-out view, with all the alerts and flights:
 
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/MCC.PNG)
 
-* Ops, a map of the earth with all of the planes displayed on it; pan by clicking and dragging, zoom by scrolling (very detailed, down to the house)
+Alerts appear as Yellow text with a number next to them signifying the number of times the alert has appeared in the past two days.  The plane's most recent or current flight is displayed in the bottom left of the panel as the airport abbreviations for the departure and destination points.  
+
+* Ops, a map of the earth with all of the planes displayed on it; pan by clicking and dragging, zoom by scrolling (very detailed, down to the adresses):
+
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Timeline_02.PNG)
 
 #Timelines
 Timelines describe the activities of each plane over time, and allow you to access the reports with data from each plane.  Simply click on the plane whose timeline you wish to see to bring it up.
@@ -27,10 +34,11 @@ Timelines describe the activities of each plane over time, and allow you to acce
 When you open a plane's timeline, you will see something like this:
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Timeline_01.PNG)
 A few notes to assist interpretation:
-* The yellow-green horizontal dotted line running through the timeline represents the present; everything below it is the past, and above it is the future.  
-* Areas marked in blue on the timeline represent time the plane is in flight; the other areas are when the plane is at rest.  
-* The messages marked in green are reports, and clicking them will take you to a dashboard with all the detailed information concerning the plane.
+* The yellow horizontal dotted line running through the timeline represents the present time; everything below it is the past, and above it is the future.  
+* Areas marked in blue on the timeline represent time the plane is in flight; the other areas are when the plane is on the ground.  
+* The messages marked in green are reports that have been decoded by the tool, and clicking them will take you to a dashboard with all the detailed information concerning the plane.
 * Messages marked in orange, like the one below, are alerts, and clicking on them will bring up the particulars of the alert, or a dashboard with the alert made visible.
+* Messages marked in grey are either simple messages with no dashboards, such as "Take Off," or messages that have not yet been decoded and assigned dashboards.  
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Timeline_02.PNG)
 
 **How to navigate the timeline:**
@@ -49,6 +57,8 @@ While an ECS report will look like this:
 ![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/ECS_01.PNG)
 
 If you look at the second one, you'll notice a timeline across the top of the picture that does not appear in the take off report.  This timeline signifies that there are several samples of data coming in for this one ECS report, and its absence in the first report means that that one was a snapshot, one instant in time.  You can navigate this timeline by clicking points along it or using the arrow keys, or simply clicking "play." 
+
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/DVD.PNG)
 
 In both of them there is a bar across the top with a forward skip, a backwards skip, and a play button, as on a DVD player; the backwards skip arrow will take you to the previous report of the same type (on a take off report it will take you to the previous take off, on an ECS report the the previous ECS, etc.), and the forward skip to the next one of the same type.  The "play" arrow will put the system into live; as soon as another report of the same type is received, it will automatically refresh to that page.  In other words, having the "play" arrow activated will keep the screen always on the most up to date report of the same type available.  
 
