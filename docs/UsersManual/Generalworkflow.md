@@ -25,7 +25,7 @@ Alerts appear as Yellow text with a number next to them signifying the number of
 
 * Ops, a map of the earth with all of the planes displayed on it; pan by clicking and dragging, zoom by scrolling (very detailed, down to the adresses):
 
-![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/Timeline_02.PNG)
+![img alt](https://github.com/flightwatching/wilco-api/blob/master/docs/UsersManual/img/ops.PNG)
 
 #Timelines
 Timelines describe the activities of each plane over time, and allow you to access the reports with data from each plane.  Simply click on the plane whose timeline you wish to see to bring it up.
