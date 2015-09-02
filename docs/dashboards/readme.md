@@ -1,35 +1,10 @@
 With WILCO, you can draw your dashboard in any tool like Adobe Illustrator and get it animated using dashboard IFTs
 
 With IFTs you can access all the elements of the dashboard, but the standard way of working is to animate the symbols of your dashboard.
-IFT is a javascript piece of code 
-
-#Debugging your IFTs
-OK, you wrote an ITF and nothing happends? here are some tips to figure out what did not happend
-
-##use the chrome inspector
-Your friend is the chrome inspector. The Dashboard and Symbol IFTs are executed by you browser, not by the server. That's why it is necessary to debug it from the client browser.
-To access the chrome inspector, go to the page that represents your dashboard in conditions, for example an event page with the dashboard activated. Right-click on any element and choose `inspect element`
-
-WILCO names each one of your IFT so that it is accessible within the inspector (see [this thread](https://developer.chrome.com/devtools/docs/javascript-debugging#breakpoints-dynamic-javascript))
-
-When your page is loaded, activate the inspector. Since in the inspector, you can ctrl+p (or cmd+p on mac). Type IFT (prefix) and a combo list will display all the loaded IFTs. choose your IFT, it will be fetched in the inspector. On the left, click on the line numbers to add/remove breakpoints. Make the IFTs to be evaluated by refreshing your page, changing the event or moving around with the samples timeline. The ITFs will be called and breakpoints activated. Hover with your mouse or right-click -> watch. You will actually see your IFT working live with access to each step.
-
-##use no-cache
-WILCO creates a cache with your dashboards, symbols and rules to accelerate the loading process. When designing rules, this is not very efficient as computing the cache is slow. add a no-cache url parameter to directly use your ongoing version of the dashboard/IFTs.
-
-e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?no-cache`
-
-##use the debug option
-debug option logs more things in the console (chrome inspector tab) about the context and rules.
-e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?debug`
-
-you can use both options with 
-e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?no-cache&debug`
-
-##console.log
-In your IFT, add some `console.log(anything)` and it will appear in your inspector (console tab)
+IFT is a javascript piece of code
 
 #Variables accessible in the dashboard
+Here is the exhaustive list of the variables you can access in your IFTs
 
 ##libraries
 some useful libraries are included in the IFTs. You can use it:
@@ -40,20 +15,40 @@ some useful libraries are included in the IFTs. You can use it:
 
 WILCO provides context related variables to the designer so that the dashboard is animated according to it.
 
-##Dashboards for an event
-Here is the exhaustive list of the variables you can access in yout IFT
+## utils
+The dashboard comes with some utility functions:
+
+### clickForTrend
+calls the trend. historycally named click for trend, but does it immediately. If you want to hook it to a click event, you should use a click callback method.
+
+The signature is `function(y1, y2, fwot, minMaxDate)`
+
+* **y1**: a single or the array of parameters you want to display in the trend. it can also be a a number. In that case, it is the trendbundle ID
+* **y2**: a single or the array of parameters you want to display in the trend (second vertical axis). If the call is inside a click event, the shift key will swap y1 and y2
+* **ac**: the fwot you want to plot against. if null, it is the current fwot (be careful it is the fwot, not the reg only)
+* **minMaxDate**: a structure {min:<date>, max:<date>} for the time window of the trend. can be moments too. UTC needed!
+
+### sort
+affects a way to weight the whole dashboard. this is useful in fleet view to sort the dashboards from the most critical to the less critical.
+The weight can be anything that is comparable (string, number...)
+
+## variables
 
 ###URL_PARAMS
-an object containing all the url parameters. for example 
+an object containing all the url parameters. for example
 `http://localhost:9000/#/APUs/events/807885?timeUnits=weeks&reg=FW-RVL`
 will provide the object
+
 ```json
 {
 	timeUnits:weeks,
 	reg:FW-RVL
 }
 ```
-###EVT
+
+
+
+###EVT (event scope only)
 `EVT` is an object that represents the [EventV3IO API object](/java/com/fw/wilco/api/EventV3IO.java).
 you can access the fields like this:
 ```javascript
@@ -81,7 +76,7 @@ for (var i = 0; i < FWOTS.length; i++) {
 ```
 
 ###FWOT
-`FWOT` exists only when the dashboard is used in the FLEET mode. it contains the current FWOT that is represented in the thumbnail (see [FwotV3IO API object](/java/com/fw/wilco/api/FwotV3IO.java))
+`FWOT` contains the current FWOT that is represented in the thumbnail (see [FwotV3IO API object](/java/com/fw/wilco/api/FwotV3IO.java))
 
 ```javascript
 MY_anim.go().text(FWOT.reg);
@@ -91,12 +86,13 @@ if you want to select an aircraft (for example the current event one) you can us
 ```javascript
 	var acEvts=_.where(evts, {reg: EVT.reg});
 ```
+
 ###SAMPLES
 even if the samples are accessible one by one, you may want to have an array with each one. The ```SAMPLES``` array is for you.
 
 Each sample is described below
 
-###DATE
+###DATE (event scope only)
 contains the current date in unix timestamp e.g 1381295944000.
 This is useful to display the current date in the SVG and to compare the current date with the sample date and check if the sample is right on the current date or is from a near timestamp.
 
@@ -105,6 +101,23 @@ you can compare it with DATE == TAT.date or using momentjs.
 
 ###Your samples by parameter name
 Each of your samples is accessible by its parameter name. WILCO creates variables which name is the name of the parameter the sample refers. A sample is still not exactly the same as [SampleV3IO API object](/java/com/fw/wilco/api/SampleV3IO.java) but we are working on it.
+
+the returned sample structure matches the updateSVG input structure:
+
+it is an object which fields are the sample name. Each sample is an array with
+the following fields.
+The array has 1 element at index 0 which is the value of the sample
+
+* name: the name of the sample (that you retreive in the holding structure)
+* date: the date of the sample in the 2015-08-16T23:11:22 format.
+* history() is a function that returs a time sorted array of archive.
+						An archive is a short: array of 1 value and date field.
+* minOK: the min value where the sample is OK
+* maxOK: the max value where the sample is OK
+* minScale: the min value where the sample visualization should range
+* maxScale: the max value where the sample visualization should range
+
+
 
 Assuming your sample's param is TAT, here is what you can call
 
@@ -119,11 +132,8 @@ TAT.minScale //contains the minOK as defined in the parameter definition (float)
 TAT.maxScale //contains the maxOK as defined in the parameter definition (float)
 TAT.date //contains the date of the TAT sample. in unix timestamp: e.g 1381295944000
 
-TAT.value //the value of the parameter.  May be a string or an Object if the TAT value was a JSON serialized string
-
 TAT; //will return the value of the sample TAT. it is the exact copy of TAT.value
 +TAT; //will return the value of the sample TAT as a float or NaN (Not a Number) if it cannot be cast
-
 ```
 
 ====
@@ -171,7 +181,7 @@ ALT_anim.gotoFwot("FW-FAN");
 scrolls to the passed dashboard Id. If the target dashboard is not in the page, there is no scroll
 
 ###clickForMessage(samples)
-When the symbol is clicked, a new message is created with the given samples associated. The message is the same as the current one (fwot, layout...) but the computedDate is the current date (now). 
+When the symbol is clicked, a new message is created with the given samples associated. The message is the same as the current one (fwot, layout...) but the computedDate is the current date (now).
 
 Samples is an array of objects with at least 2 fields: name and value. To ensure the sample continuity, we recommand modifying [SAMPLES](#samples) and passing it as parameter (or filtering it before passing)
 
@@ -233,8 +243,8 @@ var type2symbol = {
 
 var instances = clone(
     function(d) {return '#'+type2symbol[d.value.type]},
-    usefulSamples, 
-    function(d) {return d.name}, 
+    usefulSamples,
+    function(d) {return d.name},
     '#acs');
 ```
 
@@ -245,4 +255,28 @@ the `d` parameter used in the 2nd argument is each element of the passed array. 
 
 
 
+#Debugging your IFTs
+OK, you wrote an ITF and nothing happends? here are some tips to figure out what did not happend
 
+##use the chrome inspector
+Your friend is the chrome inspector. The Dashboard and Symbol IFTs are executed by you browser, not by the server. That's why it is necessary to debug it from the client browser.
+To access the chrome inspector, go to the page that represents your dashboard in conditions, for example an event page with the dashboard activated. Right-click on any element and choose `inspect element`
+
+WILCO names each one of your IFT so that it is accessible within the inspector (see [this thread](https://developer.chrome.com/devtools/docs/javascript-debugging#breakpoints-dynamic-javascript))
+
+When your page is loaded, activate the inspector. Since in the inspector, you can ctrl+p (or cmd+p on mac). Type IFT (prefix) and a combo list will display all the loaded IFTs. choose your IFT, it will be fetched in the inspector. On the left, click on the line numbers to add/remove breakpoints. Make the IFTs to be evaluated by refreshing your page, changing the event or moving around with the samples timeline. The ITFs will be called and breakpoints activated. Hover with your mouse or right-click -> watch. You will actually see your IFT working live with access to each step.
+
+##use no-cache
+WILCO creates a cache with your dashboards, symbols and rules to accelerate the loading process. When designing rules, this is not very efficient as computing the cache is slow. add a no-cache url parameter to directly use your ongoing version of the dashboard/IFTs.
+
+e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?no-cache`
+
+##use the debug option
+debug option logs more things in the console (chrome inspector tab) about the context and rules.
+e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?debug`
+
+you can use both options with
+e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?no-cache&debug`
+
+##console.log
+In your IFT, add some `console.log(anything)` and it will appear in your inspector (console tab)
