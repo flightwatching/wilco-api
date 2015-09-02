@@ -17,6 +17,6 @@ public class BookmarkV3IO {
 
 	public boolean landingPage;
 
-	public String who;
+	public String customer;
 
 }
