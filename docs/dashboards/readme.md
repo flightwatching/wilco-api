@@ -110,8 +110,8 @@ The array has 1 element at index 0 which is the value of the sample
 
 * name: the name of the sample (that you retreive in the holding structure)
 * date: the date of the sample in the 2015-08-16T23:11:22 format.
-* history() is a function that returs a time sorted array of archive.
-						An archive is a short: array of 1 value and date field.
+* history() is a function that returns a time sorted array of archive (index 0 is the newest).
+						An archive is an array of 1 value and date property.
 * minOK: the min value where the sample is OK
 * maxOK: the max value where the sample is OK
 * minScale: the min value where the sample visualization should range
