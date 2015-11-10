@@ -48,7 +48,7 @@ will provide the object
 
 
 
-###EVT (event scope only)
+###EVT (use this for a given event)
 `EVT` is an object that represents the [EventV3IO API object](/java/com/fw/wilco/api/EventV3IO.java).
 you can access the fields like this:
 ```javascript
