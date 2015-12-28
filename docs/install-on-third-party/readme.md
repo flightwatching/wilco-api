@@ -1,7 +1,12 @@
-This page defines the requirements to install WILCO on a host.
+**This page defines the requirements to install WILCO on a host.**
+
+- [System requirements](#)
+  - [Host setup](#host-setup)
+  - [Input and Output](#input-and-output)
+  - [Responsibilities](#responsibilities)
+
 
 #Host setup
-
 
 ### host kind
 WILCO runs on a linux host (currently ubuntu 14.04_LTS-server (64BITS) on our servers)
