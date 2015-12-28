@@ -82,5 +82,5 @@ Specify the way to send uplink messages to your aircom server thru your intranet
 
 Flightwatching team provides the application and start/stop unix scripts. Flightwatching is not responsible for keeping the required OS, services servers available and up to date (Ubuntu, database server, e-mail server)
 
-Automatic restarts are under the responsability of presidential flight
-Backups are under the responsability of presidential flight
+Automatic restarts are under the responsability of the private host provider
+Backups are under the responsability of private host provider
