@@ -18,7 +18,7 @@ Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
 Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
 ```
 ### Database
-postgresql database server (version 9.3.10) is required
+Postgresql database server (version 9.3.10) is required
 * A user has to be created with read/write rights on the following database. You will have to provide us the user name/password
 * A database has to be initiated like this
 ```
@@ -58,7 +58,7 @@ mail.smtp.port=
 
 #Input and Output
 
-WILCO connects to any data source using several channels (direct DB connection, websocket, http post requests or folder watching). Here we describe the folder watching.
+WILCO connects to any data source using several channels (direct DB connection, WebSocket, http post requests or folder watching). Here we describe the folder watching.
 
 ### folder watching
 WILCO watches to a specified folder (RW access) and processes all the messages that are dropped in it. As soon as they are processed, they are removed. Therefore, do not use this folder to archive data.
@@ -78,14 +78,17 @@ DT QXS MCT4 281204 D74A
 ```
 
 #### uplinks
-WILCO has to send the uplinks to your aircom server. the way to do this heavily depends on your IT.
+WILCO has to send the uplinks to your Aircom server. the way to do this heavily depends on your IT.
 
-Specify the way to send uplink messages to your aircom server thru your intranet (file dropping, e-mail addess, direct connection...). It is part of the installation process to set up and test the connection.
+Specify the way to send uplink messages to your Aircom server thru your intranet (file dropping, e-mail address, direct connection...). It is part of the installation process to set up and test the connection.
 
 
 #Responsibilities
 
-Flightwatching team provides the application and start/stop unix scripts. Flightwatching is not responsible for keeping the required OS, services servers available and up to date (Ubuntu, database server, e-mail server)
+Flightwatching team provides the application and start/stop unix scripts.
 
-Automatic restarts are under the responsability of the private host provider
-Backups are under the responsability of private host provider
+* Flightwatching is not responsible for keeping the required OS, services servers available and up to date (Ubuntu, database server, e-mail server)
+
+* Automatic restarts are under the responsibility of the private host provider
+
+* Backups are under the responsibility of private host provider
