@@ -66,7 +66,7 @@ As actions, wilco may send some data (uplinks).
 
 ### ACARS messages
 #### downlinks
-the ACARS messages have to be raw messages. if it is some forwarding, please check there is no footer appended. The ACARS header has to be preserved too. Example:
+the ACARS messages have to be raw messages. if it is some Aircom server or e-mail forwarding, please check there is no footer appended. The ACARS header has to be preserved too. Example:
 
 ```
 QU FLIGHTW
@@ -78,7 +78,7 @@ DT QXS MCT4 281204 D74A
 ```
 
 #### uplinks
-WILCO has to send the uplinks to your Aircom server. the way to do this heavily depends on your IT.
+WILCO has to send the uplinks to your Aircom server. the way to do this depends on your IT and needs some testing together
 
 Specify the way to send uplink messages to your Aircom server thru your intranet (file dropping, e-mail address, direct connection...). It is part of the installation process to set up and test the connection.
 
