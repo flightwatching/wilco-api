@@ -2,15 +2,21 @@ End 2015 release notes
 ==========
 
 - [End 2015 release notes](#)
-	- [Landing page bookmarks](#landing-page-bookmarks)
+	- [WILCO operational reliability](#wilco-operational-reliability)
+
+
+Easier fleet dashboard page
+-----
+
+
+New dashboard designer page
+------
+**JPB**
 
 WILCO operational reliability
 -----
 [exemple for REVIMA](http://stats.pingdom.com/32dljzvd48dv/1899464/2015/12)
-**JPB**
-
-new dashboard designer page
-------
+on n'a qu'à faire un bookmark pour chacun des clients
 **JPB**
 
 Change font to leto-sans
