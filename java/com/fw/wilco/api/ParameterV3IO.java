@@ -1,8 +1,10 @@
 package com.fw.wilco.api;
 
+import java.util.List;
 
 
-public class ParameterIOV3 {
+
+public class ParameterV3IO {
 
 	public Long id;
 	public  Double minScale;
@@ -12,5 +14,7 @@ public class ParameterIOV3 {
 	public  String name;
     public  String description;
 	public  String actypeName;
+	public  String address;
+	public  List<IftV3IO> ifts;
 
 }

@@ -39,3 +39,5 @@ While 2 contiguus records have the same FWOT, the records will belong to the sam
 To force the creation of a new message
 * insert an empty line between them
 * Change the FWOT and/or the LAYOUT
+
+end

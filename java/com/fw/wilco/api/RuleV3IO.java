@@ -1,16 +1,12 @@
 package com.fw.wilco.api;
 
-import com.fw.wilco.api.constants.Severity;
-
 public class RuleV3IO {
-
-	public String formula;
-	public Severity sev;
-	public String code;
-	public Boolean skip;
+	
 	public Long id;
+	public Long db_id;
+	public Boolean autoMap;
+	public String svgElt;
+	public Integer order;
+	public String formula;
 	public String name;
-	public String srcId;
-	public String srcKind;
-
 }

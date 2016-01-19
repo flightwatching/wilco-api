@@ -18,3 +18,4 @@ hs_err_pid*
 .idea/scopes/scope_settings.xml
 
 wilco-api.iml
+nodejs/node_modules

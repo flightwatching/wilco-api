@@ -8,7 +8,7 @@ import java.util.Set;
 public class DashboardV3IO  {
 
 	public String id;
-	public List<String> rules;
+	public List<RuleV3IO> rules;
 	public String svg;
 	public Map<String, String> eltMap;
 	public String name;
