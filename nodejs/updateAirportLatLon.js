@@ -1,5 +1,5 @@
 var https = require('https');
-
+var fs= require('fs');
 var site = process.argv[ process.argv.length-3];
 var login = process.argv[ process.argv.length-2];
 var password = process.argv[ process.argv.length-1];
@@ -26,22 +26,10 @@ function apiv3(path, method, callback) {
 
 
 function fr24Airports(callback) {
-	var request = https.request(
-		{'hostname': 'www.flightradar24.com',
-		'path':'/_json/airports.php',
-		'method': 'GET'
-	},
-	function(res) {
-		var body = "";
-		res.on('data', function(d) {
-			body+=d;
-		});
-		res.on('end', function(d) {
-			console.log(body);
-			callback(JSON.parse(body));
-		});
+	fs.readFile('airports.json', 'utf8', function (err, data) {
+	  if (err) throw err;
+          callback(JSON.parse(data));
 	});
-	request.end();
 }
 
 var findInFr24 = function (array, icao) {
