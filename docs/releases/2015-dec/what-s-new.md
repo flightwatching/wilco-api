@@ -31,11 +31,17 @@ When creating a dashboard for a fleet, you don't need anymore to define the para
 
 WILCO does it for you, it detects the parameters it needs and makes the call for you
 
+
 > example
 
 > [https://site.flightwatching.com/wilco/#/fwots/aircraft?db=22524850&cols=3&repair=ongoing](https://site.flightwatching.com/wilco/#/fwots/aircraft?db=22524850&cols=3&repair=ongoing)
 
+You can also use a `sort` function in the rules to sort the fwots in the fleet view as described
 
+in the following example, we sort from the greatest mean value to th e lowest.
+
+
+![img/sort.png](img/sort.png)
 
 
 New dashboard designer page
@@ -96,33 +102,47 @@ We have added a new status for the fwot in the timeline that fits to repairs
 ![img/closed.png](img/closed.png)
 
 
-
-
-better access to history from the samples
------
-
-
-dashbaord query optimization
-------
-
-
 libraries upgrade
 ----
+A bunch of libraries have been updated, better stability and cutting edge technology
 
-Dashboard rules sort function
-----
 
 Fault codes
 -----
+Fault codes are gathered and visible from the admin view (`actions > edit faultcodes`). they are paginated to speed up the navigation. You can search for faultcodes by typing the beginning of the code in the search box and WILCO makes live filtering across all the known fault codes.
+
+![img/list-faultcodes.png](img/list-faultcodes.png)
+
+
+You can attach an IFT to a fault code which will be executed as soon as WILCO receives the fault code (WARNING: may be in the PFR or after, say after the flight, it depends on the aircraft context)
+
+![img/edit-faultcode.png](img/edit-faultcode.png)
+
+
 
 
 parameters
 ------
+The list of parameters is also redesigned. It is now paginated and each parameter is a row. The search box is usable and the filtering matches all the parameters that contains the searched text. If an IFT is attached to the parameter, it is also displayed.
 
-Fleet dashbaords
------
-many fixes (and sorting)
+![img/list-parameters.png](img/list-parameters.png)
+
+IFTs
+------
+IFT listing is also paginated to handle large IFT amount
+
+![img/list-parameters.png](img/list-ifts.png)
+
 
 
 External layout support
 -----
+You can now reference websocket external sources
+
+email option
+------
+Optionally, WILCO can have it's own email adress. Send an attachment to this adress, it will be injected into WILCO.
+
+XLS adapters
+-----
+Excel files can specifically be decoded and injected into WILCO either manually or by sending them by e-mail. The decoding is subject to a purchase order
