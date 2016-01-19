@@ -10,8 +10,8 @@ npm install yargs
 ```
 
 
-used to update the lat, lon and name of the airports according to FR24 database
+used to update the lat, lon and name of the airports according to FR24 database (persisted in airports.json)
 
-`node  updateAirportLatLon.js <site>  <user> <thepassword>`
+`node  updateAirportLatLon.js -s <site>  -u <user> -p <thepassword>`
 
-`node  updateAirportLatLon.js demo  hodac@flightwatching.com tucroispasquejevaisteledonner`
+`node  updateAirportLatLon.js -s demo  -u hodac@flightwatching.com -p tucroispasquejevaisteledonner`
