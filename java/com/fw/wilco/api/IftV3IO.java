@@ -12,5 +12,6 @@ public class IftV3IO {
 	public String name;
 	public String srcId;
 	public String srcKind;
+	public String language;
 
 }
