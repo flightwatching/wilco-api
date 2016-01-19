@@ -1,8 +1,15 @@
 var https = require('https');
 var fs= require('fs');
-var site = process.argv[ process.argv.length-3];
-var login = process.argv[ process.argv.length-2];
-var password = process.argv[ process.argv.length-1];
+var argv = require('yargs')
+    .usage('Usage: $0 -s [string] -u [user] -p [passwd]')
+    .demand(['s','u', 'p'])
+    .argv;
+
+
+
+var site = argv.s;
+var login = argv.u;
+var password = argv.p;
 
 function apiv3(path, method, callback) {
 	var request = https.request(
@@ -67,7 +74,7 @@ fr24Airports(function(fr24airports) {
 					a.lat=fr24a.lat;
 					a.lon=fr24a.lon;
 					a.coolName=fr24a.name;
-					updateWilco(a);
+					//updateWilco(a);
 				}
 			}
 		});
