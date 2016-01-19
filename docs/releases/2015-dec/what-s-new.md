@@ -2,8 +2,24 @@ End 2015 release notes
 ==========
 
 - [End 2015 release notes](#)
-	- [WILCO operational reliability](#wilco-operational-reliability)
-
+	- [Easier fleet  page](#)
+	- [Easier fleet dashboard page](#)
+	- [New dashboard designer page](#)
+	- [WILCO operational reliability](#)
+	- [Change font to leto-sans](#)
+	- [Raw messages only visible to admins](#)
+	- [Login fail behavior](#)
+	- [Calendar selection in Timeline](#)
+	- [reparse all limited to last 7 days from the current message](#)
+	- [export CSV function from trend](#)
+	- [Timeline -> add a repair in Timeline](#)
+	- [libraries upgrade](#)
+	- [Fault codes](#)
+	- [parameters](#)
+	- [IFTs](#)
+	- [External layout support](#)
+	- [email option](#)
+	- [XLS adapters](#)
 
 Easier fleet  page
 -----
