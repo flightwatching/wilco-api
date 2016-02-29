@@ -11,4 +11,5 @@ public class IeiParamV3IO {
 	public ParameterV3IO param;
 	public String dateParam;
 	public String datePattern;
+	public String formula;
 }
