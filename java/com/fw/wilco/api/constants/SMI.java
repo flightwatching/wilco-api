@@ -28,6 +28,8 @@ public enum SMI {
 	M22,//AOC
 	M23,//AOC
 	M24,//AOC
+	M25,//Embraer RAM
+	M49,//B787
 	M2A,//AOC
 	M2B,//AOC
 	M2C,//AOC
