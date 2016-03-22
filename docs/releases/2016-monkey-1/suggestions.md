@@ -13,3 +13,8 @@
 * better layout list page
 * XY dashboard
 * reharsh timeline page
+
+obligatoire:
+-----
+* JAVA8
+* update wilco boilerplate
