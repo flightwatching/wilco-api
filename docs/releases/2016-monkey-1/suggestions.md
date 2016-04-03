@@ -13,8 +13,10 @@
 * better layout list page
 * XY dashboard
 * reharsh timeline page
+* integrate 3Scale
 
 obligatoire:
 -----
 * JAVA8
 * update wilco boilerplate
+* review rights: an officer cannot see IFTs (he can do it APIV3 does not prevent from doing it)
