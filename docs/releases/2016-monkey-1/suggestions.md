@@ -11,12 +11,16 @@
 * comments in timeline
 * show upcoming uplinks
 * better layout list page
-* XY dashboard
 * reharsh timeline page
-* integrate 3Scale
+* review login page
 
 obligatoire:
 -----
 * JAVA8
 * update wilco boilerplate
 * review rights: an officer cannot see IFTs (he can do it APIV3 does not prevent from doing it)
+
+side
+----
+* integrate 3Scale
+* * XY dashboard
