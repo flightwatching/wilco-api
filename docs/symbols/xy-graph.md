@@ -24,7 +24,7 @@ In the search URL path, add a `type` parameter:
 
 ## Specifying the x-y parameters
 **mandatory field**: Specify the name of the parameters to display in `x` and `y`
-
+The parameter names are then written along the axis. You can search for the names going to `edit params`. A dot is plotted only when wilco finds the 2 params in the same message. If there are several parameters with the same name in the same message (different timestamps), the first 2 ones are picked up. the considered date is the `x` param date.
 
 ## Specifying the fwots to display
 If not specified, all the fwots from the specified type will be listed. You can specify a sub list by adding a `reg` list of key pairs.
@@ -41,8 +41,11 @@ You can specify a pair of dates between which you want to fetch the samples. the
 * if `to` only is provided, we get the last `count` samples to `to`
 * if both `from` and `to` are provided, we get the samples between the dates. If `count` is less than the samples between the dates, most recent samples are fetch.
 
+The format of the date times are like `YYYY-MM-DDTHH:mm:ss`. Example: `2015-04-01T00:00:00`
 
-https://revima.flightwatching.com/wilco/#/dashboards/2898822/?to=2016-01-01T00:00:00&from=2015-04-01T00:00:00&count=5000&xmin=400&ymin=600&type=A380&y=EGTKidle&x=FFKidle
+![filtering on dates][dates]
+[dates]: xy-images/dates.png
+`&from=2015-11-20T00:00:00&to=2015-12-20T00:00:00&...`
 
 ## Specifying the count of samples to fetch from the database
 `count` limits the number of samples that are fetched. If not specified, 1000 is assumed. 5000 is the higher limit
@@ -51,6 +54,13 @@ https://revima.flightwatching.com/wilco/#/dashboards/2898822/?to=2016-01-01T00:0
 You can set the bound for the x-axis and y-axis with `xmin` `xmax` `ymin` `ymax`
 
 You can specify a min bound that is greater than a max bound. In that case, the axis will be oriented in a descending order
+
+Bounds are optional, you can specify only one bound, the other will be automatic
+
+![axis bounds][bounds]
+[bounds]: xy-images/bounds.png
+`&ymin=630&...`
+
 
 # User interactions
 
@@ -62,3 +72,6 @@ Click and pan or scroll on the graph to pan it or zoom in or out
 
 ## Focus on a sub time span
 Hover the bottom timeline to focus the graph on the dots that belongs to the area you are hovering
+
+![focus][focus]
+[focus]: xy-images/focus.png
