@@ -35,7 +35,12 @@ If not specified, all the fwots from the specified type will be listed. You can 
 `https://<site>/wilco/#/dashboards/<db_id>/?reg=REV-FA&reg=REV-FB&type=A380&y=EGTKidle&x=FFKidle`
 
 ## Specifying the time span
-You can specify a pair of dates between which you want to fetchthe samples. the both `from` and `to` dates is optional
+You can specify a pair of dates between which you want to fetch the samples. the both `from` and `to` dates is optional:
+* if none of `from` and `to` are provided, we get the last `count` samples (to now)
+* if `from` only is provided, we get the following `count` samples (therefore not necessarily to now) from `from`
+* if `to` only is provided, we get the last `count` samples to `to`
+* if both `from` and `to` are provided, we get the samples between the dates. If `count` is less than the samples between the dates, most recent samples are fetch.
+
 
 https://revima.flightwatching.com/wilco/#/dashboards/2898822/?to=2016-01-01T00:00:00&from=2015-04-01T00:00:00&count=5000&xmin=400&ymin=600&type=A380&y=EGTKidle&x=FFKidle
 
