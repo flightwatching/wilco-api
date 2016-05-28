@@ -26,6 +26,10 @@ In the search URL path, add a `type` parameter:
 **mandatory field**: Specify the name of the parameters to display in `x` and `y`
 The parameter names are then written along the axis. You can search for the names going to `edit params`. A dot is plotted only when wilco finds the 2 params in the same message. If there are several parameters with the same name in the same message (different timestamps), the first 2 ones are picked up. the considered date is the `x` param date.
 
+`x` must be unique but you can specify several `y`
+
+`https://<site>/wilco/#/dashboards/<db_id>/?type=A380&y=EGTKidle&y=FFKidle&x=H_APUHR`
+
 ## Specifying the fwots to display
 If not specified, all the fwots from the specified type will be listed. You can specify a sub list by adding a `reg` list of key pairs.
 
