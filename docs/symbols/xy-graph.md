@@ -6,8 +6,6 @@ Classical trends only supports time in x axis. XY graph dashboard allows the use
 
 The XY-graphs are customizable using the URL parameters. This documentation explains how to use them
 
-![main view][main]
-[main]: xy-images/main.png "global view of the graph"
 
 # Configuring the dashboard
 
@@ -25,6 +23,17 @@ In the search URL path, add a `type` parameter:
 ## Specifying the x-y parameters
 **mandatory field**: Specify the name of the parameters to display in `x` and `y`
 The parameter names are then written along the axis. You can search for the names going to `edit params`. A dot is plotted only when wilco finds the 2 params in the same message. If there are several parameters with the same name in the same message (different timestamps), the first 2 ones are picked up. the considered date is the `x` param date.
+
+
+![main view][main]
+[main]: xy-images/main.png "global view of the graph"
+
+## Specifying a secondary y axis
+You can specify a secondary axis `y2`. It will be displayed on the right side of the chart. `y2` can have several parameters as it is for the main `y` left axis. However the zoom and pan does not work for it. zooming and panning will only affect `x` axis for the dots related to the `y2` axis.
+
+![y2 axis][y2]
+[y2]: xy-images/y2.png
+`x=H_APUHR&y=EGTKidle&y2=M_EGT_APUIT`
 
 ## Specifying the fwots to display
 If not specified, all the fwots from the specified type will be listed. You can specify a sub list by adding a `reg` list of key pairs.
@@ -60,6 +69,14 @@ Bounds are optional, you can specify only one bound, the other will be automatic
 ![axis bounds][bounds]
 [bounds]: xy-images/bounds.png
 `&ymin=630&...`
+
+## Specifying the size of the dots
+
+The default size of the dots is 300. You can override the size (smaller or bigger) by setting `size` in the URL
+
+![size of the dots][dots]
+[dots]: xy-images/dots.png
+`&size=300&...`
 
 
 # User interactions
