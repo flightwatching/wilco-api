@@ -28,6 +28,7 @@ public class EventV3IO{
 
 	public String title;
 	public String sumUp;
+	public String description;
 	public String data;
 
 	public String reg;
