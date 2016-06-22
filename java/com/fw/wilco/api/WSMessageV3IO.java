@@ -12,15 +12,17 @@ public class WSMessageV3IO {
 	private static final String EVENT = EventV3IO.class.getSimpleName();
 	
 
-	public Long create;
-	public Long update;
-	public Long delete;
+	public String reg;
+	public String create;
+	public String update;
+	public String delete;
 	public String type;
 	
 
 
-	public WSMessageV3IO(String type, Long create, Long update, Long delete) {
+	public WSMessageV3IO(String type, String reg, String create, String update, String delete) {
 		this.type = type;
+		this.reg = reg;
 		this.create=create;
 		this.update = update;
 		this.delete = delete;
@@ -37,16 +39,16 @@ public class WSMessageV3IO {
 
 
 
-	public static WSMessageV3IO update(String type, Long id) {
-		return new WSMessageV3IO(type, null, id, null);
+	public static WSMessageV3IO update(String type, String reg, Long id) {
+		return new WSMessageV3IO(type, reg, null, id.toString(), null);
 	}
 
-	public static WSMessageV3IO create(String type, Long id) {
-		return new WSMessageV3IO(type, id, null, null);
+	public static WSMessageV3IO create(String type, String reg, Long id) {
+		return new WSMessageV3IO(type, reg, id.toString(), null, null);
 	}
 
-	public static WSMessageV3IO delete(String type, Long id) {
-		return new WSMessageV3IO(type, null, null, id);
+	public static WSMessageV3IO delete(String type, String reg, Long id) {
+		return new WSMessageV3IO(type, reg, null, null, id.toString());
 	}
 
 
