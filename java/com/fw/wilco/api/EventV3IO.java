@@ -11,7 +11,17 @@ public class EventV3IO{
 	public String id;
 	public String klass;
 	
+	/**
+	 *	@Deprecated
+	 * Use the color. The severity is too linked to the business... 
+	 */
+	@Deprecated
 	public Severity severity;
+	
+	/**
+	 * color is a css3 color
+	 */
+	public String color;
 
 	public String category;
 	public List<TagV3IO> tags;
