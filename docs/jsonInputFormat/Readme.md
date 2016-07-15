@@ -20,6 +20,7 @@ First an example to figure out what it is
   "status": "PWRUP",
   "sumup": "R91-status",
   "severity": "INFO",
+  "style": "{color:'#339922'}"
   "samples": [
     {
       "name": "118-CV_loc",
@@ -56,6 +57,14 @@ First an example to figure out what it is
 * ERROR: red
 * INFO: light gray
 
+
+**style** `String` a stringified json object to style specifically the message. The format is the following
+```json
+{
+  color:'CSS3 color'
+}
+```
+
 **tags** `String array` a list of strings used for search and filter purposes
 
 **smi** `String, Deprecated (used for ACARS)` If the message is not acars, then SMI.FW can be used
@@ -72,7 +81,7 @@ First an example to figure out what it is
 
 **layoutId** `Positive integer` the id of the layout that matches the message. The layout allows you to associate some IFTs and Dashboards to all the messages with the same layout. If it is not provided, namedLayout is tried
 
-**namedLayout** `String` the exact name of the associated layout. if it does not exist, a new layout is created. 
+**namedLayout** `String` the exact name of the associated layout. if it does not exist, a new layout is created.
 
 **visible** `boolean` if set and false, the message will not be viewable by the user. The message is only here for IFT purposes. In that case, WILCO will not ensure the persistency forever
 
@@ -92,14 +101,14 @@ First an example to figure out what it is
 #MANY EXAMPLES
 
 ```json
-{ "reg": "LFBO", 
-  "computedDate": "2014-07-15T08:59:46", 
-  "status": "PWRUP", 
-  "sumup": "aie aie aie", 
-  "severity": "WARNING", 
-  "tags": [], 
-  "samples": [], 
-  "provider": "tester", 
-  "title": "RW C14 CLOSED" 
+{ "reg": "LFBO",
+  "computedDate": "2014-07-15T08:59:46",
+  "status": "PWRUP",
+  "sumup": "aie aie aie",
+  "severity": "WARNING",
+  "tags": [],
+  "samples": [],
+  "provider": "tester",
+  "title": "RW C14 CLOSED"
 }
 ```

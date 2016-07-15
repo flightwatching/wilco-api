@@ -19,9 +19,9 @@ public class EventV3IO{
 	public Severity severity;
 	
 	/**
-	 * color is a css3 color
+	 * a json style object
 	 */
-	public String color;
+	public String style;
 
 	public String category;
 	public List<TagV3IO> tags;

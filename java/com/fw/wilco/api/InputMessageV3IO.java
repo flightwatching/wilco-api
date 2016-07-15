@@ -67,6 +67,13 @@ public class InputMessageV3IO {
 	 * The severity of the message
 	 */
 	public Severity severity;
+	
+	
+	/**
+	 * a json format to store the style of the message
+	 */
+	public String style;
+	
 	/**
 	 * a list of tags to tag the message
 	 */

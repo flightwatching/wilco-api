@@ -12,3 +12,6 @@ DB
 as per commit https://github.com/flightwatching/fleet-monitor/commit/9bc409bee558626f082a740d22727068690c7d32 add a columnn ("formula") to ieiParam:
 
 `ALTER TABLE ieiparam ADD COLUMN formula character varying(10000);`
+
+Add a style column to acEvent (string)
+`ALTER TABLE acevent ADD COLUMN style;`
