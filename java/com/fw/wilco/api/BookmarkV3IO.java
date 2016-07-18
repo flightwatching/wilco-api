@@ -19,4 +19,6 @@ public class BookmarkV3IO {
 
 	public String customer;
 
+	public String photoUrl;
+
 }
