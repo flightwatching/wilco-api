@@ -94,6 +94,9 @@ You can add some IFTs in each cell of a IeiReport. This is useful to avoid creat
 ## Trends: Left sided legends
 
 ---
+## Bookmarks add photos to bookmarks
+
+---
 
 ## libraries upgrade
 

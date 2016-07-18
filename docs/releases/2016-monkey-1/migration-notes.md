@@ -15,3 +15,7 @@ as per commit https://github.com/flightwatching/fleet-monitor/commit/9bc409bee55
 
 Add a style column to acEvent (string)
 `ALTER TABLE acevent ADD COLUMN style;`
+
+
+Add photo field to bookmarks
+`ALTER TABLE bookmark ADD COLUMN photo character varying(255);`
