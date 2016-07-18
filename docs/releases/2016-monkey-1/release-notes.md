@@ -55,13 +55,27 @@ You can add some IFTs in each cell of a IeiReport. This is useful to avoid creat
 
 ----
 
+##IFT documentation
+a list of usable functions are provided in https://github.com/flightwatching/wilco-api/blob/master/docs/ift-V2.0.md
+
 
 ## IFT: setStyle feature
+You can dynamically set the style of your event in the timeline view by setting some styling properties with this function. any name/value pair is accepted. 2 names are predefined for the display in the timeline:
+
+* color: sets the color of the event in the timeline color is in the CSS3 format (http://www.w3schools.com/cssref/css_colors_legal.asp)
+* pos: `'left'` or `'right'`. The event is on the left or the right side of the vertical time bar. Note that the position is set on the left on small devices (smartphones)
+
+![timeline rendering](img/setStyle.png)
+> those styles can be set manually for the comments thru the timeline
+
 ---
 
 
 ## Mail: IFT body parameter
 ---
+it is free text. You may want to add some URLS too to point on trends, specific dashboard or fleet views.
+
+see the documentation.
 
 
 ## Timeline tag search
