@@ -55,6 +55,15 @@ You can add some IFTs in each cell of a IeiReport. This is useful to avoid creat
 
 ----
 
+
+## IFT: setStyle feature
+---
+
+
+## Mail: IFT body parameter
+---
+
+
 ## Timeline tag search
 
 **reserved tag names (starts witn IFT or MARK)**
