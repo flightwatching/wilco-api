@@ -55,6 +55,48 @@ You can add some IFTs in each cell of a IeiReport. This is useful to avoid creat
 
 ----
 
+## Timeline tag search
+
+**reserved tag names (starts witn IFT or MARK)**
+
+---
+
+## Large description on all messages
+---
+
+## Timeline comments creation
+---
+
+## Timeline flight profile displayed (with alerts)
+---
+
+## Timeline dismiss button
+---
+
+## Timeline delete button
+---
+
+## Timeline detect partial messages
+---
+
+## Annotation on trends
+
+---
+## Trends: Left sided legends
+
+---
+
+## libraries upgrade
+
+---
+
+## Move to materiel design look&feel
+---
+
+## Internet explorer fix for small dashboards
+---
+
+
 
 # NOT DONE YET
 
