@@ -1,11 +1,14 @@
 Migration notes to upgrade to 2016-monkey-1
 =========
 
-IFTs
+TODO list
 ---
-
-Java 8 has brought Nashhorn to replace Rhino. The change implies some javascript changes
-replace `new Date()` with `new java.util.Date()`
+Check specific login pages (revima/ETD) because login page has changed
+disable pingdom
+upgrade node, npm and bower (install n)
+enable WS in nginx
+run DB upgrades
+send email to users
 
 DB
 ---
@@ -19,3 +22,13 @@ Add a style column to acEvent (string)
 
 Add photo field to bookmarks
 `ALTER TABLE bookmark ADD COLUMN photo character varying(255);`
+
+
+
+IFTs
+---
+
+** JAVA 8 is not in this release
+
+Java 8 has brought Nashhorn to replace Rhino. The change implies some javascript changes
+replace `new Date()` with `new java.util.Date()`

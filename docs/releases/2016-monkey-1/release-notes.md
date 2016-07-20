@@ -163,6 +163,13 @@ https://github.com/flightwatching/wilco-api/blob/master/docs/IFTs/ift-V2.0.md#fw
 # Various
 ---
 
+## Login page layout
+Login page has been relayout and clearly separates login and register
+
+![login page](img/login.png)
+
+---
+
 ## libraries upgrade
 update some front-end libraries
 
