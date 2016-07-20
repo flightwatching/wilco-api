@@ -71,3 +71,53 @@ FW.setStyle('pos', 'left');
 
 ![timeline rendering](img/setStyle.png)
 > those styles can be set manually for the comments thru the timeline
+
+
+## `FW.getMessage()`
+returns the current message. (EventV3IO)
+## `FW.getSamples()`
+returns the samples of the message. Instead of being separate variables, it is an array of SampleV3IO
+## `FW.report(txt, severity, timestamp, flightPhase, faultCode)`
+creates a new event with the passed severity. The timestamp is either a date, a moment object or a ISO8601 string. Flighphase is a string in constants.FlightStatus
+the timestamp and flightphase are optional. If not provided, the message values are used (computedDate, severity)
+## `FW.reportInfo(title, timestamp, flightPhase)`
+shorthand for `FW.report(txt, 'INFO', timestamp, flightPhase)`
+## `FW.reportWarn(txt, timestamp, flightPhase)`
+shorthand for `FW.report(txt, 'WARNING', timestamp, flightPhase)`
+## `FW.reportFault(txt, timestamp, flightPhase)`
+shorthand for `FW.report(txt, 'FAULT', timestamp, flightPhase)`
+## `FW.reportError(txt, timestamp, flightPhase)`
+shorthand for `FW.report(txt, 'ERROR', timestamp, flightPhase)`
+## `FW.log(txt)`
+useful for testing. The logs are displayed in the administrator's logs
+## `FW.updateProperties(props)`
+Updates a field of the current event (associated with the event) a property is a property of an eventV3IO. Property is javascript object like (`{title:'new title'}`)
+## `FW.setFlightStatus(flightStatus)`
+shorthand for `FW.updateProperties({status:flightStatus})`
+## `FW.setLoc(locOrReg, d)`
+## `FW.setComputedDate(date, setBeforeTransmissionDate)`
+## `FW.setTitle(title)`
+shorthand for `FW.updateProperties({title:title})`
+## `FW.setSeverity(severity)`
+shorthand for `FW.updateProperties({severity:severity})`
+## `FW.set(param, value, timestamp)`
+creates a sample for the passed parameter. if timestamp is not passed, then the event timestamp is used
+## `FW.updateSomeFwotProperty(reg, name, value)`
+updates a property for a FWOT (reg)
+## `FW.updateFwotProperty(name, value)`
+updates a property for the current FWOT (FWOT of the event)
+## `FW.removeFwotProperty(name)`
+removes a property for the current FWOT (FWOT of the event)
+## `FW.removeSomeFwotProperty(reg, name)`
+removes a property for a FWOT (reg)
+
+## `FW.postMessage(inputMessage)`
+posts a message. Message is in the format inputMessageV3IO
+## `FW.uplink(layoutId, delayInSec)`
+uplinks the message in `delayInSec` seconds
+## `FW.tag(tag)`
+tags the event with tag; If called several times, tag remains unique (no effect)
+## `FW.untag(tag)`
+removes a tag from the event
+## `FW.reportFaultCode(code, timestamp, flightPhase, sev, description)`
+Creates a fault message (fault code)
