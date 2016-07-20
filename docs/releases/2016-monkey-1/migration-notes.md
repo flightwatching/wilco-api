@@ -14,7 +14,7 @@ as per commit https://github.com/flightwatching/fleet-monitor/commit/9bc409bee55
 `ALTER TABLE ieiparam ADD COLUMN formula character varying(10000);`
 
 Add a style column to acEvent (string)
-`ALTER TABLE acevent ADD COLUMN style;`
+`ALTER TABLE acevent ADD COLUMN style character varying(255);`
 
 
 Add photo field to bookmarks
