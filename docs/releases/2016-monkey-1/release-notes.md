@@ -11,7 +11,7 @@ July 2016
 
 ## Timeline tag search
 
-**reserved tag names (starts witn IFT_ or MARK_)**
+**reserved tag names (starts witn IFT\_ or MARK\_)**
 
 In the timeline, you can search for tags in the search box to filter on those tags. Searching for tags requires that you prefix the tag by a hashtag. Searchig multiple tags is possible, in that case it is a OR binary operation
 
