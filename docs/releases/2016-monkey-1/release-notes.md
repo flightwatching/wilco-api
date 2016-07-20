@@ -35,6 +35,14 @@ If a description exists for a message a little cartoon bubble is added in the ti
 
 ---
 
+## Event trigs
+
+You can see what actions have been trigged following the process of the event by WILCO. If a mail has been sent or an uplink has been trigged following to the event little icons appear.
+
+![event trigs](img/eventTrigs.png)
+
+---
+
 ## Timeline comments creation
 
 You can click on any timeline circle to create a comment manually. Set the title, the description, set it left or right with the arrows, override the date and the color.
