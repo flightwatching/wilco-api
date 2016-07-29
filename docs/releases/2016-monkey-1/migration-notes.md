@@ -23,7 +23,33 @@ Add a style column to acEvent (string)
 Add photo field to bookmarks
 `ALTER TABLE bookmark ADD COLUMN photo character varying(255);`
 
+Add a api-key table
+```sql
+CREATE TABLE apikey
+(
+  id bigint NOT NULL,
+  details character varying(255),
+  expiration timestamp without time zone,
+  token character varying(255),
+  profile character varying(255),
+  username character varying(255),
+  user_id bigint,
+  CONSTRAINT apikey_pkey PRIMARY KEY (id),
+  CONSTRAINT fk75462a0547140efe FOREIGN KEY (user_id)
+      REFERENCES t_user (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT apikey_token_key UNIQUE (token)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE apikey;
+  OWNER TO <myuser>;
+```
 
+
+Add a fwottype photo
+`ALTER TABLE fwottype ADD COLUMN photo character varying(255);`
 
 IFTs
 ---

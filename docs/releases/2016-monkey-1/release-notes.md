@@ -171,6 +171,22 @@ https://github.com/flightwatching/wilco-api/blob/master/docs/IFTs/ift-V2.0.md#fw
 # Various
 ---
 
+## API-KEYs
+You can grant access to any third-party application to access API without login/password using api-key. You can create an api-key with an expiration date and a role (ADMIN, OFFICER, FREE)
+
+after creating the API-KEY, access the api by adding a api-key to the URL
+
+![api-key setting](img/api-key.png)
+
+```
+https://<site>.flightwatching.com/fleet/apiv3/fwots?api-key=83688264-5422-409e-93c7-fbf8d95a8428
+```
+
+## photos for a fwottype
+instead of adding a photo for each fwot, you can add a photo for the fwot type and it will become the default photo for all the fwots of this type. Override it by selecting a photo for a specific fwot
+
+![api-key setting](img/fwottype-photo.png)
+
 ## Login page layout
 Login page has been relayout and clearly separates login and register
 
