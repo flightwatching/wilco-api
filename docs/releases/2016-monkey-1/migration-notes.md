@@ -5,7 +5,8 @@ TODO list
 ---
 Check specific login pages (revima/ETD) because login page has changed
 disable pingdom
-upgrade node, npm and bower (install n)
+upgrade node, npm and bower (install n).
+    In case remove `rm -rf  app/components/mapbox.js`
 enable WS in nginx
 run DB upgrades
 send email to users
