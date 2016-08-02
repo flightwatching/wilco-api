@@ -44,7 +44,7 @@ CREATE TABLE apikey
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE apikey;
+ALTER TABLE apikey
   OWNER TO <myuser>;
 ```
 
