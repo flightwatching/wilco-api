@@ -7,6 +7,7 @@ public class IftV3IO {
 	public String formula;
 	public Severity sev;
 	public String code;
+	public String acFamilly;
 	public Boolean skip;
 	public Long id;
 	public String name;

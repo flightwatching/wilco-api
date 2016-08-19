@@ -19,3 +19,4 @@ hs_err_pid*
 
 wilco-api.iml
 nodejs/node_modules
+nodejs/layouts

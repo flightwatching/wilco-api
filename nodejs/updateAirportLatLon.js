@@ -102,7 +102,7 @@ var update = function(a, airports) {
   if (fr24a) {
     setIata(a, fr24a.iata);
     if (!a.lat || !a.lon) {
-      console.log('updating '+a.reg);
+      console.log('updating '+a.reg+ ' to '+[fr24a.lat, fr24a.lon]);
       a.lat=fr24a.lat;
       a.lon=fr24a.lon;
       a.coolName=fr24a.name;
