@@ -18,3 +18,10 @@ The first ACARS_RECIPIENT that is picked up is the last message received address
 | AppConfig     | example     |
 | :------------- | :------------- |
 | ACARS_RECIPIENT       | BJSXCXA, BKKXCXA       |
+
+# Force aircraft to ground when no message
+For each FWOT, you can add a property named _forceFwotToGrdAfterSeconds_. It is a number that represents a count of seconds. If ETA is in the past, and last message received is this amount of seconds old, the aircraft is forced to the ground.
+
+    The data is often cut before landing (due to communication issues)
+
+    The events can also be bufferised onboard and sent on next power up
