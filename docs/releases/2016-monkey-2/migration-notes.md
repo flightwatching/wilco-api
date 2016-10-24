@@ -10,6 +10,8 @@ add 3 fields in ScheduledAction (SVC retries)
 d3.scale.linear ↦ d3.scaleLinear
 d3.time.scale ↦ d3.scaleTime
 d3.time.scale.utc ↦ d3.scaleUtc
+d3.time.scale.utc ↦ d3.scaleUtc
+d3.svg.symbol ↦ d3.symbol for the xy graph (https://github.com/d3/d3-shape#symbolCircle)
 
 d3.svg.axis and axis.orient, D3 4.0 now provides four constructors for each orientation: d3.axisTop, d3.axisRight, d3.axisBottom, d3.axisLeft
 
