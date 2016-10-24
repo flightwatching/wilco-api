@@ -62,8 +62,18 @@ The format of the date times are like `YYYY-MM-DDTHH:mm:ss`. Example: `2015-04-0
 ## Specifying the count of samples to fetch from the database
 `count` limits the number of samples that are fetched. If not specified, 1000 is assumed. 5000 is the higher limit
 
+## Specifying a symbol for each axis
+You can specify a symbol for each axis. if not specified, both will be circles. Specify it using `ysymbol` or `y2symbol`. The symbols can be in the following:
+
+* circle - a circle.
+* cross - a Greek cross or plus sign.
+* diamond - a rhombus.
+* square - an axis-aligned square.
+* triangle-down - a downward-pointing equilateral triangle.
+* triangle-up - an upward-pointing equilateral triangle.
+
 ## Specifying the initial x-y bounds
-You can set the bound for the x-axis and y-axis with `xmin` `xmax` `ymin` `ymax`
+You can set the bound for the x-axis and y-axis with `xmin` `xmax` `ymin` `ymax` `y2min` `y2max`
 
 You can specify a min bound that is greater than a max bound. In that case, the axis will be oriented in a descending order
 
