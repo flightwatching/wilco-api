@@ -25,11 +25,3 @@ For each FWOT, you can add a property named _forceFwotToGrdAfterSeconds_. It is 
     The data is often cut before landing (due to communication issues)
 
     The events can also be bufferised onboard and sent on next power up
-
-# setVisible in IFTs
-You can call a `setVisible` function in your IFTs (V1.3 and V.20) It makes the event appear or not in the timeline of your FWOT. Even if the event is not visible, the samples are created and analysis are too.
-
-`javascript
-FW.setVisible(true);
-FW.setVisible(false);
-`
