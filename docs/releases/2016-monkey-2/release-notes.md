@@ -26,10 +26,35 @@ For each FWOT, you can add a property named _forceFwotToGrdAfterSeconds_. It is 
 
     The events can also be bufferised onboard and sent on next power up
 
-# setVisible in IFTs
+# IFTs: setVisible
 You can call a `setVisible` function in your IFTs (V1.3 and V.20) It makes the event appear or not in the timeline of your FWOT. Even if the event is not visible, the samples are created and analysis are too.
 
 `javascript
 FW.setVisible(true);
 FW.setVisible(false);
 `
+# view current connected users (admin)
+
+you can see live connected users with the API: `https://MY_SITE.flightwatching.com/fleet/apiv3/status?pretty=true`
+
+```json
+{
+  "dbWrite": "OK",
+  "users": 34,
+  "dbRead": "OK",
+  "lastAcEventWriteDate": "Feb 1, 2017 10:30:30 AM",
+  "fwots": 93,
+  "connections": {
+    "hodac@flightwatching.com": {
+      "timestamp": "Feb 1, 2017 10:31:06 AM",
+      "connected": true
+    }
+  },
+  "version": "3.0.0"
+}
+```
+
+# IFT: getBits(hex, n) from hex
+
+Slices the `n`'th bit of the `hex` number into a 1 or 0. Bits are from 1 to 32 (like in acars standard docs)")
+int getBit(String hex, int bit);
