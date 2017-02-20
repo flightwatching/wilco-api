@@ -5,6 +5,7 @@ import com.fw.wilco.api.constants.Severity;
 public class IftV3IO {
 
 	public String formula;
+	public String[] variables;
 	public Severity sev;
 	public String code;
 	public String acFamilly;

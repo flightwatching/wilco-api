@@ -3,10 +3,10 @@ With WILCO, you can draw your dashboard in any tool like Adobe Illustrator and g
 With IFTs you can access all the elements of the dashboard, but the standard way of working is to animate the symbols of your dashboard.
 IFT is a javascript piece of code
 
-#Variables accessible in the dashboard
+# Variables accessible in the dashboard
 Here is the exhaustive list of the variables you can access in your IFTs
 
-##libraries
+## Libraries
 some useful libraries are included in the IFTs. You can use it:
 * [jquery](http://api.jquery.com/) to navigate in the DOM structure of your dashboard
 * [underscore](http://underscorejs.org/) to handle arrays (search, filter, sort...)
@@ -15,7 +15,7 @@ some useful libraries are included in the IFTs. You can use it:
 
 WILCO provides context related variables to the designer so that the dashboard is animated according to it.
 
-## utils
+## Utils
 The dashboard comes with some utility functions:
 
 ### clickForTrend
@@ -32,9 +32,17 @@ The signature is `function(y1, y2, fwot, minMaxDate)`
 affects a way to weight the whole dashboard. this is useful in fleet view to sort the dashboards from the most critical to the less critical.
 The weight can be anything that is comparable (string, number...)
 
+## gotoPage: function(url)
+goes to the given URL. if you want to trig this when click on an button, you have to put this in the callback of a click event.
+
+## uplink: function(reg, layoutId)
+Uplinks to a FWOT for the give layout.
+
+
+
 ## variables
 
-###URL_PARAMS
+### URL_PARAMS
 an object containing all the url parameters. for example
 `http://localhost:9000/#/APUs/events/807885?timeUnits=weeks&reg=FW-RVL`
 will provide the object
@@ -48,7 +56,7 @@ will provide the object
 
 
 
-###EVT (use this for a given event)
+### EVT (use this for a given event)
 `EVT` is an object that represents the [EventV3IO API object](/java/com/fw/wilco/api/EventV3IO.java).
 you can access the fields like this:
 ```javascript
@@ -64,7 +72,7 @@ date.format("dddd, MMMM Do YYYY, h:mm:ss a"); // "Sunday, February 14th 2010, 3:
 date.fromNow(); // 4 hours ago
 ```
 
-###FWOTS
+### FWOTS
 `FWOTS` is an array of known FWOTs (like in fleet view). The format of each is the same as [FwotV3IO API object](/java/com/fw/wilco/api/FwotV3IO.java)
 you can loop on the FWOT array with a standard javascript loop
 
@@ -75,7 +83,7 @@ for (var i = 0; i < FWOTS.length; i++) {
 };
 ```
 
-###FWOT
+### FWOT
 `FWOT` contains the current FWOT that is represented in the thumbnail (see [FwotV3IO API object](/java/com/fw/wilco/api/FwotV3IO.java))
 
 ```javascript
@@ -87,19 +95,19 @@ if you want to select an aircraft (for example the current event one) you can us
 	var acEvts=_.where(evts, {reg: EVT.reg});
 ```
 
-###SAMPLES
+### SAMPLES
 even if the samples are accessible one by one, you may want to have an array with each one. The ```SAMPLES``` array is for you.
 
 Each sample is described below
 
-###DATE (event scope only)
+### DATE (event scope only)
 contains the current date in unix timestamp e.g 1381295944000.
 This is useful to display the current date in the SVG and to compare the current date with the sample date and check if the sample is right on the current date or is from a near timestamp.
 
 you can compare it with DATE == TAT.date or using momentjs.
 
 
-###Your samples by parameter name
+### Your samples by parameter name
 Each of your samples is accessible by its parameter name. WILCO creates variables which name is the name of the parameter the sample refers. A sample is still not exactly the same as [SampleV3IO API object](/java/com/fw/wilco/api/SampleV3IO.java) but we are working on it.
 
 the returned sample structure matches the updateSVG input structure:
@@ -136,9 +144,78 @@ TAT; //will return the value of the sample TAT. it is the exact copy of TAT.valu
 +TAT; //will return the value of the sample TAT as a float or NaN (Not a Number) if it cannot be cast
 ```
 
-====
+# Simple analysis utilis
 
-#Symbols
+## leastSquares: function(xSeries, ySeries)
+returns slope, intercept and r-square of the line
+
+## predict
+returns the value of x when y is `yval` (linear regression)
+
+The example below retreives the date when the `CREWOXYMIN` will pass `1300` if the decrease is constant.
+
+```javascript
+WILCO.getSampleTableForFwot(EVT.reg, ["CREWOXYMIN"], 10, "days", null, function(a, b) {
+  var x = _.map(b, function(s, i){ return +(moment(s.Date).utc()); });
+  var y = _.map(b, function(s){ return +(s["CREWOXYMIN"]); });
+  var pred = moment(Math.round(WILCO.predict(x, y, 1300))).utc();
+  txt.set('under 1300 '+pred.fromNow(true));
+});
+```
+# Accessing the history
+
+
+
+## `getEventsForFwot: function(reg, lastCount, lastUnit, toDate, filters, callback)`
+Returns the last events for the given FWOT.
+
+`getEventsForFwot("FW-FAN", 3, 'days', '2002-04-03T02:44:00', function(events) {
+	console.log(events);
+})`
+
+* reg: the FWOT reg
+* lastCount: the count of time units you want back in time
+* lastUnit: the unit for the time count (years, months, weeks, days, hours, minutes, seconds)
+* toDate: the reference date for the search. If null, it is current date
+* filters: a map with filters according to https://SITE.flightwatching.com/fleet/apiv3#events (like tag, sev, showHidden, withDismissed, important...)
+* callback: the function to call when request succedded. the arguments are `callback(reg, eventArray, status)`
+
+eventArray are with the format described here: https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/EventV3IO.java
+
+
+##   `getEventsForFwotMinMaxDate: function(reg, minDate, maxDate, filters, callback)`
+the same as `getEventsForFwot` but with min/max dates. `minDate` and `maxDate` are moment objects
+
+## `getSamplesForFwot: function(reg, params, lastCount, lastUnit, toDate, callback)`
+returns the samples in the format: https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/SampleV3IO.java
+
+* reg: the FWOT reg
+* params: an array of parameter names (strings)
+* lastCount: the count of time units you want back in time
+* lastUnit: the unit for the time count (years, months, weeks, days, hours, minutes, seconds)
+* toDate: the reference date for the search. If null, it is current date
+* callback: the function to call when request succedded. the arguments are `callback(reg, sampleArray, status)`
+
+##   `getSamplesForFwotMinMaxDate: function(reg, params, fromDate, toDate, callback)`
+
+the same as `getSamplesForFwot` but with min/max dates. `minDate` and `maxDate` are moment objects
+
+
+
+## `getSampleTableForFwot: function(reg, params, lastCount, lastUnit, toDate, callback)`
+same as `getSamplesForFwot` but callback elements are formatted as rows. Callback is like this: `callback(reg,rows)`
+
+`rows` are objects whom each field is the param name and an extra field which is `date`
+
+##   `getSamplesTableForFwotMinMaxDate: function(reg, params, minDate, maxDate, callback)`
+
+same as `getSamplesForFwotMinMaxDate` but callback elements are formatted as rows. Callback is like this: `callback(reg,rows)`
+
+`rows` are objects whom each field is the param name and an extra field which is `date`
+
+------
+
+# Symbols
 
 ##refering to a symbol
 A symbol is described [here](../symbols/readme.md)
