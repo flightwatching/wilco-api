@@ -2,6 +2,7 @@ package com.fw.wilco.api;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class LayoutV3IO {
 	
@@ -9,6 +10,10 @@ public class LayoutV3IO {
 		public String varName;
 		public String urlTemplate;
 		public Integer poolPeriodSecond;
+		public String webhook;
+		public String user;
+		public String password;
+		public Map<String, String> headers;
 	}
 	
 	//ieiLayout
