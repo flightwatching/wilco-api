@@ -8,6 +8,7 @@ public class SampleV3IO {
 	public String name;
 	public String value;
 	public Long paramId;
+	public String type;
 	@Deprecated
 	public Double minOK;
 	@Deprecated

@@ -12,6 +12,7 @@ public class ParameterV3IO {
 	public  Double minOK;
 	public  Double maxOK;
 	public  String name;
+	public  String type;
     public  String description;
 	public  String actypeName;
 	public  String address;
