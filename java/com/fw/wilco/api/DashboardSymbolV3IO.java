@@ -10,5 +10,5 @@ public class DashboardSymbolV3IO {
 	public String name;
 	public Long autoFctId;
 	public Boolean isTag;
-
+	public String svg;
 }
