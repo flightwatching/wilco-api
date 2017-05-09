@@ -49,8 +49,8 @@ will provide the object
 
 ```json
 {
-	timeUnits:weeks,
-	reg:FW-RVL
+	"timeUnits":"weeks",
+	"reg":"FW-RVL"
 }
 ```
 
