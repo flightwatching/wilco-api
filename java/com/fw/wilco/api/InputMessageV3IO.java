@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 
 import com.fw.wilco.api.constants.FlightStatus;
 import com.fw.wilco.api.constants.SMI;
@@ -33,6 +34,11 @@ public class InputMessageV3IO {
 	public String reg;
 	
 	public String sharingId;
+	
+	/**
+	 * Where to put the analysis that are linked to the message
+	 */
+	public List<FaultCodeV3IO> faultcodes;
 	
 	/**
 	 * the ID of the message. If you want to update a message, use the field, else 
