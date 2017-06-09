@@ -2,8 +2,6 @@ package com.fw.wilco.api;
 
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
@@ -12,40 +10,41 @@ import com.fw.wilco.api.constants.SMI;
 import com.fw.wilco.api.constants.Severity;
 import com.google.gson.JsonElement;
 
-@Deprecated 
+@Deprecated
 /**
  * we will have to merge it with the EventV3IO
  * @author dao
  *
  */
 public class InputMessageV3IO {
-	
+
 	/**
 	 * date formatter and parser from and to pattern "yyyy-MM-dd'T'HH:mm:ss"
 	 */
 	public final static SimpleDateFormat ISO8601DF = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
 
-	
+
 	/**
 	 * the aircraft registration. it is the tail number
 	 * The aircraft has to be known in the server
 	 * MANDATORY
 	 */
 	public String reg;
-	
+
 	public String sharingId;
-	
+
 	/**
 	 * Where to put the analysis that are linked to the message
 	 */
+	@CollectionComponent(value=FaultCodeV3IO.class)
 	public List<FaultCodeV3IO> faultcodes;
-	
+
 	/**
-	 * the ID of the message. If you want to update a message, use the field, else 
+	 * the ID of the message. If you want to update a message, use the field, else
 	 * leave it null or missing
 	 */
 	public Long id;
-	
+
 	/**
 	 * the computed date of the message, in ISO8601 format, eg. 2014-05-23T13:45:23
 	 * it is UTC time
@@ -58,11 +57,11 @@ public class InputMessageV3IO {
 	public FlightStatus status;
 
 	/**
-	 * a text to describe the message (<1500 characters) 
+	 * a text to describe the message (<1500 characters)
 	 */
 	public String sumup;
 	/**
-	 * a short title (40 char max) 
+	 * a short title (40 char max)
 	 */
 	public String title;
 	/**
@@ -73,16 +72,17 @@ public class InputMessageV3IO {
 	 * The severity of the message
 	 */
 	public Severity severity;
-	
-	
+
+
 	/**
 	 * a json format to store the style of the message
 	 */
 	public String style;
-	
+
 	/**
 	 * a list of tags to tag the message
 	 */
+	@CollectionComponent(value=String.class)
 	public HashSet<String> tags;
 	/**
 	 * a category of message. The SMI can be in the ACARS specification.
@@ -92,6 +92,7 @@ public class InputMessageV3IO {
 	/**
 	 * the list of samples attached to the message
 	 */
+	@CollectionComponent(value=InputSampleV3IO.class)
 	public HashSet<InputSampleV3IO> samples;
 	/**
 	 * the flight Id of the message, if attached to a flight
@@ -114,22 +115,22 @@ public class InputMessageV3IO {
 	 * In that case, WILCO will not ensure the persistency forever
 	 */
 	public Boolean visible;
-	
+
 	/**
 	 * the name of the layout that matches the message. The name is the name as it appears on the server.
 	 * if it is not provided, no rule or dashboard can be attached, but the message is still inserted
 	 * if the layoutId is provided, this is ignored
 	 */
 	public String namedLayout;
-	
+
 	/**
-	 * the id of the layout that matches the message. 
+	 * the id of the layout that matches the message.
 	 * if it is not provided, namedLayout is tried
 	 */
 	public Long layoutId;
-	
-	
-	
+
+
+
 	public InputSampleV3IO insertSample(String name, String value, String d) {
 		if (samples==null) {
 			samples = new HashSet<InputSampleV3IO>();
@@ -140,13 +141,13 @@ public class InputMessageV3IO {
 		}
 		return ret;
 	}
-	
+
 	public InputSampleV3IO insertSample(String name, String value) {
 		return insertSample(name, value, this.computedDate);
 	}
-	
-	
-	
+
+
+
 	public InputSampleV3IO insertSample(String name, JsonElement value, String d) {
 		if (samples==null) {
 			samples = new HashSet<InputSampleV3IO>();
@@ -171,6 +172,6 @@ public class InputMessageV3IO {
 		return ret;
 	}
 
-	
+
 
 }
