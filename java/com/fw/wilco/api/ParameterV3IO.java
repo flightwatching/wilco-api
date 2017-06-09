@@ -16,6 +16,7 @@ public class ParameterV3IO {
     public  String description;
 	public  String actypeName;
 	public  String address;
+	public Boolean isKey;
 
 	@CollectionComponent(value=IftV3IO.class)
 	public  List<IftV3IO> ifts;
