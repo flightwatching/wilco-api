@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import com.fw.wilco.api.constants.HttpMethod;
+
 public class LayoutV3IO {
 
 	public static class ExtSource {
@@ -11,8 +13,9 @@ public class LayoutV3IO {
 		public String urlTemplate;
 		public Integer poolPeriodSecond;
 		public String webhook;
-		public String user;
+		public String login;
 		public String password;
+		public HttpMethod method;
 		public Map<String, String> headers;
 	}
 
