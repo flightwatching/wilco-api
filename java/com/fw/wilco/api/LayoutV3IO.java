@@ -15,7 +15,7 @@ public class LayoutV3IO {
 		public String webhook;
 		public String login;
 		public String password;
-		public String body;
+		public String bodyTemplate;
 		public HttpMethod method;
 		public Map<String, String> headers;
 	}
