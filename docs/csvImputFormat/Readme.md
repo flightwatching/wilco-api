@@ -30,6 +30,15 @@ This CSV table will create 3 messages:
 
 > THE DECIMAL DELIMITER IS THE `.`
 
+##Date format
+The date format has to be one of the following. Be careful, Excel can be very random with date exportation. In case of error, we suggest checking the data with a simple text editor
+
+* date `yyyy/MM/dd` and time `HH:mm`
+* date `yyyy/MM/dd` and time `HH:mm:ss`
+* date `dd/MM/yyyy` and time `HH:mm:ss`
+* date `yyyy-MM-dd` and time `HH:mm:ss.SSS`
+* date `yyyy-MM-dd` and time `HH:mm:ss`
+
 The CSV file has at least the 4 first columns in this order. It also have the header line (mandatory)
 
 The parameters are created on the fly if they do not exist (PARAM_1, PARAM_2)
