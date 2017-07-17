@@ -31,6 +31,7 @@ This CSV table will create 3 messages:
 > THE DECIMAL DELIMITER IS THE `.`
 
 ##Date format
+
 The date format has to be one of the following. Be careful, Excel can be very random with date exportation. In case of error, we suggest checking the data with a simple text editor
 
 * date `yyyy/MM/dd` and time `HH:mm`
