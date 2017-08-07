@@ -44,10 +44,13 @@ The CSV file has at least the 4 first columns in this order. It also have the he
 
 The parameters are created on the fly if they do not exist (PARAM_1, PARAM_2)
 
-While 2 contiguus records have the same FWOT, the records will belong to the same [message](https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/InputMessageV3IO.java). 
+While 2 contiguus records have the same FWOT, the records will belong to the same [message](https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/InputMessageV3IO.java).
 
 To force the creation of a new message
 * insert an empty line between them
 * Change the FWOT and/or the LAYOUT
 
-end
+# Error management
+
+* if the CSV contains only 1 fwot, and it is unknown, the event is not inserted, and code 400 is returned
+* if the CSV contains several messages. If a FWOT is unknown for some of them, all the messages are inserted, except the ones that are unknown that are quietly skipped
