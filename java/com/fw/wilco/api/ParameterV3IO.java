@@ -2,6 +2,8 @@ package com.fw.wilco.api;
 
 import java.util.List;
 
+import com.fw.wilco.api.constants.ParamType;
+
 
 
 public class ParameterV3IO {
@@ -12,7 +14,7 @@ public class ParameterV3IO {
 	public  Double minOK;
 	public  Double maxOK;
 	public  String name;
-	public  String type;
+	public  ParamType type;
     public  String description;
 	public  String actypeName;
 	public  String address;
