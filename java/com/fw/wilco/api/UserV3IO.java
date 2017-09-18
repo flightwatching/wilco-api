@@ -9,6 +9,7 @@ public class UserV3IO {
 	public String airline;
 	public String profile;
 	public String trigram;
+	public boolean bigdata;
 
 
 }
