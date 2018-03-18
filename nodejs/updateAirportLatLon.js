@@ -123,7 +123,7 @@ fr24Airports(function(fr24) {
     });
   } else {
     apiv3('/fleet/apiv3/airports', 'GET', function(json) {
-      json.airports.forEach(function(a) {
+      json.fwots.forEach(function(a) {
         update(a, fr24);
       });
     });
