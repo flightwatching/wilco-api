@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -21,11 +23,11 @@ public class CSVParser implements IParser {
 	private static final int PARAMS_OFFSET = MANDATORY_FIELDS.values().length;
 	
 	@Override
-	public List<InputMessageV3IO> parse(File file) throws ParseException {
+	public List<InputMessageV3IO> parse(InputStream is) throws ParseException {
 		List<InputMessageV3IO> ret = new ArrayList<InputMessageV3IO>();
 		InputMessageV3IO m = new InputMessageV3IO();
 		try {
-			org.apache.commons.csv.CSVParser parser = CSVFormat.EXCEL.withDelimiter(';').parse(new FileReader(file));
+			org.apache.commons.csv.CSVParser parser = CSVFormat.EXCEL.withDelimiter(';').parse(new InputStreamReader(is));
 			Iterator<CSVRecord> it = parser.iterator();
 			if (!it.hasNext()) {
 				throw new ParseException("header", "the format must at least have a header (see https://github.com/flightwatching/wilco-api/tree/master/docs/csvImputFormat)");
@@ -88,7 +90,7 @@ public class CSVParser implements IParser {
 			}
 
 		} catch (Exception e) {
-			throw new ParseException("file", file.getName(), e);
+			throw new ParseException("inputstream", "cannot process data with CSV parser", e);
 		}
 		return ret;
 	}

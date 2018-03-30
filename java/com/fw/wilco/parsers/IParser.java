@@ -1,6 +1,7 @@
 package com.fw.wilco.parsers;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.List;
 
 import com.fw.wilco.api.InputMessageV3IO;
@@ -14,7 +15,7 @@ public interface IParser {
 	 * @return
 	 * @throws ParseException
 	 */
-	List<InputMessageV3IO> parse(File file) throws ParseException;
+	List<InputMessageV3IO> parse(InputStream is) throws ParseException;
 
 	String getName();
 
