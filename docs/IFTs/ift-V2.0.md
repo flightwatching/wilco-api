@@ -1,9 +1,18 @@
 # Help page for IFT V2.0 available functions
 
-**a pre-requisite is to know javascript. The functions belongs to a FW javascript object.**
+**a pre-requisite is to know javascript.**
+
+The functions belongs to a FW javascript object.
+You can use some libraries (and associated variables):
+* [moment](http://momentjs.com/docs/) to manipulate the dates,
+* [\_](http://underscorejs.org/) to manipulate the arrays and the collections
+
+    Some of the following functions are not available with the webservice/webhook connector as they are not linked to a message or an event.
+    The best practice with those connectors is to create an event with `FW.postEvent` with a defined layout and then work on the layout IFTs to screen or enhance
+
 
 ## Accessing the samples in your IFT
-The samples for the currently processed message are provided in the script for computation. A variable is automatically created for each sample. The variable contains the value of the sample as a string, whatever the status. To use it as a number, just add the sign _+_ before it.
+The samples for the currently processed message or constants are provided in the script for computation. A variable is automatically created for each sample or constant. The variable contains the value of the sample as a string, whatever the status. To use it as a number, just add the sign _+_ before it.
 
 ```javascript
 var EGT_1="655"; //created by WILCO
@@ -177,7 +186,37 @@ removes a property for the current FWOT (FWOT of the event)
 removes a property for a FWOT (reg)
 
 ## `FW.postMessage(inputMessage)`
-posts a message. Message is in the format inputMessageV3IO
+posts a message. Message is in the format inputMessageV3IO **deprecated. Use FW.postEvent(EventV3IO)**
+
+## `FW.postEvent(eventV3IO)`
+posts an event. There are help functions to make it easier.
+
+The eventV3IO complies to the definition found [here](https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/EventV3IO.java)
+
+When creating a date, we first check if the string matches known [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) formats, we then check if the string matches the [RFC 2822](https://tools.ietf.org/html/rfc2822#section-3.3) Date time format before dropping to the fall back of new Date(string) if a known format is not found.
+
+
+Example:
+
+```javascript
+let event = new EventV3IO("MY_FWOT");
+event.addSample("extTemperature", 18) // would crate a parameter if not exists and a sample
+event.addSample("extHumidity", 40) // would crate a parameter if not exists and a sample
+event.title="Sensor temp="+18;
+event.layoutId=4917788; // the ID of the layout associated with the message (if you need it)
+event.date = '1973-03-03'; // would set the computedDate
+//event.visible=false;
+var hour=moment().hours(); // you can use the moment library and the _ library
+if (hour>=8&&hour<=19) {
+	event.status="flying";
+} else {
+	event.status="gatein";
+}
+FW.postEvent(event)
+```
+
+
+
 ## `FW.uplink(layoutId, delayInSec)`
 uplinks the message in `delayInSec` seconds
 ## `FW.tag(tag)`
