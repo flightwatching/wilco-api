@@ -76,6 +76,22 @@ FW.getEvents(cms.reg, fromDate, toDate, true, false, null, ["2420FJV7", "2420FJV
 });
 ```
 
+
+
+
+## `FW.getFwot(reg)`
+
+    only in V2
+
+Access any FWOT using its registration:
+```javascript
+FW.updateSomeFwotProperty('FW-LUC', 'key', 'oldValue');
+FW.updateSomeFwotProperty('FW-LUC', 'key', FW.getFwot('FW-LUC').properties.key+' newValue');
+
+//would set the property **key** of FW-LUC to **oldValue newValue**
+```
+
+
 ## `FW.notify(who, subject, body)`
 Sends an e-mail to `who` with subject and eventually a body. A signature is always added to the message. It can be overridden with the AppConfig property `MAIL_TEMPLATE` using the groovy syntax. Few parameters are available.
 
