@@ -42,7 +42,7 @@ if (FW["EGT_1"].state=="VALID" && FW["EGT_2"].state=="VALID" ) {
 
 
 ## `FW.getEvent()`
-Accesses the currently processed event. returns a EventV3IO object
+Accesses the currently processed event. returns a [EventV3IO](https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/EventV3IO.java) object
 
 ## `FW.getEvents(reg, from, to, withDismissed, withHidden, severities, tags, count)`
 requests the database for events filtered according to the parameter passed
@@ -83,13 +83,32 @@ FW.getEvents(cms.reg, fromDate, toDate, true, false, null, ["2420FJV7", "2420FJV
 
     only in V2
 
-Access any FWOT using its registration:
+Access any FWOT using its registration. returns a [FwotV3IO](https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/FwotV3IO.java):
 ```javascript
 FW.updateSomeFwotProperty('FW-LUC', 'key', 'oldValue');
 FW.updateSomeFwotProperty('FW-LUC', 'key', FW.getFwot('FW-LUC').properties.key+' newValue');
 
 //would set the property **key** of FW-LUC to **oldValue newValue**
 ```
+
+## `FW.getFwots()`
+
+    only in V2
+
+You can filter it with [\_](http://underscorejs.org/):
+```javascript
+const a320s = _.where(FW.getFwots(), {type:'A320'});
+```
+
+
+returns an array of [FwotV3IO](https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/FwotV3IO.java):
+```javascript
+FW.updateSomeFwotProperty('FW-LUC', 'key', 'oldValue');
+FW.updateSomeFwotProperty('FW-LUC', 'key', FW.getFwot('FW-LUC').properties.key+' newValue');
+
+//would set the property **key** of FW-LUC to **oldValue newValue**
+```
+
 
 
 ## `FW.notify(who, subject, body)`
