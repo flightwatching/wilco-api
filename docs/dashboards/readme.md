@@ -309,7 +309,7 @@ In the Symbols chapter, we described how to animate static elements of your dash
 
 In those cases, WILCO allows you to dynamically create associated symbols. It also enables the user to translate or rotate them manually directly within the dashboard with smart tools.
 
-##cloning a template
+## cloning a template
 To achieve that, the user can create some template symbols, and WILCO will map the template to the data. Here is the code snippet for that
 
 
@@ -336,10 +336,10 @@ the `d` parameter used in the 2nd argument is each element of the passed array. 
 
 
 
-#Debugging your IFTs
+# Debugging your IFTs
 OK, you wrote an ITF and nothing happends? here are some tips to figure out what did not happend
 
-##use the chrome inspector
+## use the chrome inspector
 Your friend is the chrome inspector. The Dashboard and Symbol IFTs are executed by you browser, not by the server. That's why it is necessary to debug it from the client browser.
 To access the chrome inspector, go to the page that represents your dashboard in conditions, for example an event page with the dashboard activated. Right-click on any element and choose `inspect element`
 
@@ -347,17 +347,17 @@ WILCO names each one of your IFT so that it is accessible within the inspector (
 
 When your page is loaded, activate the inspector. Since in the inspector, you can ctrl+p (or cmd+p on mac). Type IFT (prefix) and a combo list will display all the loaded IFTs. choose your IFT, it will be fetched in the inspector. On the left, click on the line numbers to add/remove breakpoints. Make the IFTs to be evaluated by refreshing your page, changing the event or moving around with the samples timeline. The ITFs will be called and breakpoints activated. Hover with your mouse or right-click -> watch. You will actually see your IFT working live with access to each step.
 
-##use no-cache
+## use no-cache
 WILCO creates a cache with your dashboards, symbols and rules to accelerate the loading process. When designing rules, this is not very efficient as computing the cache is slow. add a no-cache url parameter to directly use your ongoing version of the dashboard/IFTs.
 
 e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?no-cache`
 
-##use the debug option
+## use the debug option
 debug option logs more things in the console (chrome inspector tab) about the context and rules.
 e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?debug`
 
 you can use both options with
 e.g convert `http://localhost:9000/#/RAF-11/events/11857` to  `http://localhost:9000/#/RAF-11/events/11857?no-cache&debug`
 
-##console.log
+## console.log
 In your IFT, add some `console.log(anything)` and it will appear in your inspector (console tab)
