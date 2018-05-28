@@ -44,7 +44,7 @@ registers a callback function that is called each time a new event is created, w
 ## variables
 
 ### scope.anims
-A dictionnary with all the `\_anims`. The key is the name of the anim, and the value is the anim itself.
+A dictionnary with all the `_anims`. The key is the name of the anim, and the value is the anim itself.
 
 ### URL_PARAMS
 an object containing all the url parameters. for example
