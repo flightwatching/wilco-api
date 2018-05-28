@@ -38,9 +38,13 @@ goes to the given URL. if you want to trig this when click on an button, you hav
 ## uplink: function(reg, layoutId)
 Uplinks to a FWOT for the give layout.
 
-
+## onNewMessages: function(callback<events>)
+registers a callback function that is called each time a new event is created, whatever the FWOT. this is useful for general fleet dashboards. The list of events as EventV3IO is passed as a parameter
 
 ## variables
+
+### scope.anims
+A dictionnary with all the `\_anims`. The key is the name of the anim, and the value is the anim itself.
 
 ### URL_PARAMS
 an object containing all the url parameters. for example
