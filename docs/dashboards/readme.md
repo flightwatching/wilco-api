@@ -221,7 +221,7 @@ same as `getSamplesForFwotMinMaxDate` but callback elements are formatted as row
 
 # Symbols
 
-##refering to a symbol
+## refering to a symbol
 A symbol is described [here](../symbols/readme.md)
 
 The symbols are automatically mapped on an IFT as soon as its id (the name of the object in illustrator) ends with `_anim`. For example, `ALT_anim` will be mapped to the IFT named `ALT`.
@@ -230,11 +230,11 @@ The symbol ALT must exist in the symbol list, and its type has to match (a svg s
 If the symbol has a default function, you can simply tick the auto checkbox, and the default function will be called with a sample in parameter. The sample is chosen like this:
 symbol name minus `_anim`. The example above will lead to `theFunction(ALT)`
 
-##symbol functions
+## symbol functions
 
 Each symbol becomes a javascript object which name is the ID of the symbol. I has a function to ease access to sub components and to manage its behavior. For example, you can have a `ALT_anim` variable created for you.
 
-###tag(tags)
+### tag(tags)
 This function takes a string with whitespace separated tags (or comma). each tag is then searchable using the search box and the symbol is framed when found. If you pass a sample, its name is used as single tag.
 
 ```javascript
@@ -242,7 +242,7 @@ ALT_anim.tag(ALT); // will make the string "ALT" searchable
 ALT_anim.tag("foo bar"); // will make the string "foo" and "bar" searchable
 ```
 
-###clickForTrend(sample)
+### clickForTrend(sample)
 This function binds the click event on the symbol. When clicked, the parameter of the sample is used to display the Trend modal box. You can also pass an array to see several trends at a time
 
 ```javascript
@@ -251,17 +251,17 @@ ALT_anim.clickForTrend([ALT, MACH]);
 ```
 
 
-###gotoFwot(reg)
+### gotoFwot(reg)
 Opens the last message of the fwot which registration is `reg`. It will enable the live mode.
 
 ```javascript
 ALT_anim.gotoFwot("FW-FAN");
 ```
 
-###clickForDashboard(db_id)
+### clickForDashboard(db_id)
 scrolls to the passed dashboard Id. If the target dashboard is not in the page, there is no scroll
 
-###clickForMessage(samples)
+### clickForMessage(samples)
 When the symbol is clicked, a new message is created with the given samples associated. The message is the same as the current one (fwot, layout...) but the computedDate is the current date (now).
 
 Samples is an array of objects with at least 2 fields: name and value. To ensure the sample continuity, we recommand modifying [SAMPLES](#samples) and passing it as parameter (or filtering it before passing)
@@ -270,10 +270,10 @@ Samples is an array of objects with at least 2 fields: name and value. To ensure
 ALT_anim.clickForMessage(SAMPLES);
 ```
 
-###createMessage(samples)
+### createMessage(samples)
 Same as above, but does not map the action to a click. The post is performed immediately
 
-###inlineDashboard(db_id)
+### inlineDashboard(db_id)
 This function will take the bounding box of the element and display the given dashbaord (db_id) within it. We recommend that the element is a rect. The rect can be rotated or scaled, the dashboard will try to fit it the best
 
 The db_id is the unique ID of the dashboard as it appears in the dashboard list
@@ -282,7 +282,7 @@ The db_id is the unique ID of the dashboard as it appears in the dashboard list
 ALT_anim.inlineDashboard(12445);
 ```
 
-###d3(the_sym)
+### d3(the_sym)
 This function give you access to child elements of the symbol. The child elements are the elements which suffix is \_sym. Do not specify this suffix.
 If your sub element is named `needle_sym` you will get access to it with the following. You can now use the [d3](http://d3js.org/) functions
 
@@ -290,7 +290,7 @@ If your sub element is named `needle_sym` you will get access to it with the fol
 ALT_anim.d3("needle").attr("opacity", )
 ```
 
-###updateOnFwots()
+### updateOnFwots()
 
 This function forces the page to render each time a FWOT changes in the server. This way, it is possible to use the properties or attributes of other fwots (using the FWOTS array) and get some live data in a dashboard.
 
