@@ -10,6 +10,8 @@ You can use some libraries (and associated variables):
     Some of the following functions are not available with the webservice/webhook connector as they are not linked to a message or an event.
     The best practice with those connectors is to create an event with `FW.postEvent` with a defined layout and then work on the layout IFTs to screen or enhance
 
+## Accessing to the current fwot
+You can access the current fwot by using the `fwot` variable that contains a [FwotV3IO](https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/FwotV3IO.java) structure
 
 ## Accessing the samples in your IFT
 The samples for the currently processed message or constants are provided in the script for computation. A variable is automatically created for each sample or constant. The variable contains the value of the sample as a string, whatever the status. To use it as a number, just add the sign _+_ before it.
