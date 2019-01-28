@@ -114,18 +114,63 @@ FW.updateSomeFwotProperty('FW-LUC', 'key', FW.getFwot('FW-LUC').properties.key+'
 
 
 ## `FW.notify(who, subject, body)`
-Sends an e-mail to `who` with subject and eventually a body. A signature is always added to the message. It can be overridden with the AppConfig property `MAIL_TEMPLATE` using the groovy syntax. Few parameters are available.
+Sends an e-mail to `who` with subject and eventually a body. A signature is always added to the message. It can be overridden with the AppConfig property `MAIL_TEMPLATE` using the groovy  syntax ([cheatsheet](https://www.playframework.com/documentation/1.5.x/cheatsheet/templates)). Few parameters are available.
 
 	Check ${msg.sumUp} details <a href="${url}">here</a>
 	<br>
 	<br>
 	<em>Health Monitoring by Flightwatching</em>
 
+
 ```javascript
-FW.notify('support@flightwatching.com',
-'My subject',
-'Dear FW support team, ...');
+FW.notify('support@flightwatching.com', //recipient list
+'My subject', // subject
+'Dear FW support team, ...' //body
+);
 ```
+
+  - `who`: A string with brackets, coma or semicolon separator of email addresses. The function will create the array of recipients from it. any field that does not contains the character @ will be ignored
+  - `subject`: the subject of the email
+  - `body`: the content of the message.
+
+## `FW.notifyWithTemplate(who, subject, templateId, params)`
+The purpose of this is to reference the body from a complex html file that will be customized with parameters.
+
+Same as `FW.notify` but the body of the message is created from the template that is passed as parameter.
+
+A template is a document (in your admin page the `docs` models). The document file is a text file that will be a html format.
+
+  - `templateId` has to be a number (not a string) to be considered as a reference to a template.
+  - `params` is a javascript object that contains all the data used by the template. This object is referenced using the groovy language ([cheatsheet](https://www.playframework.com/documentation/1.5.x/cheatsheet/templates))
+
+### Example
+
+``` javascript
+FW.notifyWithTemplate("user1@example.com, user2@example.com", "test template", 48017774, {
+  event:{
+      id:FW.getEvent().id
+    },
+    toto:'Japan'
+  }
+);
+```
+
+with template#48017774 is
+
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  	<h1>HELLO FROM ${toto}</h1>
+    <p>The event is #<code>${ event.id }</code></p>
+  </body>
+</html>
+```
+
 
 ## `FW.setFrom(reg)` and `FW.setTo(reg)`
 
