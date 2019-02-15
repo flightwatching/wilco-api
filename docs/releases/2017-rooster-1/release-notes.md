@@ -1,4 +1,4 @@
-# Release notes for version release-monkey-2
+# Release notes for version release-rooster-2
 
 Dec 2016
 
