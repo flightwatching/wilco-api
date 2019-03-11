@@ -315,7 +315,7 @@ a new function. Each sample is a [SampleV3IO](https://github.com/flightwatching/
 
 ```
 FW.querySamples(
-  regs,           // an array of fwot registrations. if null or empty, this field is replaced by the event's fwot.
+  regs,           // an array of fwot registrations. if null, this field is replaced by the event's fwot.
   names,          // the name of a parameter or an array of parameter names
   from,           // A date, a moment or a string that specifies the begin time window of the request. can be null
   to,             // A date, a moment or a string that specifies the end time window of the request. if null or not passed, the date of the event is considered
