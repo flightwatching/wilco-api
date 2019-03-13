@@ -105,12 +105,17 @@ Templates needs to be tested. You can now test an IFT that sends an email with t
 IFTs supports now `ES6`and async/awaits for FW.* functions. See below
 
 ## Query samples in IFT V2
+
+
+> This function gets rid of the use of a lot of fwot.properties and should be prefered.
+> fwot.properties is very convenient but is a real mess when reprocessing data.
+
 You can now query WILCO for samples. It allows to make real analytics on message reception.
 a new function. Each sample is a [SampleV3IO](https://github.com/flightwatching/wilco-api/blob/master/java/com/fw/wilco/api/SampleV3IO.java)
 
 ```
 FW.querySamples(
-  regs,           // an array of fwot registrations. if null or empty, this field is replaced by the event's fwot.
+  regs,           // an array of fwot registrations. if null, this field is replaced by the event's fwot.
   names,          // the name of a parameter or an array of parameter names
   from,           // A date, a moment or a string that specifies the begin time window of the request. can be null
   to,             // A date, a moment or a string that specifies the end time window of the request. if null or not passed, the date of the event is considered
@@ -130,8 +135,6 @@ const values = s.map(s=>s.value);
 //values is an array of all the values.
 ```
 
-## Math/Stats support (beta)
-
 
 ## Access to big data information in WILCO
 Now you can access to the bigdata elasticsearch from WILCO (dashboards and IFTs) to take benefit of the analysis abilities, the ML, etc...
@@ -139,3 +142,38 @@ Now you can access to the bigdata elasticsearch from WILCO (dashboards and IFTs)
 https://youdomain.flightwatching.com/fleet/apiv3/es/_search
 
 You can use the [whole API of elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
+
+
+## Math/Stats support (beta)
+We start adding math functions. First step is linear basic functions
+
+### Least Square algorithm
+
+You can run least square algorithm on any set of values.
+
+```
+leastSquares= function(xSeries, ySeries)
+//xSeries is an array of numerical
+//ySeries is an array of numerical. Should have the same length
+
+//returns: {slope, intercept, rSquare}
+
+//slope is the "derivative of the least square approximation, intercept is the x where y is 0 and rSquare is the precision of the approximation"
+```
+
+The function is powerful used in conjunction with `querySamples`
+
+_example_
+
+```javascript
+
+```
+
+
+### Predict algorithm
+Predict uses the least square algorithm and returns the `x` value for which `y` is `yval`. For example: when the oxygen level will reach 1600 if we decrease linearly?
+
+```javascript
+const oxyLevelLimit = 1600;
+const alertTime = predict(times, oxyLevels, oxyLevelLimit)
+```
