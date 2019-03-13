@@ -135,6 +135,22 @@ const values = s.map(s=>s.value);
 //values is an array of all the values.
 ```
 
+## Access to any webservice
+`axios` is directly accessible to use any external service from WILCO.
+
+you can get/set data like
+* MIS
+* weather
+* FR24
+* servers
+* trello, github, google...
+
+
+
+## Access to apiv3
+Now you can use all the apiV3 from the IFTs with `FW.wilco`. It will use the `axios` library and credentials are already in place.
+
+ApiV3 is defined in swaggerHub. Thank's to APIV3, you can get all the information on samples, events, fwots,  bigdata information.
 
 ## Access to big data information in WILCO
 Now you can access to the bigdata elasticsearch from WILCO (dashboards and IFTs) to take benefit of the analysis abilities, the ML, etc...
