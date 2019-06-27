@@ -258,6 +258,12 @@ shorthand for `FW.updateProperties({title:title})`
 shorthand for `FW.updateProperties({severity:severity})`
 ## `FW.set(param, value, timestamp)`
 creates a sample for the passed parameter. if timestamp is not passed, then the event timestamp is used
+
+The timestamp has to be in the format: "yyyy-MM-dd'T'HH:mm:ss"
+
+With moment, you can format it like this: `moment(timestamp+1000).utc().format("YYYY-MM-DDTHH:mm:ss")`
+
+
 ## `FW.updateSomeFwotProperty(reg, name, value)`
 updates a property for a FWOT (reg)
 ## `FW.updateFwotProperty(name, value)`
