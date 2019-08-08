@@ -66,11 +66,11 @@ var updateWilco = function(fwot) {
 var setIata = function(fwot, iata) {
   //POST /apiv3/{category}s/{reg}/property?name&value
   if (!iata) {
-    console.log(" > no iata "+iata );
+    console.log(`${a.reg} no iata iata` );
     return;
   }
   if (fwot.properties && fwot.properties.IATA) {
-    console.log(" > iata already set" );
+    //console.log(" > iata already set" );
     return;
   }
   var request = https.request(
@@ -93,26 +93,26 @@ var setIata = function(fwot, iata) {
 var icaoMatch = /^\w{4}$/;
 
 var update = function(a, airports) {
-  console.log("processing "+a.reg);
+  //console.log("processing "+a.reg);
   if (!icaoMatch.test(a.reg)) {
-    console.log(" > not 4 digits");
+    console.log(`${a.reg} not 4 digits`);
     return;
   }
   var fr24a = findInFr24(airports.rows, a.reg);
   if (fr24a) {
     setIata(a, fr24a.iata);
     if (!a.lat || !a.lon) {
-      console.log('updating '+a.reg+ ' to '+[fr24a.lat, fr24a.lon]);
+      console.log(`${a.reg} updating to ${fr24a.lat}, ${fr24a.lon}`);
       a.lat=fr24a.lat;
       a.lon=fr24a.lon;
       a.coolName=fr24a.name;
       updateWilco(a);
       //console.log('done');
     } else {
-      console.log(" > lat/lon already set to "+[a.lat, a.lon]);
+      //console.log(" > lat/lon already set to "+[a.lat, a.lon]);
     }
   } else {
-    console.log(" > not found");
+    console.log(`${a.reg}  not found`);
   }
 };
 
