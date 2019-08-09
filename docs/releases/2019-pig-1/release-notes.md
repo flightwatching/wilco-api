@@ -25,6 +25,8 @@ This feature allows the user to display a small chart. It is not as powerfull as
 - `options`: it is an object that defines customizations:
     - xScale: a d3 scale: `d3.time.scale()` to force the X span
     - yScale: a d3 scale: `d3.scale` to force the Y span
+    - margin: a structure like `margin: {left:0, top:0, bottom:10,right:0}` to set the margins of the chart. By default, it is `margin: {left:30, top:30, bottom:30,right:30}`,
+    - axis: do you want to display the axis: `axis: { showX:true, showY:false}`
 
 ### set the title of the graph
 `graph.title(title)`
@@ -43,11 +45,12 @@ A zone helps to split the graph into zones. Zones are between 2 X values
 - `name`: the name of the serie. Has to be unique in the chart. It will identify the curve among others.
 - `data`: an array of {x, y} elements, where x is a date and y a number
 - `opts`: it is an object that defines customizations: 
-   - `xDomain`: forces the X scale extent of the whole graph. If not passed will autoscale.
-   - `yDomain`: forces the Y scale extent of the whole graph. If not passed will autoscale.
+   - `autoScaleX`: The X axis is recomputed to match the data.
+   - `autoScaleY`: The Y axis is recomputed to match the data.
    - `color`: the color as web color or RGB hex
    - `width`: the width
    - `opacity`: the opacity of the curve (0..1)
+   - `type`: can be `AREA` or `LINE`. If not defined, then it is a line.
 
 ### draw horizontal line
 A shorthand to create a flat curve (horizontal line) at a y value. `name` and `opts` are the same as for `drawSerie`
@@ -70,7 +73,10 @@ A shorthand to create a vertical curve (vertical line) at a x value. `name` and 
 - `radius`: the size of the circle of the dot (string). can also be a function where the parameter is the `dot`. the return should be a number
 - `opacity`: the opacity of the circle of the dot (string). can also be a function where the parameter is the `dot`. the return should be a number between 0 and 1
 
+## Migration guide
 
+- replace `drawDots` with `drawCircles`
+- replace the xDomain and yDomain with setting the values when creating the graph or use autoScaleX and autoScaleY
 
 ## Example
 
@@ -125,10 +131,21 @@ if (OIL_CONSUMPTION.minOK) {
 
 ------------------
 
+# Least square algorithm
+
+------------------
+
 # Performances in getting the samples
+
+------------------
+
 
 # Titles for all the windows
 
 Now, all, the pages have a meaningfull title so that you can organize better your browser tabs
 
+------------------
+
+
 # Fleet dashboard URL parameters
+
