@@ -18,4 +18,4 @@ jobs:
             - ~/.m2
           key: wilco-api-{{ checksum "java/pom.xml" }}
 
-      - run: mvn integration-test
+      - run: cd java; mvn integration-test
