@@ -21,4 +21,4 @@ jobs:
       - run: cd java; mvn integration-test
 
       - store_artifacts:
-          path: java/target/wilco-api-*.jar
+          path: java/target/wilco-api.jar
