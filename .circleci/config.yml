@@ -19,3 +19,6 @@ jobs:
           key: wilco-api-{{ checksum "java/pom.xml" }}
 
       - run: cd java; mvn integration-test
+
+      - store_artifacts:
+          path: java/targets/wilco-api-*.jar
