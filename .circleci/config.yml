@@ -1,0 +1,24 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:11-jdk
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - wilco-api-{{ checksum "java/pom.xml" }}
+            - wilco-api-
+
+      - run: cd java; mvn dependency:go-offline
+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: wilco-api-{{ checksum "java/pom.xml" }}
+
+      - run: cd java; mvn integration-test
+
+      - store_artifacts:
+          path: java/target/wilco-api.jar
