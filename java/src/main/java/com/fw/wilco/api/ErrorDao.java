@@ -19,6 +19,16 @@ public class ErrorDao {
 	public ErrorDao(int code) {
 		this(code, null, null);
 	}
-	
-	
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public int getCode() {
+		return code;
+	}
 }
