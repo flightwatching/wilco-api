@@ -135,7 +135,27 @@ if (OIL_CONSUMPTION.minOK) {
 
 ------------------
 
-# Performances in getting the samples
+# Performance improvements
+
+## Back-end performance improvements
+
+While retaining compatibility with the current API, parts of the back-end have been modified to :
+ - limit CPU and memory resources
+ - limit database accesses
+ - use newly created database indexes
+
+The results are :
+ - Up to 92% response time improvement when querying samples.
+ - Up to 95% response time improvement when retrieving the last event. 
+ - Up to 25% response time improvement when retrieving events with tag filtering.
+
+## Front-end performance improvements
+
+The front-end directly benefits the performance improvements of the back-end, while also grouping calls to the backend for better efficiency.
+ 
+The results are:
+ - Up to 50% response time improvement when viewing the fleet status.
+ - Up to 39% response time improvement when viewing performance charts.
 
 ------------------
 
