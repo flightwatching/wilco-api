@@ -175,4 +175,8 @@ public class EventsStatsRequestV3IO {
     public void setParts(List<Part> parts) {
         this.parts = parts;
     }
+
+    public void addPart(Part part) {
+        parts.add(part);
+    }
 }

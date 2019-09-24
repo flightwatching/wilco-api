@@ -22,6 +22,10 @@ public class EventsStatsResponseV3IO {
         public void setValue(BigDecimal value) {
             put("value", value);
         }
+
+        public Double getValue() {
+            return (Double)get("value");
+        }
     }
 
     public static final class Part {
@@ -53,5 +57,14 @@ public class EventsStatsResponseV3IO {
 
     public void setParts(List<Part> parts) {
         this.parts = parts;
+    }
+
+    public Part getPartById(String id) {
+        for(Part part : parts) {
+            if (id.equals(part.id)) {
+                return part;
+            }
+        }
+        return null;
     }
 }
