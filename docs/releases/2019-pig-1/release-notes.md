@@ -140,7 +140,198 @@ if (OIL_CONSUMPTION.minOK) {
 
 ------------------
 
-# Performances in getting the samples
+# Performance improvements
+
+## Back-end performance improvements
+
+While retaining compatibility with the current API, parts of the back-end have been modified to :
+ - limit CPU and memory resources
+ - limit database accesses
+ - use newly created database indexes
+
+The results are :
+ - Up to 92% response time improvement when querying samples.
+ - Up to 95% response time improvement when retrieving the last event. 
+ - Up to 25% response time improvement when retrieving events with tag filtering.
+
+## Front-end performance improvements
+
+The front-end directly benefits the performance improvements of the back-end, while also grouping calls to the backend for better efficiency.
+ 
+The results are:
+ - Up to 50% response time improvement when viewing the fleet status.
+ - Up to 39% response time improvement when viewing performance charts.
+
+------------------
+
+# New API: events statistics
+
+The new API endpoint /apiv3/events/stats allows clients to request server-side events counting, by sending the server a list of count jobs to execute.
+
+Each server job must have an id, and specify :
+- on which criteria to filter the events (by reg, by tag or by severity)
+- how to aggregate the results (by reg, by tag or by severity)
+
+Here are an example of requests and responses to the new API endpoint :
+- Job ALL-COUNT : count all events
+- Job DATE-RANGE : count all events between two dates
+- Job AFTER : count all events after a date
+- Job BEFORE : count all events before a date
+- Job KNOWN-REG: count all the events of reg FW-LUC
+- Job KNOWN-TAG: count all the events tagged REP2
+- Job SEVERITY-INFO: count all the events with the severity INFO
+- Job AGGR-REG: count all the events, aggregate results by reg
+- Job AGGR-TAG: count all the events, aggregate results by tags
+- Job AGGR-SEV: count all the events, aggregate results by severity
+- Job AGGR-REG-TAG: count all the events, aggregate results by reg and tag
+- Job COMBINED: count all the events between two dates that have the severity INFO and are tagged FLYING, aggregate results by reg
+
+Client request:
+```
+{
+	"parts": [{
+		"id": "ALL-COUNT"
+	}, {
+		"id": "DATE-RANGE",
+		"from": "2019-02-06T10:47:51",
+		"to": "2019-02-08T10:47:51"
+	}, {
+		"id": "AFTER",
+		"from": "2019-02-08T10:47:51"
+	}, {
+		"id": "BEFORE",
+		"to": "2019-02-06T10:47:51"
+	}, {
+		"id": "KNOWN-REG",
+		"regs": ["FW-LUC"]
+	}, {
+		"id": "KNOWN-TAG",
+		"tags": ["REP2"]
+	}, {
+		"id": "SEVERITY-INFO",
+		"severities": ["INFO"]
+	}, {
+		"id": "AGGR-REG",
+		"aggregates": [{
+			"kind": "REG"
+		}]
+	}, {
+		"id": "AGGR-TAG",
+		"aggregates": [{
+			"kind": "TAG"
+		}]
+	}, {
+		"id": "AGGR-SEV",
+		"aggregates": [{
+			"kind": "SEVERITY"
+		}]
+	}, {
+		"id": "AGGR-REG-TAG",
+		"aggregates": [{
+			"kind": "REG"
+		}, {
+			"kind": "TAG"
+		}]
+	}, {
+		"id": "COMBINED",
+		"from": "2019-02-06T10:47:51",
+		"to": "2019-02-08T10:47:51",
+		"tags": ["FLYING"],
+		"severities": ["INFO"],
+		"aggregates": [{
+			"kind": "REG"
+		}]
+	}]
+}
+```
+
+Server response:
+```
+{
+	"parts": [{
+		"id": "ALL-COUNT",
+		"result": {
+			"count": 2
+		}
+	}, {
+		"id": "DATE-RANGE",
+		"result": {
+			"count": 2
+		}
+	}, {
+		"id": "AFTER",
+		"result": {
+			"count": 0
+		}
+	}, {
+		"id": "BEFORE",
+		"result": {
+			"count": 0
+		}
+	}, {
+		"id": "KNOWN-REG",
+		"result": {
+			"count": 2
+		}
+	}, {
+		"id": "KNOWN-TAG",
+		"result": {
+			"count": 1
+		}
+	}, {
+		"id": "SEVERITY-INFO",
+		"result": {
+			"count": 1
+		}
+	}, {
+		"id": "AGGR-REG",
+		"result": {
+			"FW-LUC": {
+				"count": 2
+			}
+		}
+	}, {
+		"id": "AGGR-TAG",
+		"result": {
+			"REP2": {
+				"count": 1
+			},
+			"FLYING": {
+				"count": 1
+			}
+		}
+	}, {
+		"id": "AGGR-SEV",
+		"result": {
+			"NULL": {
+				"count": 1
+			},
+			"INFO": {
+				"count": 1
+			}
+		}
+	}, {
+		"id": "AGGR-REG-TAG",
+		"result": {
+			"FW-LUC": {
+				"REP2": {
+					"count": 1
+				},
+				"FLYING": {
+					"count": 1
+				}
+			}
+		}
+	}, {
+		"id": "COMBINED",
+		"result": {
+			"FW-LUC": {
+				"count": 1
+			}
+		}
+	}]
+}
+```
 
 ------------------
 
