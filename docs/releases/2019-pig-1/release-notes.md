@@ -18,15 +18,19 @@ This feature allows the user to display a small chart. It is not as powerfull as
 ## API
 
 ### creation of the graph
-`const graph = new WILCO.Graph(container, width, height, options)`
-- `container`: a d3 `<g>` element that will host the graph (ex: `my_anim.go()`)
-- `width`: the width of the graph (number)
-- `height`: the height of the graph (number)
+`const graph = new WILCO.Graph(container, options)`
+- `container`: a d3 `<g>` element that will host the graph (ex: `my_anim.go()`). A sub container will be created within it and translated accordingly
 - `options`: it is an object that defines customizations:
+    - `width`: the width of the graph (number). If not passed, then the bounding box of the container is used
+    - `height`: the height of the graph (number) If not passed, then the bounding box of the container is used
     - xScale: a d3 scale: `d3.time.scale()` to force the X span
     - yScale: a d3 scale: `d3.scale` to force the Y span
     - margin: a structure like `margin: {left:0, top:0, bottom:10,right:0}` to set the margins of the chart. By default, it is `margin: {left:30, top:30, bottom:30,right:30}`,
     - axis: do you want to display the axis: `axis: { showX:true, showY:false}`
+
+
+
+>   Please note that the bounding box of a container (`g`) is the bounding box of its content. It means that if you define the container as an empty group, it will have x, y, height and width set to 0. To have a correct bounding box, we suggest you add a `<rect>` in it so that the bounding box is the rect properties
 
 ### set the title of the graph
 `graph.title(title)`
@@ -77,6 +81,7 @@ A shorthand to create a vertical curve (vertical line) at a x value. `name` and 
 
 - replace `drawDots` with `drawCircles`
 - replace the xDomain and yDomain with setting the values when creating the graph or use autoScaleX and autoScaleY
+- when `new WILCO.Graph` pass the width and height in the opts instead by argument parameter.
 
 ## Example
 
@@ -149,3 +154,23 @@ Now, all, the pages have a meaningfull title so that you can organize better you
 
 # Fleet dashboard URL parameters
 
+The parameters you can pass to the fleet page are now more flexible:
+
+As before, you can specify in the URL:
+
+* `db` which can be the `id` of the dashboard that will be replicated for each fwot.
+* `cols` defines how many fwots per line you want to be fetched. accepted values are 1, 2, 3, 4, 6, 12
+* any set of parameter that is the name of a property of the fwot. It goes `PROPERTY_NAME=the_requested_value`
+
+Now, the dashboard you are refering with `db` may require some parameters (with `URL_PARAMS`), you may have to pass them thru the URL too.
+
+In that case, you can use the dashboard standard parameters in the URL. If you want to filter on a fwot property name, then you'll have to prefix it with a given prefix you choose in the URL:
+
+* `filter_prefix` will contain any word that will be prefix for the fwot filtering by property.
+* any set of parameter that is the name of a property of the fwot prefixed by `filter_prefix`. It goes `PROPERTY_NAME=the_requested_value`
+
+
+Example: 
+`https://yoursite.flightwatching.com/wilco/#/fleet?filter_prefix=fwot_&db=113297649&cols=1&param=OIL_CONSUMPTION&fwot_serviceProvider=QXT`
+
+we will display 1 fwot per column, filtering for the fwots where `serviceProvider=QXT` and passing `param=OIL_CONSUMPTION` to the dashboard. The dashboard refers to `OIL_CONSUMPTION` thru the variable `URL_PARAMS.param` (see: https://github.com/flightwatching/wilco-api/tree/master/docs/dashboards#url_params)
