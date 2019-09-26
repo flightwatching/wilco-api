@@ -44,19 +44,19 @@ public class EventsStatsRequestV3IO {
 
     public static class Part {
         private String id;
-        private Date from;
-        private Date to;
+        private String from;
+        private String to;
         private List<String> regs;
         private List<String> tags;
         private List<Severity> severities;
         private List<Aggregate> aggregates;
 
-        public Part notBefore(Date minDate) {
+        public Part notBefore(String minDate) {
             this.from = minDate;
             return this;
         }
 
-        public Part notAfter(Date maxDate) {
+        public Part notAfter(String maxDate) {
             this.to = maxDate;
             return this;
         }
@@ -109,19 +109,19 @@ public class EventsStatsRequestV3IO {
             return aggregates != null && !aggregates.isEmpty();
         }
 
-        public Date getFrom() {
+        public String getFrom() {
             return from;
         }
 
-        public void setFrom(Date from) {
+        public void setFrom(String from) {
             this.from = from;
         }
 
-        public Date getTo() {
+        public String getTo() {
             return to;
         }
 
-        public void setTo(Date to) {
+        public void setTo(String to) {
             this.to = to;
         }
 
