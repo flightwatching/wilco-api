@@ -16,6 +16,8 @@ public final class EventsStatsResponsePartV3IO {
 
     private Map<String, Object> result = new HashMap<>();
 
+    private Map<String, Object> internals;
+
     public String getId() {
         return id;
     }
@@ -30,6 +32,14 @@ public final class EventsStatsResponsePartV3IO {
 
     public void setResult(Map<String, Object> result) {
         this.result = result;
+    }
+
+    public Map<String, Object> getInternals() {
+        return internals;
+    }
+
+    public void setInternals(Map<String, Object> internals) {
+        this.internals = internals;
     }
 
     public static EventsStatsResponsePartV3IO getPartById(List<EventsStatsResponsePartV3IO> parts, String id) {
