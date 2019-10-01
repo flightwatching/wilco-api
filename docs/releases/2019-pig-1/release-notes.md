@@ -342,6 +342,12 @@ Now, all, the pages have a meaningfull title so that you can organize better you
 
 ------------------
 
+# Fleet view time ranges
+you can better handle the timerange where the fleet view gets the history data (sample.history()). 
+
+* `refDate` a reference date in ISO format that is the `to` date for the sample queries. If not specified, would use the current time
+* `unit` a unit that goes with `count` to know how far in the past from `refDate` we have to get the samples. See https://momentjs.com/docs/#/manipulating/add/ for the syntax
+* `count` number that could be a count of samples if `unit` not specified or a count of units if it is specified
 
 # Fleet dashboard URL parameters
 
