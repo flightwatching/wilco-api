@@ -8,6 +8,8 @@ To have a complete view in the features and fixes
 - back-end: https://github.com/flightwatching/fleet-monitor/commits/master
 - IFTs: https://github.com/flightwatching/wilco-ift/commits/master
 
+	Note: A (beta) feature is a feature that we release but we still do not ensure the ascent compatibility (API, behaviour). A beta feature is supposed to turn official in the next release (would be specifically written)
+
 --------------
 
 # Open a ticket!
@@ -52,7 +54,7 @@ Definition:
 ```await FW.email ("laurel@hal-roach.com, hardy@hal-roach.com", "the subject", {body: "the body", attachments: [{docId: 83391, variables: {a: 1, b: {sub1: "my first option", sub2: my second option}}} }])```
 
 
-## Snapshot as attachments!
+## Snapshot as attachments! (beta)
 
 Now, from an IFT, you can snapshot a WILCO page. It will create a PDF file containing the screenshot corresponding to the passedd URL.
 
@@ -67,7 +69,7 @@ await FW.email('laurel@hal-roach.com', 'a snap created', opts);
 
 
 ------------------
-# New dashboard chart feature
+# New dashboard chart feature (beta)
 
 This feature allows the user to display a small chart. It is not as powerfull as the trend feature, but you can easily add chart widgets in a standard dashboard. Plus, you can access to fleet wide stacked trends.
 
@@ -245,7 +247,7 @@ The results are:
 
 ------------------
 
-# New API: events statistics
+# New API: events statistics (beta)
 
 The new API endpoint /apiv3/events/stats allows clients to request server-side events counting, by sending the server a list of count jobs to execute.
 
@@ -419,14 +421,14 @@ Now, all, the pages have a meaningfull title so that you can organize better you
 
 ------------------
 
-# Fleet view time ranges
+# Fleet view time ranges (beta)
 you can better handle the timerange where the fleet view gets the history data (sample.history()). 
 
 * `refDate` a reference date in ISO format that is the `to` date for the sample queries. If not specified, would use the current time
 * `unit` a unit that goes with `count` to know how far in the past from `refDate` we have to get the samples. See https://momentjs.com/docs/#/manipulating/add/ for the syntax
 * `count` number that could be a count of samples if `unit` not specified or a count of units if it is specified
 
-# Fleet dashboard URL parameters
+# Fleet dashboard URL parameters (beta)
 
 The parameters you can pass to the fleet page are now more flexible:
 
