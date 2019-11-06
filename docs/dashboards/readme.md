@@ -18,7 +18,7 @@ WILCO provides context related variables to the designer so that the dashboard i
 ## Utils
 The dashboard comes with some utility functions:
 
-### WILCO.clickForTrend
+### this.clickForTrend
 calls the trend. historycally named click for trend, but does it immediately. If you want to hook it to a click event, you should use a click callback method.
 
 The signature is `function(y1, y2, fwot, minMaxDate)`
@@ -28,17 +28,17 @@ The signature is `function(y1, y2, fwot, minMaxDate)`
 * **ac**: the fwot you want to plot against. if null, it is the current fwot (be careful it is the fwot, not the reg only)
 * **minMaxDate**: a structure {min:<date>, max:<date>} for the time window of the trend. can be moments too. UTC needed!
 
-### WILCO.sort
+### this.sort
 affects a way to weight the whole dashboard. this is useful in fleet view to sort the dashboards from the most critical to the less critical.
 The weight can be anything that is comparable (string, number...)
 
-## WILCO.gotoPage: function(url)
+## this.gotoPage: function(url)
 goes to the given URL. if you want to trig this when click on an button, you have to put this in the callback of a click event.
 
-## WILCO.uplink: function(reg, layoutId)
+## this.uplink: function(reg, layoutId)
 Uplinks to a FWOT for the give layout.
 
-## WILCO.onNewMessages: function(callback<events>)
+## this.onNewMessages: function(callback<events>)
 registers a callback function that is called each time a new event is created, whatever the FWOT. this is useful for general fleet dashboards. The list of events as EventV3IO is passed as a parameter
 
 ## variables
