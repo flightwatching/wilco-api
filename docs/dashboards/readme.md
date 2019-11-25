@@ -18,27 +18,35 @@ WILCO provides context related variables to the designer so that the dashboard i
 ## Utils
 The dashboard comes with some utility functions:
 
-### WILCO.clickForTrend
+### this.api
+accesses to all the API provided by the server: https://app.swaggerhub.com/apis/flightwatching/wilco-api/3.0.0
+
+You have `this.api.get`, `this.api.put`, `this.api.post`
+
+### this.clickForTrend
 calls the trend. historycally named click for trend, but does it immediately. If you want to hook it to a click event, you should use a click callback method.
 
 The signature is `function(y1, y2, fwot, minMaxDate)`
 
-* **y1**: a single or the array of parameters you want to display in the trend. it can also be a a number. In that case, it is the trendbundle ID
-* **y2**: a single or the array of parameters you want to display in the trend (second vertical axis). If the call is inside a click event, the shift key will swap y1 and y2
+     `OXY_title_anim.clickForTrend(["CREW_OXY", "BT1_1", "BT1_2", "BT1_3", "BT1_4", "BT2_1", "BT2_2", "BT2_3", "BT2_4"]);`
+
+* **y1**: a single or the array of parameter names (or sample structure) you want to display in the trend. it can also be a a number. In that case, it is the trendbundle ID.
+* **y2**: a single or the array of parameter names (or sample structure) you want to display in the trend (second vertical axis). If the call is inside a click event, the shift key will swap y1 and y2
 * **ac**: the fwot you want to plot against. if null, it is the current fwot (be careful it is the fwot, not the reg only)
 * **minMaxDate**: a structure {min:<date>, max:<date>} for the time window of the trend. can be moments too. UTC needed!
 
-### WILCO.sort
+
+### this.sort
 affects a way to weight the whole dashboard. this is useful in fleet view to sort the dashboards from the most critical to the less critical.
 The weight can be anything that is comparable (string, number...)
 
-## WILCO.gotoPage: function(url)
+## this.gotoPage: function(url)
 goes to the given URL. if you want to trig this when click on an button, you have to put this in the callback of a click event.
 
-## WILCO.uplink: function(reg, layoutId)
+## this.uplink: function(reg, layoutId)
 Uplinks to a FWOT for the give layout.
 
-## WILCO.onNewMessages: function(callback<events>)
+## this.onNewMessages: function(callback<events>)
 registers a callback function that is called each time a new event is created, whatever the FWOT. this is useful for general fleet dashboards. The list of events as EventV3IO is passed as a parameter
 
 ## variables
