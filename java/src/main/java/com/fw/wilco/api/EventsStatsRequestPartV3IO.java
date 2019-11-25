@@ -52,6 +52,8 @@ public class EventsStatsRequestPartV3IO {
     private List<String> tags;
     private List<Severity> severities;
     private List<Aggregate> aggregates;
+    private Boolean visible;
+    private Boolean dismissed;
 
     public EventsStatsRequestPartV3IO withId(String id) {
         this.id = id;
@@ -97,6 +99,16 @@ public class EventsStatsRequestPartV3IO {
             aggregates = new ArrayList<>();
         }
         aggregates.add(aggregate);
+        return this;
+    }
+
+    public EventsStatsRequestPartV3IO withVisible(Boolean visible) {
+        this.visible = visible;
+        return this;
+    }
+
+    public EventsStatsRequestPartV3IO withDismissed(Boolean dismissed) {
+        this.dismissed = dismissed;
         return this;
     }
 
@@ -170,5 +182,13 @@ public class EventsStatsRequestPartV3IO {
 
     public void setAggregates(List<Aggregate> aggregates) {
         this.aggregates = aggregates;
+    }
+
+    public Boolean getVisible() {
+        return visible;
+    }
+
+    public Boolean getDismissed() {
+        return dismissed;
     }
 }

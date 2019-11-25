@@ -66,6 +66,8 @@ public class EventV3IO{
 	private List<SampleV3IO> samples;
 	private FwotV3IO fwot;
 
+	private Long charsCount;
+
 	public String getId() {
 		return id;
 	}
@@ -351,5 +353,13 @@ public class EventV3IO{
 
 	public void setFwot(FwotV3IO fwot) {
 		this.fwot = fwot;
+	}
+
+	public Long getCharsCount() {
+		return charsCount;
+	}
+
+	public void setCharsCount(Long charsCount) {
+		this.charsCount = charsCount;
 	}
 }
