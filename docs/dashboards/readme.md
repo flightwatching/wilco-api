@@ -18,10 +18,10 @@ WILCO provides context related variables to the designer so that the dashboard i
 ## Utils
 The dashboard comes with some utility functions:
 
-### this.api
+### WILCO.api
 accesses to all the API provided by the server: https://app.swaggerhub.com/apis/flightwatching/wilco-api/3.0.0
 
-You have `this.api.get`, `this.api.put`, `this.api.post`
+You have `WILCO.api.get`, `WILCO.api.put`, `WILCO.api.post`
 
 ### this.clickForTrend
 calls the trend. historycally named click for trend, but does it immediately. If you want to hook it to a click event, you should use a click callback method.
