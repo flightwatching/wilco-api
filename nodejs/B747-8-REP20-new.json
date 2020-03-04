@@ -1,0 +1,1770 @@
+{
+  "ieis": [
+    {
+      "code": "",
+      "idxMin": 7,
+      "idxMax": 7,
+      "length": 14,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 7,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  26",
+          "conversion": 1,
+          "param": {
+            "id": 29888985,
+            "name": "INLET_TEMP",
+            "type": "NUMBER",
+            "description": "The display shows the air inlet temperature in degrees C (T1)",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 0,
+      "idxMax": 0,
+      "length": 1,
+      "param": [],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 0,
+      "idxMax": 0,
+      "length": 24,
+      "param": [],
+      "isHeader": false
+    },
+    {
+      "code": "B",
+      "idxMin": 0,
+      "idxMax": 0,
+      "length": 63,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 28,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "WIII",
+          "conversion": 1,
+          "formula": "FW.setFrom(X);"
+        },
+        {
+          "isNumber": true,
+          "offset": 32,
+          "length": 1,
+          "idx": 0,
+          "sampleValue": "/"
+        },
+        {
+          "isNumber": false,
+          "offset": 33,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "WMKP",
+          "conversion": 1,
+          "formula": "FW.setTo(X);"
+        },
+        {
+          "isNumber": true,
+          "offset": 37,
+          "length": 21,
+          "idx": 0,
+          "sampleValue": " 685-2270-012 PW-508 "
+        },
+        {
+          "isNumber": false,
+          "offset": 58,
+          "length": 2,
+          "idx": 0,
+          "sampleValue": "TA",
+          "conversion": 1,
+          "formula": "if(X=='PO') {FW.setFlightStatus('PWRUP');} //power on\nif(X=='ES') {FW.setFlightStatus('ENGON');} //engine start\nif(X=='TA') {FW.setFlightStatus('TAXIOUT');} // taxi out\nif(X=='TO') {FW.setFlightStatus('FLYING');} // take off\nif(X=='IC') {FW.setFlightStatus('FLYING');} // initial climb\nif(X=='CL') {FW.setFlightStatus('FLYING');} // climb\nif(X=='ER') {FW.setFlightStatus('FLYING');} //cruise\nif(X=='DC') {FW.setFlightStatus('FLYING');} //descent\nif(X=='AP') {FW.setFlightStatus('FLYING');} //approach\nif(X=='GA') {FW.setFlightStatus('FLYING');} //go around\nif(X=='FL') {FW.setFlightStatus('FLYING');} // flare\nif(X=='RO') {FW.setFlightStatus('TAXIIN');} // roll out\nif(X=='TI') {FW.setFlightStatus('TAXIIN');} // flare\nif(X=='SD') {FW.setFlightStatus('GATEIN');} // shutdown\nif(X=='MT') {FW.setFlightStatus('CLOSED');} // maintenance"
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 1,
+      "idxMax": 1,
+      "length": 19,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 0,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": " 450",
+          "conversion": 1,
+          "param": {
+            "id": 29888938,
+            "name": "APU_EGT",
+            "type": "NUMBER",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 4,
+          "length": 6,
+          "idx": 0,
+          "sampleValue": " 100.0",
+          "conversion": 1,
+          "param": {
+            "id": 29888940,
+            "name": "APU_N1",
+            "type": "NUMBER",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 10,
+          "length": 6,
+          "idx": 0,
+          "sampleValue": "  90.7",
+          "conversion": 1,
+          "param": {
+            "id": 29888942,
+            "name": "APU_N2",
+            "type": "NUMBER",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 2,
+      "idxMax": 2,
+      "length": 7,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": " GND",
+          "conversion": 1,
+          "param": {
+            "id": 29888946,
+            "name": "AIR_GND_MODE",
+            "type": "TEXT",
+            "description": "\"The Auxiliary Power Unit Controller (APUC) detects and sends the\nairplane air or ground configuration\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 3,
+      "idxMax": 3,
+      "length": 10,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 7,
+          "idx": 0,
+          "sampleValue": "   OPEN",
+          "conversion": 1,
+          "param": {
+            "id": 29888950,
+            "name": "INLET_DOOR",
+            "type": "TEXT",
+            "description": "The display shows the position of the APU air inlet door",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 4,
+      "idxMax": 4,
+      "length": 12,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": " OFF",
+          "conversion": 1,
+          "param": {
+            "id": 29888954,
+            "name": "STARTER",
+            "type": "TEXT",
+            "description": "The display shows ON when the APU control switch is set to START.\nThe display shows OFF when the APUC removes power from the\nstarter at 40% N2",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 4,
+          "length": 5,
+          "idx": 0,
+          "sampleValue": " 0.70",
+          "conversion": 0.01,
+          "param": {
+            "id": 29888956,
+            "minScale": 0,
+            "maxScale": 100,
+            "minOK": 0,
+            "maxOK": 100,
+            "name": "OIL_QTY",
+            "type": "NUMBER",
+            "description": "\"The display shows the remaining APU oil level as a percent of\nmaximum oil quantity.",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 5,
+      "idxMax": 5,
+      "length": 11,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": " OFF",
+          "conversion": 1,
+          "param": {
+            "id": 29888960,
+            "name": "IGNITOR",
+            "type": "TEXT",
+            "description": "The display shows ON when the APU control switch is set to START.\nThe display shows OFF when the APUC removes power from the\nignition system at 40% N2",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 4,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  74",
+          "conversion": 1,
+          "param": {
+            "id": 29888962,
+            "minScale": -50,
+            "maxScale": 150,
+            "minOK": 0,
+            "maxOK": 130,
+            "name": "OIL_TEMP",
+            "type": "NUMBER",
+            "description": "The display shows the oil temperature in degrees Centigrade",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 6,
+      "idxMax": 6,
+      "length": 19,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 4,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  ON",
+          "conversion": 1,
+          "param": {
+            "id": 29888968,
+            "name": "FUEL_SEC",
+            "type": "TEXT",
+            "description": "\"The display shows the position of the primary and secondary solenoid\nvalves. ON/ON shows that the primary/secondary solenoid valves are\ncommanded on by 8% N2. OFF/OFF shows that the primary/secondary\nsolenoid valves close at approximately 67% N1. This stops all fuel to\nthe APU\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 8,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": " 216",
+          "conversion": 1,
+          "param": {
+            "id": 29888970,
+            "minScale": 0,
+            "maxScale": 300,
+            "minOK": 0,
+            "maxOK": 300,
+            "name": "FMU_CMD",
+            "type": "NUMBER",
+            "description": "\"The display shows the commanded (CMD) position that the APUC sets\nthe Fuel Metering Unit (FMU) stepper motor. The position (POS) shows\nthe actual position of the FMU stepper motor. During normal operation,\nthe difference between the two numbers must be less than five steps\"",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "FW.set('FMU_CMD_POS_DIFF', Math.abs(+FMU_CMD-FMU_POS));",
+                "variables": [
+                  "FMU_CMD",
+                  "FMU_POS"
+                ],
+                "id": 29888971,
+                "name": "FMU_CMD",
+                "srcId": "29888970",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 12,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": " 214",
+          "conversion": 1,
+          "param": {
+            "id": 29888973,
+            "name": "FMU_POS",
+            "type": "NUMBER",
+            "description": "\"The display shows the commanded (CMD) position that the APUC sets\nthe Fuel Metering Unit (FMU) stepper motor. The position (POS) shows\nthe actual position of the FMU stepper motor. During normal operation,\nthe difference between the two numbers must be less than five steps\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  ON",
+          "conversion": 1,
+          "param": {
+            "id": 29888966,
+            "name": "FUEL_PRI",
+            "type": "TEXT",
+            "description": "The display shows the position of the primary and secondary solenoid\nvalves. ON/ON shows that the primary/secondary solenoid valves are\ncommanded on by 8% N2. OFF/OFF shows that the primary/secondary\nsolenoid valves close at approximately 67% N1. This stops all fuel to\nthe APU",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 7,
+      "idxMax": 7,
+      "length": 15,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 7,
+          "length": 5,
+          "idx": 0,
+          "sampleValue": " 13.9",
+          "conversion": 1,
+          "param": {
+            "id": 29888979,
+            "name": "INLET_PRESS",
+            "type": "NUMBER",
+            "description": "\"The display shows the air inlet pressure in Pounds per Square Inch\nGauge (PSIG) (P1)\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 7,
+          "idx": 0,
+          "sampleValue": "   NORM",
+          "conversion": 1,
+          "param": {
+            "id": 29888977,
+            "name": "F_FILTER",
+            "type": "TEXT",
+            "description": "\"The display shows NORM when there is correct fuel flow through the\nfuel filter. The display shows BYPASS for an impending fuel filter\nbypass which occurs at approximately 25 Pounds Per Square Inch\nDifferential (PSID)\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 8,
+      "idxMax": 8,
+      "length": 14,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 7,
+          "idx": 0,
+          "sampleValue": "   OPEN",
+          "conversion": 1,
+          "param": {
+            "id": 29888983,
+            "name": "BLEED_VALVE",
+            "type": "TEXT",
+            "description": "\"The display shows the position of\nthe APU bleed valve during APU operation\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 7,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "   6",
+          "conversion": 1,
+          "param": {
+            "id": 29888985,
+            "name": "INLET_TEMP",
+            "type": "NUMBER",
+            "description": "The display shows the air inlet temperature in degrees C (T1)",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 9,
+      "idxMax": 9,
+      "length": 11,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  ON",
+          "conversion": 1,
+          "param": {
+            "id": 29888995,
+            "name": "ELEC_AVAIL",
+            "type": "TEXT",
+            "description": "\"The display shows ON when N1 is more than 95% and APU generator\npower is available. The display shows OFF when the APU control\nswitch is OFF\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 4,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  12",
+          "conversion": 1,
+          "param": {
+            "id": 29888997,
+            "name": "LC_EXIT_TEMP",
+            "type": "NUMBER",
+            "description": "\"The display shows the load compressor outlet temperature in degrees\nC (T13)\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 10,
+      "idxMax": 10,
+      "length": 11,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  ON",
+          "conversion": 1,
+          "param": {
+            "id": 29888995,
+            "name": "ELEC_AVAIL",
+            "type": "TEXT",
+            "description": "\"The display shows ON when N1 is more than 95% and APU generator\npower is available. The display shows OFF when the APU control\nswitch is OFF\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 4,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": " 190",
+          "conversion": 1,
+          "param": {
+            "id": 29888997,
+            "name": "LC_EXIT_TEMP",
+            "type": "NUMBER",
+            "description": "\"The display shows the load compressor outlet temperature in degrees\nC (T13)\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 13,
+      "idxMax": 13,
+      "length": 18,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 7,
+          "idx": 0,
+          "sampleValue": "   OPEN",
+          "conversion": 1,
+          "param": {
+            "id": 29889019,
+            "name": "FAN_VALVE",
+            "type": "TEXT",
+            "description": "\"The display shows the position of the low oil pressure switch. OPEN =\nNORM and CLOSED = LOW.\nNOTE: On APUs with no fan valve, the fan valve indication is wired\nthrough the low oil pressure switch\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 7,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  53",
+          "conversion": 1,
+          "param": {
+            "id": 29889021,
+            "minScale": 0,
+            "maxScale": 100,
+            "minOK": 0,
+            "maxOK": 100,
+            "name": "DV_CMD",
+            "type": "NUMBER",
+            "description": "\"This display shows the Diverter Valve (DV) actuator commanded (CMD)\nand actual position (POS) reset (RST). The indication shows in percent,\nwith 100% full open and 0% full closed. During normal operation, the\ndifference between the two numbers must be less than 15%\"",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "FW.set('DV_CMD_POS_DIFF', Math.abs(+DV_CMD-DV_POS));",
+                "variables": [
+                  "DV_CMD",
+                  "DV_POS"
+                ],
+                "id": 29889022,
+                "name": "DV_CMD",
+                "srcId": "29889021",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 11,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  53",
+          "conversion": 1,
+          "param": {
+            "id": 29889024,
+            "minScale": 0,
+            "maxScale": 100,
+            "minOK": 0,
+            "maxOK": 100,
+            "name": "DV_POS",
+            "type": "NUMBER",
+            "description": "\"This display shows the Diverter Valve (DV) actuator commanded (CMD)\nand actual position (POS) reset (RST). The indication shows in percent,\nwith 100% full open and 0% full closed. During normal operation, the\ndifference between the two numbers must be less than 15%\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 14,
+      "idxMax": 14,
+      "length": 7,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 0,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  99",
+          "conversion": 1,
+          "param": {
+            "id": 29889028,
+            "minScale": 0,
+            "maxScale": 101,
+            "minOK": 0,
+            "maxOK": 101,
+            "name": "ECS_DMD",
+            "type": "NUMBER",
+            "description": "\"The display shows the percentage of a 1 - 9 volt signal sent from the\nECS zone temperature controller. The indication shows in percent.\n100% shows with no air conditioning packs on. 0% shows with one A/C\npack ON. When at 0%, the indication can increase if there is a\ndifference between actual and set cabin temperature. When three\npacks are ON, the input will increase the IGV schedule\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 15,
+      "idxMax": 15,
+      "length": 16,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 9,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  21",
+          "conversion": 1,
+          "param": {
+            "id": 29889041,
+            "name": "DC_A",
+            "type": "NUMBER",
+            "description": "\"The display shows the APU battery charge (CHG) in Direct Current\n(DC) AMPS (Amperes).\nNOTE: This data comes from the airplane systems and not the APUC\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 9,
+          "idx": 0,
+          "sampleValue": "  853  37",
+          "conversion": 1,
+          "param": {
+            "id": 29533817,
+            "name": "APU_HRS",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "/*// [17April2019] APU Hours & Cycles Corruption check along with update of any new APU HRS and APU CYC sample into the properties\nvar sample = APU_HRS;\nvar sampleName = \"APU_HRS\";\nvar sampleCYC = APU_CYC;\nvar sampleCYCName = \"APU_CYC\";\nvar palert= \"APUHR_CORRUPTED\";\nvar hr = Math.round(APU_HRS);\nvar cyc = Math.round(APU_CYC);\nvar apusn = APU_SN;\nvar refsn = \"APU_SN\";\nvar sn = FW.getEvent();\n// ########## DEFINITION OF FUNCTIONS ######## \n// APU Serial Number validation ##############\nvar isValid = function(apusn) {\n    var sn_length = apusn.trim().replace(/\\./g, '').length;\n    FW.log(\"APU SN current: \"+apusn); \n  return (sn_length>0 && sn_length<8);\n};\nvar hasChanged = function(apusn) {\n   return apusn !== fwot.properties[refsn];\n};\n// APU Hours Check: ##########################\nvar hrValid = function(sample) {\n  var hr_length = sample.trim().replace(/\\./g, '').length;\nreturn (hr_length>0);\n };\nvar hrCorrupt = function(sample){\n  var diff = Math.abs( +sample - fwot.properties[sampleName]);\nreturn diff;\n};\nvar cycCorrupt = function(sampleCYC){\n  var diff = Math.abs( +sampleCYC - fwot.properties[sampleCYCName]);\nreturn diff;\n};\n\n// OUTCOME OF THE ALGORITHM #################\nvar updateProperties = function(sample) {\n  FW.updateFwotProperty(sampleName, sample);\n  FW.updateFwotProperty('lastDate_APU_HRS', sn.computedDate); \n  FW.updateFwotProperty(sampleCYCName, sampleCYC);\n  FW.updateFwotProperty('lastDate_APU_CYC', sn.computedDate); \n};\nvar updatePropertiesAlert = function(sample) {\n  FW.updateFwotProperty('P_ALERT', 'APUHR_CORRUPTED');\n  FW.updateFwotProperty('P_ALERT_DATE', sn.computedDate);\n};\nvar notify = function(sample) {\n  var subject=\"APU HC corrupted. Step is: \" +hrCorrupt(sample)+ \"hrs and \"+cycCorrupt(sampleCYC)+\"cyc.\";\n  var style = \"<style> table {width:100%;}table, th, td {border: 1px solid black;border-collapse: collapse;}th, td {padding: 15px;text-align: left;}</style>\";\n  var body = \"\";\n  body+= style+\"<table><tr><th></th><th>OLD APU CONFIG</th><th>NEW APU CONFIG</th></tr>\";\n  body+=\"  <tr><td>APU_SN</td><td>#\"+fwot.properties.APU_SN+\"#</td><td>#\"+APU_SN+\"#</td></tr>\";\n  body+=\"  <tr><td>APU_HRS</td><td>#\"+fwot.properties.APU_HRS+\"#</td><td>#\"+sample+\"#</td></tr>\";\n  body+=\"  <tr><td>APU_CYC</td><td>#\"+fwot.properties.APU_CYC+\"#</td><td>#\"+sampleCYC+\"#</td></tr>\";\n  body+=\"</table>\";\n  FW.notify(RAPU, subject, body);\n // FW.reportWarn(subject);\n};\nvar tagMessage = function(sample) {\n  FW.tag(palert);\n  FW.tag(\"P_ALERT\");\n  FW.set(\"P_ALERT\", palert);\n};\n//############### CODE #####################\nif (hrValid(sample) || hrValid(sampleCYC)  ) {\n    FW.log(sample+\" APU_HRS is valid\");\n    FW.log(sampleCYC+\" APU_CYC is valid\");\n  if ((hrCorrupt(sample)> 20 ) || (cycCorrupt(sampleCYC)> 20)) {\n      FW.log(\"APU H&C are corrupted: Step is: \" +hrCorrupt(sample)+ \"hrs and \"+cycCorrupt(sampleCYC)+\"cyc\");\n      if (isValid(apusn) && hasChanged(apusn)) {\n      FW.log(\"APU H&C changed due apu change. No notfication\"); \n      }else{ \n      tagMessage(sample);\n      //notify(sample);\n      updatePropertiesAlert(sample);\n      }\n    }\nupdateProperties(sample); \n}else{FW.log(sample+\"hrs is NOT valid. Or \"+sampleCYC+\"cyc is NOT valid\");}\n//######################################*/",
+                "variables": [],
+                "id": 29603163,
+                "name": "APU_HRS",
+                "srcId": "29533817",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              },
+              {
+                "formula": "var sample = APU_HRS;\nvar sampleName = \"APU_HRS\";\nvar sampleCYC = APU_CYC;\nvar sampleCYCName = \"APU_CYC\";\nvar palert= \"APUHR_CORRUPTED\";\nvar hr = Math.round(APU_HRS);\nvar cyc = Math.round(APU_CYC);\nFW.log(\"sample: \"+sample);\nFW.log(\"hr: \"+hr);\n\nvar apusn = APU_SN;\nvar refsn = \"APU_SN\";\nvar sn = FW.getEvent();\n\nif(hr > 0){\n  FW.updateFwotProperty(sampleName, sample);\n  FW.updateFwotProperty('lastDate_APU_HRS', sn.computedDate); \n  FW.updateFwotProperty(sampleCYCName, sampleCYC);\n  FW.updateFwotProperty('lastDate_APU_CYC', sn.computedDate); \n}",
+                "variables": [
+                  "APU_HRS",
+                  "APU_CYC",
+                  "APU_SN"
+                ],
+                "id": 29981730,
+                "name": "APU_HRS",
+                "srcId": "29533817",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 16,
+      "idxMax": 16,
+      "length": 16,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 0,
+          "length": 6,
+          "idx": 0,
+          "sampleValue": "   407",
+          "conversion": 1,
+          "param": {
+            "id": 29533817,
+            "name": "APU_HRS",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "/*// [17April2019] APU Hours & Cycles Corruption check along with update of any new APU HRS and APU CYC sample into the properties\nvar sample = APU_HRS;\nvar sampleName = \"APU_HRS\";\nvar sampleCYC = APU_CYC;\nvar sampleCYCName = \"APU_CYC\";\nvar palert= \"APUHR_CORRUPTED\";\nvar hr = Math.round(APU_HRS);\nvar cyc = Math.round(APU_CYC);\nvar apusn = APU_SN;\nvar refsn = \"APU_SN\";\nvar sn = FW.getEvent();\n// ########## DEFINITION OF FUNCTIONS ######## \n// APU Serial Number validation ##############\nvar isValid = function(apusn) {\n    var sn_length = apusn.trim().replace(/\\./g, '').length;\n    FW.log(\"APU SN current: \"+apusn); \n  return (sn_length>0 && sn_length<8);\n};\nvar hasChanged = function(apusn) {\n   return apusn !== fwot.properties[refsn];\n};\n// APU Hours Check: ##########################\nvar hrValid = function(sample) {\n  var hr_length = sample.trim().replace(/\\./g, '').length;\nreturn (hr_length>0);\n };\nvar hrCorrupt = function(sample){\n  var diff = Math.abs( +sample - fwot.properties[sampleName]);\nreturn diff;\n};\nvar cycCorrupt = function(sampleCYC){\n  var diff = Math.abs( +sampleCYC - fwot.properties[sampleCYCName]);\nreturn diff;\n};\n\n// OUTCOME OF THE ALGORITHM #################\nvar updateProperties = function(sample) {\n  FW.updateFwotProperty(sampleName, sample);\n  FW.updateFwotProperty('lastDate_APU_HRS', sn.computedDate); \n  FW.updateFwotProperty(sampleCYCName, sampleCYC);\n  FW.updateFwotProperty('lastDate_APU_CYC', sn.computedDate); \n};\nvar updatePropertiesAlert = function(sample) {\n  FW.updateFwotProperty('P_ALERT', 'APUHR_CORRUPTED');\n  FW.updateFwotProperty('P_ALERT_DATE', sn.computedDate);\n};\nvar notify = function(sample) {\n  var subject=\"APU HC corrupted. Step is: \" +hrCorrupt(sample)+ \"hrs and \"+cycCorrupt(sampleCYC)+\"cyc.\";\n  var style = \"<style> table {width:100%;}table, th, td {border: 1px solid black;border-collapse: collapse;}th, td {padding: 15px;text-align: left;}</style>\";\n  var body = \"\";\n  body+= style+\"<table><tr><th></th><th>OLD APU CONFIG</th><th>NEW APU CONFIG</th></tr>\";\n  body+=\"  <tr><td>APU_SN</td><td>#\"+fwot.properties.APU_SN+\"#</td><td>#\"+APU_SN+\"#</td></tr>\";\n  body+=\"  <tr><td>APU_HRS</td><td>#\"+fwot.properties.APU_HRS+\"#</td><td>#\"+sample+\"#</td></tr>\";\n  body+=\"  <tr><td>APU_CYC</td><td>#\"+fwot.properties.APU_CYC+\"#</td><td>#\"+sampleCYC+\"#</td></tr>\";\n  body+=\"</table>\";\n  FW.notify(RAPU, subject, body);\n // FW.reportWarn(subject);\n};\nvar tagMessage = function(sample) {\n  FW.tag(palert);\n  FW.tag(\"P_ALERT\");\n  FW.set(\"P_ALERT\", palert);\n};\n//############### CODE #####################\nif (hrValid(sample) || hrValid(sampleCYC)  ) {\n    FW.log(sample+\" APU_HRS is valid\");\n    FW.log(sampleCYC+\" APU_CYC is valid\");\n  if ((hrCorrupt(sample)> 20 ) || (cycCorrupt(sampleCYC)> 20)) {\n      FW.log(\"APU H&C are corrupted: Step is: \" +hrCorrupt(sample)+ \"hrs and \"+cycCorrupt(sampleCYC)+\"cyc\");\n      if (isValid(apusn) && hasChanged(apusn)) {\n      FW.log(\"APU H&C changed due apu change. No notfication\"); \n      }else{ \n      tagMessage(sample);\n      //notify(sample);\n      updatePropertiesAlert(sample);\n      }\n    }\nupdateProperties(sample); \n}else{FW.log(sample+\"hrs is NOT valid. Or \"+sampleCYC+\"cyc is NOT valid\");}\n//######################################*/",
+                "variables": [],
+                "id": 29603163,
+                "name": "APU_HRS",
+                "srcId": "29533817",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              },
+              {
+                "formula": "var sample = APU_HRS;\nvar sampleName = \"APU_HRS\";\nvar sampleCYC = APU_CYC;\nvar sampleCYCName = \"APU_CYC\";\nvar palert= \"APUHR_CORRUPTED\";\nvar hr = Math.round(APU_HRS);\nvar cyc = Math.round(APU_CYC);\nFW.log(\"sample: \"+sample);\nFW.log(\"hr: \"+hr);\n\nvar apusn = APU_SN;\nvar refsn = \"APU_SN\";\nvar sn = FW.getEvent();\n\nif(hr > 0){\n  FW.updateFwotProperty(sampleName, sample);\n  FW.updateFwotProperty('lastDate_APU_HRS', sn.computedDate); \n  FW.updateFwotProperty(sampleCYCName, sampleCYC);\n  FW.updateFwotProperty('lastDate_APU_CYC', sn.computedDate); \n}",
+                "variables": [
+                  "APU_HRS",
+                  "APU_CYC",
+                  "APU_SN"
+                ],
+                "id": 29981730,
+                "name": "APU_HRS",
+                "srcId": "29533817",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 6,
+          "length": 7,
+          "idx": 0,
+          "sampleValue": "      0",
+          "conversion": 1,
+          "param": {
+            "id": 29889041,
+            "name": "DC_A",
+            "type": "NUMBER",
+            "description": "\"The display shows the APU battery charge (CHG) in Direct Current\n(DC) AMPS (Amperes).\nNOTE: This data comes from the airplane systems and not the APUC\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 17,
+      "idxMax": 17,
+      "length": 12,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 6,
+          "length": 3,
+          "idx": 0,
+          "sampleValue": " 27",
+          "conversion": 1,
+          "param": {
+            "id": 29889046,
+            "name": "DC_V",
+            "type": "NUMBER",
+            "description": "\"The display shows the APU battery voltage in DC V (Volts).\nNOTE: This data comes from the airplane systems and not the APUC\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 0,
+          "length": 6,
+          "idx": 0,
+          "sampleValue": "   333",
+          "conversion": 1,
+          "param": {
+            "id": 29533819,
+            "name": "APU_CYC",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 18,
+      "idxMax": 18,
+      "length": 20,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 17,
+          "idx": 0,
+          "sampleValue": " 04MAY19 03:10:10",
+          "conversion": 1,
+          "formula": "FW.setComputedDate(moment.utc(X, ' DDMMMYY HH:mm:ss'));"
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 19,
+      "idxMax": 19,
+      "length": 3,
+      "param": [],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 0,
+      "idxMax": 0,
+      "length": 23,
+      "param": [],
+      "isHeader": false
+    },
+    {
+      "code": "B",
+      "idxMin": 0,
+      "idxMax": 0,
+      "length": 63,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 34,
+          "length": 1,
+          "idx": 0,
+          "sampleValue": "/"
+        },
+        {
+          "isNumber": true,
+          "offset": 39,
+          "length": 15,
+          "idx": 0,
+          "sampleValue": " CMC-802 GE-804"
+        },
+        {
+          "isNumber": false,
+          "offset": 35,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "PANC",
+          "conversion": 1,
+          "formula": "FW.setTo(X);"
+        },
+        {
+          "isNumber": false,
+          "offset": 54,
+          "length": 6,
+          "idx": 0,
+          "sampleValue": "    ES",
+          "conversion": 1,
+          "formula": "if(X=='PO') {FW.setFlightStatus('PWRUP');} //power on\nif(X=='ES') {FW.setFlightStatus('ENGON');} //engine start\nif(X=='TA') {FW.setFlightStatus('TAXIOUT');} // taxi out\nif(X=='TO') {FW.setFlightStatus('FLYING');} // take off\nif(X=='IC') {FW.setFlightStatus('FLYING');} // initial climb\nif(X=='CL') {FW.setFlightStatus('FLYING');} // climb\nif(X=='ER') {FW.setFlightStatus('FLYING');} //cruise\nif(X=='DC') {FW.setFlightStatus('FLYING');} //descent\nif(X=='AP') {FW.setFlightStatus('FLYING');} //approach\nif(X=='GA') {FW.setFlightStatus('FLYING');} //go around\nif(X=='FL') {FW.setFlightStatus('FLYING');} // flare\nif(X=='RO') {FW.setFlightStatus('TAXIIN');} // roll out\nif(X=='TI') {FW.setFlightStatus('TAXIIN');} // flare\nif(X=='SD') {FW.setFlightStatus('GATEIN');} // shutdown\nif(X=='MT') {FW.setFlightStatus('CLOSED');} // maintenance"
+        },
+        {
+          "isNumber": false,
+          "offset": 28,
+          "length": 6,
+          "idx": 0,
+          "sampleValue": "  KORD",
+          "conversion": 1,
+          "formula": "FW.setFrom(X);"
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 0,
+      "idxMax": 0,
+      "length": 19,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 4,
+          "length": 6,
+          "idx": 0,
+          "sampleValue": " 100.0",
+          "conversion": 1,
+          "param": {
+            "id": 29888940,
+            "name": "APU_N1",
+            "type": "NUMBER",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 10,
+          "length": 6,
+          "idx": 0,
+          "sampleValue": "  92.7",
+          "conversion": 1,
+          "param": {
+            "id": 29888942,
+            "name": "APU_N2",
+            "type": "NUMBER",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 1,
+      "idxMax": 1,
+      "length": 7,
+      "param": [],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 2,
+      "idxMax": 2,
+      "length": 10,
+      "param": [],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 3,
+      "idxMax": 3,
+      "length": 15,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 4,
+          "length": 8,
+          "idx": 0,
+          "sampleValue": " 0.93   ",
+          "conversion": 0.01,
+          "param": {
+            "id": 29888956,
+            "minScale": 0,
+            "maxScale": 100,
+            "minOK": 0,
+            "maxOK": 100,
+            "name": "OIL_QTY",
+            "type": "NUMBER",
+            "description": "\"The display shows the remaining APU oil level as a percent of\nmaximum oil quantity.",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 4,
+      "idxMax": 4,
+      "length": 11,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 4,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  90",
+          "conversion": 1,
+          "param": {
+            "id": 29888962,
+            "minScale": -50,
+            "maxScale": 150,
+            "minOK": 0,
+            "maxOK": 130,
+            "name": "OIL_TEMP",
+            "type": "NUMBER",
+            "description": "The display shows the oil temperature in degrees Centigrade",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 5,
+      "idxMax": 5,
+      "length": 19,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 4,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  ON",
+          "conversion": 1,
+          "param": {
+            "id": 29888968,
+            "name": "FUEL_SEC",
+            "type": "TEXT",
+            "description": "\"The display shows the position of the primary and secondary solenoid\nvalves. ON/ON shows that the primary/secondary solenoid valves are\ncommanded on by 8% N2. OFF/OFF shows that the primary/secondary\nsolenoid valves close at approximately 67% N1. This stops all fuel to\nthe APU\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 8,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": " 222",
+          "conversion": 1,
+          "param": {
+            "id": 29888970,
+            "minScale": 0,
+            "maxScale": 300,
+            "minOK": 0,
+            "maxOK": 300,
+            "name": "FMU_CMD",
+            "type": "NUMBER",
+            "description": "\"The display shows the commanded (CMD) position that the APUC sets\nthe Fuel Metering Unit (FMU) stepper motor. The position (POS) shows\nthe actual position of the FMU stepper motor. During normal operation,\nthe difference between the two numbers must be less than five steps\"",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "FW.set('FMU_CMD_POS_DIFF', Math.abs(+FMU_CMD-FMU_POS));",
+                "variables": [
+                  "FMU_CMD",
+                  "FMU_POS"
+                ],
+                "id": 29888971,
+                "name": "FMU_CMD",
+                "srcId": "29888970",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 12,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": " 222",
+          "conversion": 1,
+          "param": {
+            "id": 29888973,
+            "name": "FMU_POS",
+            "type": "NUMBER",
+            "description": "\"The display shows the commanded (CMD) position that the APUC sets\nthe Fuel Metering Unit (FMU) stepper motor. The position (POS) shows\nthe actual position of the FMU stepper motor. During normal operation,\nthe difference between the two numbers must be less than five steps\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 6,
+      "idxMax": 6,
+      "length": 15,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 7,
+          "length": 5,
+          "idx": 0,
+          "sampleValue": " 13.9",
+          "conversion": 1,
+          "param": {
+            "id": 29888979,
+            "name": "INLET_PRESS",
+            "type": "NUMBER",
+            "description": "\"The display shows the air inlet pressure in Pounds per Square Inch\nGauge (PSIG) (P1)\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 8,
+      "idxMax": 8,
+      "length": 11,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 4,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  32",
+          "conversion": 1,
+          "param": {
+            "id": 29888991,
+            "name": "LC_INLET_TEMP",
+            "type": "NUMBER",
+            "description": "\"The display shows the load compressor inlet temperature in degrees C\n(T12)\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 10,
+      "idxMax": 10,
+      "length": 16,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 7,
+          "idx": 0,
+          "sampleValue": "    MES",
+          "conversion": 1,
+          "param": {
+            "id": 29889001,
+            "name": "OP_MODE",
+            "type": "TEXT",
+            "description": "\"The display shows one of six possible pneumatic loads:\n1) MIN/min (Minimum) - The bleed valve is closed, the inlet guide vanes\ngo to minimum, and the diverter valve goes to full open.\n2) Duct Pressurization (DPZ) - The bleed valve is open, there is no\npneumatic load, and the diverter valve closes a small degree.\n3) Air Driven Pump (ADP) - The bleed valve is open and an ADP is ON.\n4) Environmental Control System (ECS) 1,2, or 3 - The bleed valve is\nopen and shows the number of Air Conditioning (A/C) packs that are\nON.\n5) FLT (Flight) - The airplane is in air with an ADP or A/C pack ON.\n6) Main Engine Start (MES) - The bleed valve is OPEN and an engine\nstart switch is in START\"",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "/*if (OP_MODE == \"MIN\") \nif (OP_MODE == \"DPZ\") \nif (OP_MODE == \"ADP\") \nif (OP_MODE == \"ECS 1\" || OP_MODE == \"ECS 2\" || OP_MODE == \"ECS 3\" ) \nif (OP_MODE == \"FLT\")\nif (OP_MODE == \"MES\") \n*/",
+                "variables": [],
+                "id": 30149497,
+                "name": "OP_MODE",
+                "srcId": "29889001",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 7,
+          "length": 3,
+          "idx": 0,
+          "sampleValue": " 39",
+          "conversion": 1,
+          "param": {
+            "id": 29889003,
+            "name": "DUCT_PRESS_L",
+            "type": "NUMBER",
+            "description": "\"The display shows the manifold pressure for the left and right wing. The\nmanifold pressure is measured in PSIG\"",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "FW.set('DUCT_PRESS_DIFF', +DUCT_PRESS_L-DUCT_PRESS_R);",
+                "variables": [
+                  "DUCT_PRESS_L",
+                  "DUCT_PRESS_R"
+                ],
+                "id": 29889004,
+                "name": "DUCT_PRESS_L",
+                "srcId": "29889003",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 10,
+          "length": 3,
+          "idx": 0,
+          "sampleValue": " 37",
+          "conversion": 1,
+          "param": {
+            "id": 29889006,
+            "name": "DUCT_PRESS_R",
+            "type": "NUMBER",
+            "description": "\"The display shows the manifold pressure for the left and right wing. The\nmanifold pressure is measured in PSIG\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 12,
+      "idxMax": 12,
+      "length": 18,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 11,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  52",
+          "conversion": 1,
+          "param": {
+            "id": 29889024,
+            "minScale": 0,
+            "maxScale": 100,
+            "minOK": 0,
+            "maxOK": 100,
+            "name": "DV_POS",
+            "type": "NUMBER",
+            "description": "\"This display shows the Diverter Valve (DV) actuator commanded (CMD)\nand actual position (POS) reset (RST). The indication shows in percent,\nwith 100% full open and 0% full closed. During normal operation, the\ndifference between the two numbers must be less than 15%\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 7,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  52",
+          "conversion": 1,
+          "param": {
+            "id": 29889021,
+            "minScale": 0,
+            "maxScale": 100,
+            "minOK": 0,
+            "maxOK": 100,
+            "name": "DV_CMD",
+            "type": "NUMBER",
+            "description": "\"This display shows the Diverter Valve (DV) actuator commanded (CMD)\nand actual position (POS) reset (RST). The indication shows in percent,\nwith 100% full open and 0% full closed. During normal operation, the\ndifference between the two numbers must be less than 15%\"",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "FW.set('DV_CMD_POS_DIFF', Math.abs(+DV_CMD-DV_POS));",
+                "variables": [
+                  "DV_CMD",
+                  "DV_POS"
+                ],
+                "id": 29889022,
+                "name": "DV_CMD",
+                "srcId": "29889021",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 7,
+          "idx": 0,
+          "sampleValue": "   OPEN",
+          "conversion": 1,
+          "param": {
+            "id": 29889019,
+            "name": "FAN_VALVE",
+            "type": "TEXT",
+            "description": "\"The display shows the position of the low oil pressure switch. OPEN =\nNORM and CLOSED = LOW.\nNOTE: On APUs with no fan valve, the fan valve indication is wired\nthrough the low oil pressure switch\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 13,
+      "idxMax": 13,
+      "length": 7,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 0,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": " 100",
+          "conversion": 1,
+          "param": {
+            "id": 29889028,
+            "minScale": 0,
+            "maxScale": 101,
+            "minOK": 0,
+            "maxOK": 101,
+            "name": "ECS_DMD",
+            "type": "NUMBER",
+            "description": "\"The display shows the percentage of a 1 - 9 volt signal sent from the\nECS zone temperature controller. The indication shows in percent.\n100% shows with no air conditioning packs on. 0% shows with one A/C\npack ON. When at 0%, the indication can increase if there is a\ndifference between actual and set cabin temperature. When three\npacks are ON, the input will increase the IGV schedule\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 14,
+      "idxMax": 14,
+      "length": 16,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 9,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  22",
+          "conversion": 1,
+          "param": {
+            "id": 29889036,
+            "name": "GEN_LOAD_2",
+            "type": "NUMBER",
+            "description": "\"The display shows the electrical load in Kilowatt (KW) for APU\ngenerator No. (Number) 1 and 2\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 5,
+          "idx": 0,
+          "sampleValue": "  881",
+          "conversion": 1,
+          "param": {
+            "id": 29533815,
+            "name": "APU_SN",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "FW.log(\"Setting APU_SN_PW901C with old requests\");\nif (/[0-9]+/.test(APU_SN)) {\n  FW.set(\"APU_SN_PW901C\", 'SN_'+APU_SN);\n      FW.updateFwotProperty('APU_SN',+APU_SN);\n} else {\n  const q = await FW.querySamples(null, \"APU_SN\", null, ctx.evt.computedDate, false, false, 1, 25);\n  const sns = q.map(s=>s.value)\n  .filter(v=>{\n    return /[0-9]+/.test(v);\n  });\n  if (sns.length>0) {\n    console.log('SN_'+sns[0]);\n    FW.set(\"APU_SN_PW901C\", 'SN_'+sns[0]);\n      FW.updateFwotProperty('APU_SN',+sns[0]);\n  } else {\n    FW.log(\"nothing set\");\n    FW.log(JSON.stringify(s.data.samples.map(s=>s.value)));\n  }\n}",
+                "variables": [
+                  "APU_SN",
+                  "await",
+                  "s"
+                ],
+                "id": 29600829,
+                "name": "APU_SN",
+                "srcId": "29533815",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 5,
+          "length": 4,
+          "idx": 0,
+          "sampleValue": "  36",
+          "conversion": 1,
+          "param": {
+            "id": 29889033,
+            "name": "GEN_LOAD_1",
+            "type": "NUMBER",
+            "description": "\"The display shows the electrical load in Kilowatt (KW) for APU\ngenerator No. (Number) 1 and 2\"",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "FW.set('GEN_LOAD_DIFF', Math.abs(+GEN_LOAD_1-GEN_LOAD_2));\nFW.set('GEN_LOAD_TOTAL', +GEN_LOAD_1+GEN_LOAD_2);",
+                "variables": [
+                  "GEN_LOAD_1",
+                  "GEN_LOAD_2"
+                ],
+                "id": 29889034,
+                "name": "GEN_LOAD_1",
+                "srcId": "29889033",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 16,
+      "idxMax": 16,
+      "length": 12,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 0,
+          "length": 6,
+          "idx": 0,
+          "sampleValue": "    35",
+          "conversion": 1,
+          "param": {
+            "id": 29533819,
+            "name": "APU_CYC",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 6,
+          "length": 3,
+          "idx": 0,
+          "sampleValue": " 27",
+          "conversion": 1,
+          "param": {
+            "id": 29889046,
+            "name": "DC_V",
+            "type": "NUMBER",
+            "description": "\"The display shows the APU battery voltage in DC V (Volts).\nNOTE: This data comes from the airplane systems and not the APUC\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 17,
+      "idxMax": 17,
+      "length": 20,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 17,
+          "idx": 0,
+          "sampleValue": " 28APR19 15:21:12",
+          "conversion": 1,
+          "formula": "FW.setComputedDate(moment.utc(X, ' DDMMMYY HH:mm:ss'));"
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 18,
+      "idxMax": 18,
+      "length": 3,
+      "param": [],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 11,
+      "idxMax": 12,
+      "length": 16,
+      "param": [
+        {
+          "isNumber": false,
+          "offset": 0,
+          "length": 7,
+          "idx": 0,
+          "sampleValue": " NORM  ",
+          "conversion": 1,
+          "param": {
+            "id": 29889010,
+            "name": "OIL_PRESS",
+            "type": "TEXT",
+            "description": "\"The display shows the low oil pressure switch at NORM when the oil\npressure is correct. NORM will stay until shutdown at less than 40% N2.\nThe display will show LOW when the oil pressure is 50 Pounds Per\nSquare Inch (PSI) or less\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 7,
+          "length": 3,
+          "idx": 0,
+          "sampleValue": "61 ",
+          "conversion": 1,
+          "param": {
+            "id": 29889012,
+            "minScale": 0,
+            "maxScale": 100,
+            "minOK": 0,
+            "maxOK": 100,
+            "name": "IGV_CMD",
+            "type": "NUMBER",
+            "description": "\"The display shows the Inlet Guide Vane (IGV) actuator commanded\n(CMD) position and actual position (POS). The indication shows in\npercent, with 100% full open and 0% full closed. During normal\noperation, the difference between the two numbers must be less than\n15%\"",
+            "actypeName": "B747",
+            "ifts": [
+              {
+                "formula": "FW.set('IGV_CMD_POS_DIFF', Math.abs(+IGV_CMD-IGV_POS));",
+                "variables": [
+                  "IGV_CMD",
+                  "IGV_POS"
+                ],
+                "id": 29889013,
+                "name": "IGV_CMD",
+                "srcId": "29889012",
+                "srcKind": "parameters",
+                "language": "JS_NODEJS"
+              }
+            ]
+          },
+          "formula": ""
+        },
+        {
+          "isNumber": true,
+          "offset": 10,
+          "length": 3,
+          "idx": 0,
+          "sampleValue": " 61",
+          "conversion": 1,
+          "param": {
+            "id": 29889015,
+            "name": "IGV_POS",
+            "type": "NUMBER",
+            "description": "\"The display shows the Inlet Guide Vane (IGV) actuator commanded\n(CMD) position and actual position (POS). The indication shows in\npercent, with 100% full open and 0% full closed. During normal\noperation, the difference between the two numbers must be less than\n15%\"",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 0,
+      "idxMax": 0,
+      "length": 50,
+      "param": [],
+      "isHeader": false
+    },
+    {
+      "code": "",
+      "idxMin": 4,
+      "idxMax": 4,
+      "length": 15,
+      "param": [
+        {
+          "isNumber": true,
+          "offset": 4,
+          "length": 8,
+          "idx": 0,
+          "sampleValue": " 0.66   ",
+          "conversion": 0.01,
+          "param": {
+            "id": 29888956,
+            "minScale": 0,
+            "maxScale": 100,
+            "minOK": 0,
+            "maxOK": 100,
+            "name": "OIL_QTY",
+            "type": "NUMBER",
+            "description": "\"The display shows the remaining APU oil level as a percent of\nmaximum oil quantity.",
+            "actypeName": "B747",
+            "ifts": []
+          },
+          "formula": ""
+        }
+      ],
+      "isHeader": false
+    }
+  ],
+  "layoutFMTs": "",
+  "layoutDBs": "",
+  "id": 29888924,
+  "actype": "B747",
+  "dtype": "ReportLayout",
+  "name": "APU Performance report (REP20)",
+  "reportId": "20",
+  "ifts": [
+    {
+      "formula": "//[April2019][maddy]\r\nFW.set(\"H_REP\",\"REP20\");\r\nFW.updateFwotProperty(\"lastPerfRep\", APU_SN.date);",
+      "variables": [
+        "APU_SN"
+      ],
+      "id": 29984516,
+      "name": "APU Performance report (REP20)",
+      "srcId": "29888924",
+      "srcKind": "layouts",
+      "language": "JS_NODEJS"
+    },
+    {
+      "formula": "//[April 2019][maddy] OP MODE - (MIN, DPZ, ADP, ECS, FLIGHT or MES) for six possible pneumatic loads\r\n//Set APU LABELS for OP MODE \r\n\r\nif (OP_MODE.trim().length>0) {\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_APU_EGT', APU_EGT,0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_APU_N1', APU_N1, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_APU_N2', APU_N2,0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_AIR_GND_MODE', AIR_GND_MODE,0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_INLET_DOOR', INLET_DOOR,0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_IGNITOR', IGNITOR, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_OIL_TEMP', OIL_TEMP, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_FUEL_PRI', FUEL_PRI, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_FUEL_SEC', FUEL_SEC, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_FMU_CMD', FMU_CMD, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_FMU_POS', FMU_POS, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_F_FILTER', F_FILTER, 0);  \r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_INLET_PRESS', INLET_PRESS, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_INLET_TEMP', INLET_TEMP, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_BLEED_VALVE', BLEED_VALVE, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_PNEU_AVAIL', PNEU_AVAIL, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_LC_INLET_TEMP', LC_INLET_TEMP, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_ELEC_AVAIL', ELEC_AVAIL, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_LC_EXIT_TEMP', LC_EXIT_TEMP, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_DUCT_PRESS_L', DUCT_PRESS_L, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_DUCT_PRESS_R', DUCT_PRESS_R, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_OIL_PRESS', OIL_PRESS, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_IGV_CMD', IGV_CMD, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_IGV_POS', IGV_POS, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_FAN_VALVE', FAN_VALVE, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_DV_CMD', DV_CMD, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_DV_POS', DV_POS, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_ECS_DMD', ECS_DMD, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_GEN_LOAD_1', GEN_LOAD_1, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_GEN_LOAD_2', GEN_LOAD_2, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_DC_A', DC_A, 0);\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_DC_V', DC_V, 0);\r\n\r\n}",
+      "variables": [
+        "OP_MODE",
+        "APU_EGT",
+        "APU_N1",
+        "APU_N2",
+        "AIR_GND_MODE",
+        "INLET_DOOR",
+        "IGNITOR",
+        "OIL_TEMP",
+        "FUEL_PRI",
+        "FUEL_SEC",
+        "FMU_CMD",
+        "FMU_POS",
+        "F_FILTER",
+        "INLET_PRESS",
+        "INLET_TEMP",
+        "BLEED_VALVE",
+        "PNEU_AVAIL",
+        "LC_INLET_TEMP",
+        "ELEC_AVAIL",
+        "LC_EXIT_TEMP",
+        "DUCT_PRESS_L",
+        "DUCT_PRESS_R",
+        "OIL_PRESS",
+        "IGV_CMD",
+        "IGV_POS",
+        "FAN_VALVE",
+        "DV_CMD",
+        "DV_POS",
+        "ECS_DMD",
+        "GEN_LOAD_1",
+        "GEN_LOAD_2",
+        "DC_A",
+        "DC_V"
+      ],
+      "id": 29984519,
+      "name": "APU Performance report (REP20)",
+      "srcId": "29888924",
+      "srcKind": "layouts",
+      "language": "JS_NODEJS"
+    },
+    {
+      "formula": "if (OP_MODE.trim().length>0 && OIL_QTY) {\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_OIL_QTY', OIL_QTY, 0);\r\n}",
+      "variables": [
+        "OP_MODE",
+        "OIL_QTY"
+      ],
+      "id": 30023574,
+      "name": "APU Performance report (REP20)",
+      "srcId": "29888924",
+      "srcKind": "layouts",
+      "language": "JS_NODEJS"
+    },
+    {
+      "formula": "if (OP_MODE.trim().length>0 && STARTER) {\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_STARTER', STARTER, 0);\r\n}",
+      "variables": [
+        "OP_MODE",
+        "STARTER"
+      ],
+      "id": 30023600,
+      "name": "APU Performance report (REP20)",
+      "srcId": "29888924",
+      "srcKind": "layouts",
+      "language": "JS_NODEJS"
+    },
+    {
+      "formula": "//[April 2019][maddy] Set APU Title  for OP MODE \r\nFW.log(OP_MODE);\r\nif (OP_MODE.trim().length>2  && OP_MODE.trim()==\"MES\" ) {\r\n  FW.setTitle(\"Report with MES\");\r\n  FW.setStyle('color', 'SpringGreen');\r\n  FW.setStyle('pos', 'right');\r\n} \r\nelse if (OP_MODE.trim().length<2 ) {\r\n  FW.setTitle(\"Report incorrect\");\r\n  FW.setStyle('color', 'LightGrey');\r\n  FW.setStyle('pos', 'right');\r\n FW.tag('BAD_DATA');\r\n} \r\n\r\nelse {\r\n  FW.setStyle('color', 'LightBlue');\r\n  FW.setStyle('pos', 'right');\r\n\r\n}",
+      "variables": [
+        "OP_MODE"
+      ],
+      "id": 30024858,
+      "name": "APU Performance report (REP20)",
+      "srcId": "29888924",
+      "srcKind": "layouts",
+      "language": "JS_NODEJS"
+    },
+    {
+      "formula": "//Total Gen Load \r\nif (OP_MODE.trim().length>0 && GEN_LOAD_1 && GEN_LOAD_2) {\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_GEN_LOAD_TOTAL', GEN_LOAD_1+GEN_LOAD_2, 0);\r\n}",
+      "variables": [
+        "OP_MODE",
+        "GEN_LOAD_1",
+        "GEN_LOAD_2"
+      ],
+      "id": 30024913,
+      "name": "APU Performance report (REP20)",
+      "srcId": "29888924",
+      "srcKind": "layouts",
+      "language": "JS_NODEJS"
+    },
+    {
+      "formula": "if (OP_MODE.trim().length>0) {\r\n  FW.set(OP_MODE.trim().replace(/ /g,'_')+'_APU_EGT', APU_EGT,0);\r\n  FW.set(OP_MODE.trim()+'_APU_EGT', APU_EGT,0);\r\n}",
+      "variables": [
+        "OP_MODE",
+        "APU_EGT"
+      ],
+      "id": 30026696,
+      "name": "APU Performance report (REP20)",
+      "srcId": "29888924",
+      "srcKind": "layouts",
+      "language": "JS_NODEJS"
+    },
+    {
+      "formula": "FW.log(OP_MODE);\r\nif (OP_MODE.trim().length>0) {\r\n  FW.tag(OP_MODE.trim().replace(/ /g,'_'));\r\n}",
+      "variables": [
+        "OP_MODE"
+      ],
+      "id": 30162963,
+      "name": "APU Performance report (REP20)",
+      "srcId": "29888924",
+      "srcKind": "layouts",
+      "language": "JS_NODEJS"
+    }
+  ]
+}

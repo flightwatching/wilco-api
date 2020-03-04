@@ -20,3 +20,8 @@ hs_err_pid*
 wilco-api.iml
 nodejs/node_modules
 nodejs/layouts
+nodejs/package-lock.json
+
+.vscode
+
+python/reprocessRep39/deletedRaws/

@@ -1,0 +1,4317 @@
+{
+  "took": 75,
+  "timed_out": false,
+  "_shards": {
+    "total": 165,
+    "successful": 165,
+    "skipped": 163,
+    "failed": 0
+  },
+  "hits": {
+    "total": 8786,
+    "max_score": 0,
+    "hits": []
+  },
+  "aggregations": {
+    "fwot": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "A6-BLN",
+          "doc_count": 582,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.041666666666667
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.166666666666667
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.027777777777778
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.016666666666667
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.041666666666667
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.458333333333333
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.316666666666666
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.3
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.285714285714286
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.303571428571429
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.3625
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.5227272727272725
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.738095238095238
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.696428571428571
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 32,
+                "QTY": {
+                  "value": 5.6796875
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.671052631578948
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 27,
+                "QTY": {
+                  "value": 5.7407407407407405
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 5.854166666666667
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.590909090909091
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.6875
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.673076923076923
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 28,
+                "QTY": {
+                  "value": 5.491071428571429
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.845238095238095
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.4875
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.8375
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.232142857142857
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.839285714285714
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.678571428571429
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.625
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 27,
+                "QTY": {
+                  "value": 6.0092592592592595
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.661764705882353
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 5.61
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.671052631578948
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.444444444444445
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLO",
+          "doc_count": 576,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 6.142857142857143
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 6.1875
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 6.204545454545454
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 6.1
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 6.3
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.25
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 6.09375
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 6.071428571428571
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 6.208333333333333
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 6.222222222222222
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 6.416666666666667
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 6.545454545454546
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 6.363636363636363
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 6.285714285714286
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6.323529411764706
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.4
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 26,
+                "QTY": {
+                  "value": 6.346153846153846
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 6.565217391304348
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6.735294117647059
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 6.595238095238095
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 6.545454545454546
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.625
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 6.695652173913044
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 6.607142857142857
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 28,
+                "QTY": {
+                  "value": 6.607142857142857
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 31,
+                "QTY": {
+                  "value": 6.637096774193548
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 6.592105263157895
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 6.62
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 6.410714285714286
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 6.488636363636363
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 6.454545454545454
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 6.625
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.6
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 6.553571428571429
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 6.535714285714286
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLQ",
+          "doc_count": 574,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.785714285714286
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.90625
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.785714285714286
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.833333333333333
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.714285714285714
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 2,
+                "QTY": {
+                  "value": 4.625
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.9423076923076925
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.666666666666667
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 3,
+                "QTY": {
+                  "value": 5.333333333333333
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.71875
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 6.277777777777778
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.821428571428571
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.640625
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.85
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.911764705882353
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.0875
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 6.083333333333333
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 28,
+                "QTY": {
+                  "value": 6.214285714285714
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 29,
+                "QTY": {
+                  "value": 6
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 27,
+                "QTY": {
+                  "value": 5.962962962962963
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 26,
+                "QTY": {
+                  "value": 6.0576923076923075
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.825
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 29,
+                "QTY": {
+                  "value": 5.956896551724138
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 6.043478260869565
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 6.043478260869565
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 6.083333333333333
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 6.083333333333333
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 5.90625
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.9875
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.470588235294118
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 6
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.546875
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 26,
+                "QTY": {
+                  "value": 5.769230769230769
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.609375
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.666666666666667
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLB",
+          "doc_count": 551,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 4.78125
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 4.892857142857143
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 4.75
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 4.9
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.041666666666667
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.041666666666667
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 4.875
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 4.875
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 4.9875
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.083333333333333
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.233333333333333
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 26,
+                "QTY": {
+                  "value": 5.096153846153846
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.019230769230769
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.130434782608695
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.076086956521739
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.023809523809524
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 31,
+                "QTY": {
+                  "value": 5.153225806451613
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.163043478260869
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.338235294117647
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 30,
+                "QTY": {
+                  "value": 5.191666666666666
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 30,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 30,
+                "QTY": {
+                  "value": 5.2
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.226190476190476
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.279411764705882
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.277777777777778
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.266666666666667
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.197368421052632
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.455882352941177
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.339285714285714
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.175
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.325
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.194444444444445
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLD",
+          "doc_count": 550,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 6.678571428571429
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 6.625
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 6.295454545454546
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 6.5
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 6.75
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 2,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.125
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.972222222222222
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 6.075
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 6.0625
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 6.305555555555555
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 5.770833333333333
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 6.3
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 6.055555555555555
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.8076923076923075
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.868421052631579
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 6.19
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 5.83
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 6.0625
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 26,
+                "QTY": {
+                  "value": 6.134615384615385
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 6.1521739130434785
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 5.69
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 38,
+                "QTY": {
+                  "value": 5.822368421052632
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 37,
+                "QTY": {
+                  "value": 5.898648648648648
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.607142857142857
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.552631578947368
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.7976190476190474
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.5
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.7
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.338235294117647
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.483333333333333
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.568181818181818
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.46875
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.458333333333333
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLA",
+          "doc_count": 547,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 3,
+                "QTY": {
+                  "value": 6
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.964285714285714
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 3,
+                "QTY": {
+                  "value": 5.166666666666667
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 6.333333333333333
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.666666666666667
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 3,
+                "QTY": {
+                  "value": 5.666666666666667
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 6.138888888888889
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 5.916666666666667
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 6.159090909090909
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 6.053571428571429
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 6.160714285714286
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.980769230769231
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 6.019230769230769
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 6.173913043478261
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.940476190476191
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.793478260869565
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.934210526315789
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 27,
+                "QTY": {
+                  "value": 5.953703703703703
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 29,
+                "QTY": {
+                  "value": 5.741379310344827
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 30,
+                "QTY": {
+                  "value": 5.925
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.025
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 34,
+                "QTY": {
+                  "value": 5.772058823529412
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 29,
+                "QTY": {
+                  "value": 5.931034482758621
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 6.095238095238095
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.867647058823529
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.697368421052632
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 6.238095238095238
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.9411764705882355
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 6.275
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.947368421052632
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 2,
+                "QTY": {
+                  "value": 6.625
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 6.25
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 6.295454545454546
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLP",
+          "doc_count": 547,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.714285714285714
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.583333333333333
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.6875
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.678571428571429
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.6875
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.607142857142857
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.5625
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.96875
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.9
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.944444444444445
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.821428571428571
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.956521739130435
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 6.035714285714286
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 5.95
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 6.011904761904762
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.9868421052631575
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.1375
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 6.1
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 6.079545454545454
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 34,
+                "QTY": {
+                  "value": 6.176470588235294
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 6.203125
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 6.2272727272727275
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 6.035714285714286
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6.1911764705882355
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 6.159090909090909
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 6.23
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 6.203125
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 6.125
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 6.402777777777778
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 6.336956521739131
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6.264705882352941
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 6.285714285714286
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 6.359375
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLE",
+          "doc_count": 542,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.025
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.166666666666667
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.21875
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.28125
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.361111111111111
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.083333333333333
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.365384615384615
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.3125
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 5.291666666666667
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.416666666666667
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.4021739130434785
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.397058823529412
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 5.520833333333333
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.321428571428571
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.4868421052631575
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.35
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 26,
+                "QTY": {
+                  "value": 5.346153846153846
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 27,
+                "QTY": {
+                  "value": 5.444444444444445
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.336956521739131
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.411764705882353
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 5.458333333333333
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 41,
+                "QTY": {
+                  "value": 5.560975609756097
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.473684210526316
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 5.53125
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.511363636363637
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.466666666666667
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.616666666666666
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.636363636363637
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.4
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.340909090909091
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.328125
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.53125
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 2,
+                "QTY": {
+                  "value": 5.25
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLH",
+          "doc_count": 532,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.55
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.4375
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 6.2
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.775
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.5625
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.666666666666667
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 3,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.857142857142857
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.615384615384615
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.783333333333333
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.921875
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.779411764705882
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.716666666666667
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 6.013888888888889
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.826086956521739
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 6.203125
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.2125
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.875
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 5.97
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.875
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 28,
+                "QTY": {
+                  "value": 6.071428571428571
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 31,
+                "QTY": {
+                  "value": 6.169354838709677
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.869565217391305
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 6.416666666666667
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 6.342105263157895
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 6.234375
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 27,
+                "QTY": {
+                  "value": 6.148148148148148
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.897058823529412
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 6.453125
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.25
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.85
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 6.4423076923076925
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.78125
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLL",
+          "doc_count": 527,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.5625
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 6.333333333333333
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.555555555555555
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 3,
+                "QTY": {
+                  "value": 5.833333333333333
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.5
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.725
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 6
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 5.6875
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.90625
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.3125
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 6.386363636363637
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 6.29
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.944444444444445
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6.338235294117647
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 6.43
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 6.16
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 6.34375
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 6.19
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.458333333333333
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 6.5
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 6.321428571428571
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 6.526315789473684
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 6.4375
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 6.3522727272727275
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 6.447368421052632
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 6.204545454545454
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6.294117647058823
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 6.515625
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.3375
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 6.423076923076923
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 6.285714285714286
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.708333333333333
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 6.365384615384615
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLG",
+          "doc_count": 526,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 4.916666666666667
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.1
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.055555555555555
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.3125
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.15625
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.321428571428571
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.111111111111111
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.03125
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.35
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.326923076923077
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 4.964285714285714
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.363636363636363
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.2
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.178571428571429
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.355263157894737
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.196428571428571
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 27,
+                "QTY": {
+                  "value": 5.305555555555555
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 32,
+                "QTY": {
+                  "value": 5.359375
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.383333333333334
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 5.177083333333333
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.357142857142857
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.166666666666667
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 26,
+                "QTY": {
+                  "value": 5.288461538461538
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.276315789473684
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.489130434782608
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.144736842105263
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.159090909090909
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.222222222222222
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.15
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.319444444444445
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.152777777777778
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.15625
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLI",
+          "doc_count": 517,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.425
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.071428571428571
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.361111111111111
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.05
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 1,
+                "QTY": {
+                  "value": 6
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.642857142857143
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.4
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.725
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.5625
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.375
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.704545454545454
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.5227272727272725
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.640625
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.7125
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.411764705882353
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.670454545454546
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.670454545454546
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.55
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.583333333333333
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.6521739130434785
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.6911764705882355
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.779411764705882
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.773809523809524
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.722222222222222
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.583333333333333
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 30,
+                "QTY": {
+                  "value": 5.733333333333333
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.920454545454546
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.65
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.625
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.730769230769231
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 5.825
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.484375
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.575
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.6
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.769230769230769
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLM",
+          "doc_count": 502,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.8
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.8125
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.833333333333333
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.875
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.625
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.8125
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.666666666666667
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.8
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.818181818181818
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.821428571428571
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.85
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.8076923076923075
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.805555555555555
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.884615384615385
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.953125
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 6.027777777777778
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.175
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.983333333333333
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 6.15625
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.0875
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.0125
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.1
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 6.0227272727272725
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.025
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 6.102941176470588
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 25,
+                "QTY": {
+                  "value": 6.2
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 6.071428571428571
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 28,
+                "QTY": {
+                  "value": 6.133928571428571
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 6.134615384615385
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 6.232142857142857
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.0375
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 6.125
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.967391304347826
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 6.125
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLJ",
+          "doc_count": 486,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.392857142857143
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.458333333333333
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.392857142857143
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.4375
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.375
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.5
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.1
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 4.925
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.1875
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.152777777777778
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.428571428571429
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.489130434782608
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.470588235294118
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 26,
+                "QTY": {
+                  "value": 5.269230769230769
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.403846153846154
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.525
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.375
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.375
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.545454545454546
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.480769230769231
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.266666666666667
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.291666666666667
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.407894736842105
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.473684210526316
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.375
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 24,
+                "QTY": {
+                  "value": 5.447916666666667
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 23,
+                "QTY": {
+                  "value": 5.326086956521739
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.365384615384615
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.4375
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.447368421052632
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.288461538461538
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.264705882352941
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLC",
+          "doc_count": 472,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.833333333333333
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.472222222222222
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.7
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 6.181818181818182
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 6.4
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 6.6875
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 7
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.9375
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.875
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 6.40625
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.145833333333333
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 6.541666666666667
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.625
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.9868421052631575
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.894736842105263
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.984375
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 20,
+                "QTY": {
+                  "value": 6.075
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.911764705882353
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 27,
+                "QTY": {
+                  "value": 5.722222222222222
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.875
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.65
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 21,
+                "QTY": {
+                  "value": 5.833333333333333
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.703125
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.455882352941177
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.4605263157894735
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.5227272727272725
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.779411764705882
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.421052631578948
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.527777777777778
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.3
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.392857142857143
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.421875
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.416666666666667
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.553571428571429
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLF",
+          "doc_count": 416,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 45,
+                "doc_count": 2,
+                "QTY": {
+                  "value": 5
+                }
+              },
+              {
+                "key": 46,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.035714285714286
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.45
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.071428571428571
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 4.95
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 1,
+                "QTY": {
+                  "value": 5
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.45
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 4.892857142857143
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.222222222222222
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 7,
+                "QTY": {
+                  "value": 5.142857142857143
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.458333333333333
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.2
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 5.125
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.4423076923076925
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 5.2272727272727275
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.176470588235294
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.184210526315789
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.238636363636363
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.375
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.383333333333334
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.375
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 22,
+                "QTY": {
+                  "value": 5.443181818181818
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 17,
+                "QTY": {
+                  "value": 5.470588235294118
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 5.395833333333333
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.4605263157894735
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.368421052631579
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.596153846153846
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.589285714285714
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 26,
+                "QTY": {
+                  "value": 5.596153846153846
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.416666666666667
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 14,
+                "QTY": {
+                  "value": 5.696428571428571
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.703125
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.903846153846154
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "A6-BLK",
+          "doc_count": 339,
+          "temperature": {
+            "buckets": [
+              {
+                "key": 46,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.791666666666667
+                }
+              },
+              {
+                "key": 47,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.4375
+                }
+              },
+              {
+                "key": 48,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 6.25
+                }
+              },
+              {
+                "key": 49,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 50,
+                "doc_count": 3,
+                "QTY": {
+                  "value": 5.75
+                }
+              },
+              {
+                "key": 51,
+                "doc_count": 2,
+                "QTY": {
+                  "value": 5.625
+                }
+              },
+              {
+                "key": 52,
+                "doc_count": 3,
+                "QTY": {
+                  "value": 5.916666666666667
+                }
+              },
+              {
+                "key": 53,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.6
+                }
+              },
+              {
+                "key": 54,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 5.625
+                }
+              },
+              {
+                "key": 55,
+                "doc_count": 5,
+                "QTY": {
+                  "value": 5.25
+                }
+              },
+              {
+                "key": 56,
+                "doc_count": 4,
+                "QTY": {
+                  "value": 6.25
+                }
+              },
+              {
+                "key": 57,
+                "doc_count": 6,
+                "QTY": {
+                  "value": 5.833333333333333
+                }
+              },
+              {
+                "key": 58,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.9375
+                }
+              },
+              {
+                "key": 59,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.519230769230769
+                }
+              },
+              {
+                "key": 60,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.640625
+                }
+              },
+              {
+                "key": 61,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 6.0576923076923075
+                }
+              },
+              {
+                "key": 62,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.788461538461538
+                }
+              },
+              {
+                "key": 63,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 5.666666666666667
+                }
+              },
+              {
+                "key": 64,
+                "doc_count": 15,
+                "QTY": {
+                  "value": 5.633333333333334
+                }
+              },
+              {
+                "key": 65,
+                "doc_count": 19,
+                "QTY": {
+                  "value": 5.855263157894737
+                }
+              },
+              {
+                "key": 66,
+                "doc_count": 18,
+                "QTY": {
+                  "value": 5.777777777777778
+                }
+              },
+              {
+                "key": 67,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.765625
+                }
+              },
+              {
+                "key": 68,
+                "doc_count": 9,
+                "QTY": {
+                  "value": 5.611111111111111
+                }
+              },
+              {
+                "key": 69,
+                "doc_count": 11,
+                "QTY": {
+                  "value": 6.409090909090909
+                }
+              },
+              {
+                "key": 70,
+                "doc_count": 13,
+                "QTY": {
+                  "value": 5.673076923076923
+                }
+              },
+              {
+                "key": 71,
+                "doc_count": 8,
+                "QTY": {
+                  "value": 5.90625
+                }
+              },
+              {
+                "key": 72,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.6875
+                }
+              },
+              {
+                "key": 73,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 5.3125
+                }
+              },
+              {
+                "key": 74,
+                "doc_count": 10,
+                "QTY": {
+                  "value": 6.075
+                }
+              },
+              {
+                "key": 75,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.083333333333333
+                }
+              },
+              {
+                "key": 76,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 5.895833333333333
+                }
+              },
+              {
+                "key": 77,
+                "doc_count": 16,
+                "QTY": {
+                  "value": 5.78125
+                }
+              },
+              {
+                "key": 78,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.020833333333333
+                }
+              },
+              {
+                "key": 79,
+                "doc_count": 12,
+                "QTY": {
+                  "value": 6.041666666666667
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+20445552 	skip	 already reprocessed
+20445621 	skip	 already reprocessed
+20446185 	skip	 already reprocessed
+20446873 	skip	 already reprocessed
+20445803 	skip	 already reprocessed
+20445783 	skip	 already reprocessed
+20446747 	skip	 already reprocessed
+20445979 	skip	 already reprocessed
+20446060 	skip	 already reprocessed
+20447073 	skip	 already reprocessed
+20446606 	skip	 already reprocessed
+20446678 	skip	 already reprocessed
+17360661 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453126
+17336905 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453201
+17339962 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453270
+17302608 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453338
+17310430 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453408
+17289877 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453480
+17288964 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453550
+17271398 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453619
+17286326 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453689
+6377594 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453786
+6391723 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453856
+6379906 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20453962
+6396882 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454066
+6391005 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454135
+6378267 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454205
+6350582 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454275
+6365596 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454372
+6359477 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454443
+6355740 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454512
+6366060 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454581
+6353342 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454651
+6346630 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454720
+6340924 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454792
+6359552 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454890
+6358988 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20454959
+6337512 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20455029
+6342041 	reprocess	https://insight-val.flightwatching.com/fleet/apiv3/events/20455099
+6377594 	skip	 already reprocessed
+6391723 	skip	 already reprocessed
+6379906 	skip	 already reprocessed
+6396882 	skip	 already reprocessed
+6391005 	skip	 already reprocessed
+6378267 	skip	 already reprocessed
+6350582 	skip	 already reprocessed
+6365596 	skip	 already reprocessed
+6359477 	skip	 already reprocessed
+6355740 	skip	 already reprocessed
+6366060 	skip	 already reprocessed
+6353342 	skip	 already reprocessed
+6346630 	skip	 already reprocessed
+6340924 	skip	 already reprocessed
+6359552 	skip	 already reprocessed
+6358988 	skip	 already reprocessed
+6337512 	skip	 already reprocessed
+6342041 	skip	 already reprocessed
+{'id': '13157360', 'klass': 'acms', 'category': 'REP39', 'tags': [{'id': 'REP39'}, {'id': 'ATA78'}], 'transmissionDate': '2020-01-23T20:49:00', 'receptionDate': '2020-01-23T20:49:00', 'computedDate': '2020-01-23T20:47:13', 'station': 'HYD', 'network': 'BKK', 'dateIsEstimated': False, 'phase': 'sky', 'status': 'flying', 'sumUp': 'REVERSER REPORT <39>', 'reg': 'B-LBA', 'layoutId': 693989, 'lastUpdate': 1579812574997, 'flightId': 'CX678', 'dashboardIds': ['1426097', '7757'], 'from': 'VOHS', 'to': 'VHHH', 'analysis': [], 'charsCount': 2722} 	skip	 no TC 4000 but 100T
+6377594 	skip	 already reprocessed
+6391723 	skip	 already reprocessed
+6379906 	skip	 already reprocessed
+6396882 	skip	 already reprocessed
+6391005 	skip	 already reprocessed
+6378267 	skip	 already reprocessed
+6350582 	skip	 already reprocessed
+6365596 	skip	 already reprocessed
+6359477 	skip	 already reprocessed
+6355740 	skip	 already reprocessed
+6366060 	skip	 already reprocessed
+6353342 	skip	 already reprocessed
+6346630 	skip	 already reprocessed
+6340924 	skip	 already reprocessed
+6359552 	skip	 already reprocessed
+6358988 	skip	 already reprocessed
+6337512 	skip	 already reprocessed
+6342041 	skip	 already reprocessed
+13157360 	skip	 no TC 4000 but 100T
