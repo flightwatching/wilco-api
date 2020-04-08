@@ -14,6 +14,7 @@ public class IftV3IO {
 	private String name;
 	private String srcId;
 	private String srcKind;
+	private String description;
 	private String language;
 
 	public String getFormula() {
@@ -102,5 +103,13 @@ public class IftV3IO {
 
 	public void setLanguage(String language) {
 		this.language = language;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }
