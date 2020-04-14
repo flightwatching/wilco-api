@@ -52,5 +52,6 @@ public enum SMI {
 	JLS,//LOGBOOK
 	JLC,//LOGBOOK
 	SVC,//CONNEXION PROBLEM
-	GLEN, MAS, REJ, A8A, FW, MED
+	GLEN, MAS, REJ, A8A, FW, MED,
+  N10 //custom reports as per B777 cathay pacific
 }
