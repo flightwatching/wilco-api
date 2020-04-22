@@ -28,6 +28,7 @@ public class LayoutV3IO {
 	@CollectionComponent(value=DashboardV3IO.class)
 	private List<DashboardV3IO> dashboards;
 	private String reportId;
+	private Boolean isUplinkable;
 	private Boolean canUseAlphaCallUps;
 	@CollectionComponent(value=IftV3IO.class)
 	private ArrayList<IftV3IO> ifts;
@@ -164,7 +165,15 @@ public class LayoutV3IO {
 		this.extSource = extSource;
 	}
 
-	public static class ExtSource {
+  public Boolean getUplinkable() {
+    return isUplinkable;
+  }
+
+  public void setUplinkable(Boolean uplinkable) {
+    isUplinkable = uplinkable;
+  }
+
+  public static class ExtSource {
 		private String varName;
 		private String urlTemplate;
 		private Integer poolPeriodSecond;
