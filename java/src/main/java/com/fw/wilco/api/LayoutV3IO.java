@@ -35,7 +35,10 @@ public class LayoutV3IO {
 
 	private String uplinkTemplate;
 
-	private ExtSource extSource;
+  private Map<String, String> properties;
+
+
+  private ExtSource extSource;
 
 	public List<IeiV3IO> getIeis() {
 		return ieis;
@@ -171,6 +174,14 @@ public class LayoutV3IO {
 
   public void setUplinkable(Boolean uplinkable) {
     isUplinkable = uplinkable;
+  }
+
+  public Map<String, String> getProperties() {
+    return properties;
+  }
+
+  public void setProperties(Map<String, String> properties) {
+    this.properties = properties;
   }
 
   public static class ExtSource {
