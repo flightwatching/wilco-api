@@ -10,15 +10,17 @@ public class UplinkActionV3IO {
     private String completedDate;
     private String requestDate;
     private String giveUpDate;
-    private Long layoutId;
+    private LayoutV3IO layout;
     private FwotV3IO fwot;
     private String tieback;
     private String recipient;
     private String triggerKind;
     private Long triggerId;
     private String triggerUser;
-    private Long origMsgId;
-    private Long ackMsgId;
+    private EventV3IO origMsg;
+    private EventV3IO ackMsg;
+    private EventV3IO rejected;
+    private EventV3IO answer;
     private Map<String,String> opts = new HashMap<>();
 
     public Long getId() {
@@ -61,12 +63,12 @@ public class UplinkActionV3IO {
         this.giveUpDate = giveUpDate;
     }
 
-    public Long getLayoutId() {
-        return layoutId;
+    public LayoutV3IO getLayout() {
+        return layout;
     }
 
-    public void setLayoutId(Long layoutId) {
-        this.layoutId = layoutId;
+    public void setLayout(LayoutV3IO layout) {
+        this.layout = layout;
     }
 
     public FwotV3IO getFwot() {
@@ -117,20 +119,36 @@ public class UplinkActionV3IO {
         this.triggerUser = triggerUser;
     }
 
-    public Long getOrigMsgId() {
-        return origMsgId;
+    public EventV3IO getOrigMsg() {
+        return origMsg;
     }
 
-    public void setOrigMsgId(Long origMsgId) {
-        this.origMsgId = origMsgId;
+    public void setOrigMsg(EventV3IO origMsg) {
+        this.origMsg = origMsg;
     }
 
-    public Long getAckMsgId() {
-        return ackMsgId;
+    public EventV3IO getAckMsg() {
+        return ackMsg;
     }
 
-    public void setAckMsgId(Long ackMsgId) {
-        this.ackMsgId = ackMsgId;
+    public void setAckMsg(EventV3IO ackMsg) {
+        this.ackMsg = ackMsg;
+    }
+
+    public EventV3IO getRejected() {
+        return rejected;
+    }
+
+    public void setRejected(EventV3IO rejected) {
+        this.rejected = rejected;
+    }
+
+    public EventV3IO getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(EventV3IO answer) {
+        this.answer = answer;
     }
 
     public Map<String, String> getOpts() {
